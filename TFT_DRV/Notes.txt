@@ -1,0 +1,20 @@
+	black 		= 0,
+	maroon		= 1,
+	green		= 2,
+	olive		= 3,
+	navy_blue	= 4,
+	purple		= 5,
+	teal		= 6,
+	silver		= 7,
+	gray		= 8,
+	red			= 9,
+	lime_green	= A,
+	yellow		= B,
+	blue		= C,
+	fuchsia		= D,
+	aqua_light	= E,
+	white		= F,
+	
+	uint8_t barColor[BARS] = {white, yellow, teal, green, fuchsia, red, blue};
+	
+	BF

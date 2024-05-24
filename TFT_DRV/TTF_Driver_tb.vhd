@@ -2,6 +2,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+LIBRARY std;
+USE std.textio.ALL;
+USE ieee.std_logic_textio.ALL;
+
+
+
 entity TTF_Driver_tb is
 --  Port ( );
 end TTF_Driver_tb;
@@ -80,68 +86,40 @@ begin
     clk <= not clk after 5 ns;
     nEnable <= '1', '0' after 30 ns;
 
-stim: process
+--Sorce file format:
+-- 6 Hex digit
+-- DDAAAA
+-- 2 Digit of data
+-- 4 Digit of address
+-- e.g 0xA5 data go to 0x1234 address
+-- A51234
+writeToMem : process is
+	constant period : time := 80 ns;
+	variable line_v : line;
+	file read_file 	: text;
+	variable slv_v 	: std_logic_vector(23 downto 0) := (others => '0');
 begin
+	file_open(read_file, "source.txt", read_mode);
 
 	wait for 100 ns;
 	writeMemoryEN <= '1';
-	writeClk <= '0';
 
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(0, memoryAddress'length));
-	memoryData <= x"00";
+	while not endfile(read_file) loop
+		READLINE(read_file, line_v);
+		hread(line_v, slv_v);
+		memoryData <= slv_v(23 downto 16);
+		memoryAddress <= slv_v(14 downto 0);
+		writeClk <= '0';
+		wait for 10 ns;
+		
+		writeClk <= '1';
+		wait for 10 ns;
+		
+		report "slv_v: " ;--& to_hstring(slv_v);
 
-	wait for 5 ns;
-	writeClk <= '1';
-	wait for 5 ns;
-	writeClk <= '0';
-
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(1, memoryAddress'length));
-	memoryData <= x"01";
-
-	wait for 5 ns;
-	writeClk <= '1';
-	wait for 5 ns;
-	writeClk <= '0';
-
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(2, memoryAddress'length));
-	memoryData <= x"02";	
-
-	wait for 5 ns;
-	writeClk <= '1';
-	wait for 5 ns;
-	writeClk <= '0';
-
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(3, memoryAddress'length));
-	memoryData <= x"03";
+	  end loop;
+	  writeMemoryEN <= '0';
 	
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(4, memoryAddress'length));
-	memoryData <= x"04";
-	wait for 5 ns;
-	writeClk <= '1';
-	wait for 5 ns;
-	writeClk <= '0';	
-
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(5, memoryAddress'length));
-	memoryData <= x"05";
-	wait for 5 ns;
-	writeClk <= '1';
-	wait for 5 ns;
-	writeClk <= '0';	
-
-	wait for 10 ns;
-	memoryAddress <= std_logic_vector(to_unsigned(6, memoryAddress'length));
-	memoryData <= x"06";
-	wait for 5 ns;
-	writeClk <= '1';
-	wait for 5 ns;
-	writeClk <= '0';
-
 	wait;
 
 end process;

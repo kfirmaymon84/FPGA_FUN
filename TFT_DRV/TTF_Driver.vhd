@@ -2,6 +2,22 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+-- Frame memory maping:
+
+-- address 	| Data
+------------------
+-- 0x0000	| Width
+-- 0x0001	| Height
+-- 0x0002	| [4 bit pixle 0][4 bit pixle 1]
+-- and continue.
+
+-- TFT pixle data:
+-- 16 bit color 565 RGB format.
+-- pixle format:
+-- Byte 0: [(5-bit Red)(3 MSB Green)] = 8 bits.
+-- Byte 1: [(3-bit LSB Green)(5-bit Blue)] = 8 bits.
+
+-- Before sending to memory a command 0x2C needed to be send to inform display we going to send frame.
 entity TTF_Driver is
     Port ( clk : in STD_LOGIC;
 			nEnable : in STD_LOGIC;
@@ -54,7 +70,8 @@ architecture Behavioral of TTF_Driver is
         );
 		
 	-- Memory frame buffer
-	type t_Memory is array (0 to 57602) of std_logic_vector(7 downto 0);
+	--type t_Memory is array (0 to 57602) of std_logic_vector(7 downto 0);
+	type t_Memory is array (0 to 31) of std_logic_vector(7 downto 0);
 	signal r_Mem : t_Memory := (others => (others => '0'));
 	
 	-- State machine signals
