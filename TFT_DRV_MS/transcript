@@ -1,0 +1,573 @@
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.ttf_driver_tb
+# vsim -gui work.ttf_driver_tb 
+# Start time: 19:18:47 on May 25,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.ttf_driver_tb(behavioral)
+# Loading work.ttf_driver(behavioral)
+DO wave.do
+# invalid command name "DO"
+do wave.do
+run
+# ** Note: slv_v: 
+#    Time: 120 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 140 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 160 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 180 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 200 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 220 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 240 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 260 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 280 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 300 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 320 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 340 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 360 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 380 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 400 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 420 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 440 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 460 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 480 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 520 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 540 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 560 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 580 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 600 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 620 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 640 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 660 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 680 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 700 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 720 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 740 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 760 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 780 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Fatal: (vsim-3341) Cannot open file "target.txt"; it is already open.
+#    Time: 1175 ns  Iteration: 0  Process: /ttf_driver_tb/printFrame File: C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd
+# Fatal error in Process printFrame at C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd line 136
+# 
+# HDL call sequence:
+# Stopped at C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd 136 Process printFrame
+# 
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ttf_driver_tb(behavioral)
+# Loading work.ttf_driver(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: slv_v: 
+#    Time: 120 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 140 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 160 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 180 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 200 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 220 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 240 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 260 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 280 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 300 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 320 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 340 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 360 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 380 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 400 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 420 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 440 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 460 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 480 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 520 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 540 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 560 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 580 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 600 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 620 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 640 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 660 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 680 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 700 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 720 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 740 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 760 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 780 ns  Iteration: 0  Instance: /ttf_driver_tb
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ttf_driver_tb(behavioral)
+# Loading work.ttf_driver(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: slv_v: 
+#    Time: 120 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 140 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 160 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 180 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 200 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 220 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 240 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 260 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 280 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 300 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 320 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 340 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 360 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 380 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 400 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 420 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 440 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 460 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 480 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 520 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 540 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 560 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 580 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 600 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 620 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 640 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 660 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 680 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 700 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 720 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 740 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 760 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 780 ns  Iteration: 0  Instance: /ttf_driver_tb
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ttf_driver_tb(behavioral)
+# Loading work.ttf_driver(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: slv_v: 
+#    Time: 375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ttf_driver_tb(behavioral)
+# Loading work.ttf_driver(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: slv_v: 
+#    Time: 375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# Compile of TTF_Driver.vhd was successful.
+# Compile of TTF_Driver_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ttf_driver_tb(behavioral)
+# Loading work.ttf_driver(behavioral)
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: slv_v: 
+#    Time: 375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+run
+run
+run
+run
+run
+run
+run
+run
+restart -f
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: slv_v: 
+#    Time: 375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1500 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1562500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1625 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1687500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1750 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1812500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1875 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 1937500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2 us  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2062500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2125 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2187500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2250 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2312500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2375 ns  Iteration: 0  Instance: /ttf_driver_tb
+# ** Note: slv_v: 
+#    Time: 2437500 ps  Iteration: 0  Instance: /ttf_driver_tb
+# End time: 19:35:38 on May 25,2024, Elapsed time: 0:16:51
+# Errors: 0, Warnings: 1
