@@ -116,6 +116,9 @@ begin
 		
 		writeClk <= '1';
 		wait for 31.25 ns;
+		
+		report "slv_v: " ;--& to_hstring(slv_v);
+
 	  end loop;
 	  writeMemoryEN <= '0';
 	

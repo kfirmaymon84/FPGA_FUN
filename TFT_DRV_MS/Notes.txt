@@ -1,6 +1,6 @@
 	To Do:
 	1. test memory write:
-		1.1. write 240x240 pixles to memory and test if it written ok.
+		1.1. write 240x240 pixles to memory and test if it written ok. PASS
 	2. test override:
 		2.1 write 240x240 frame with override mode and test it.
 	3. test tft driver:

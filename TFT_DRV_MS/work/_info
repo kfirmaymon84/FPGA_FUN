@@ -10,38 +10,36 @@ z2
 cModel Technology
 dC:/FPGA/FPGA_FUN/TFT_DRV
 Ettf_driver
-Z0 w1716654844
-Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z0 w1716703296
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 54
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z4 dC:/FPGA/FPGA_FUN/TFT_DRV_MS
 Z5 8C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd
 Z6 FC:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd
 l0
-L21 1
-V^JbTzI=QPHA1UC_cZi@E21
+L21
+Vad5XHSC6zaD`7`]P5^7[G0
 !s100 IFKe<BAgLL`X_M20TVdjL1
-Z7 OV;C;2020.1;71
+Z7 OV;C;10.5b;63
 32
-Z8 !s110 1716654852
+Z8 !s110 1716703311
 !i10b 1
-Z9 !s108 1716654852.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd|
+Z9 !s108 1716703311.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd|
 Z11 !s107 C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd|
 !i113 1
-Z12 o-work work -2002 -explicit
+Z12 o-work work
 Z13 tExplicit 1 CvgOpt 0
 Abehavioral
 R1
 R2
 R3
-DEx4 work 10 ttf_driver 0 22 ^JbTzI=QPHA1UC_cZi@E21
-!i122 54
+DEx4 work 10 ttf_driver 0 22 ad5XHSC6zaD`7`]P5^7[G0
 l93
-L51 221
-VTkTcZjQ3Ii6H9C@@QaM>e1
-!s100 Q5VJJ[EOM?dQ3[6FP7bdz3
+L51
+VIHQa0cY?:hhZeNV4;ERHC0
+!s100 5kHmI[Uo@@HRoCce<1A]e0
 R7
 32
 R8
@@ -53,25 +51,24 @@ R11
 R12
 R13
 Ettf_driver_tb
-Z14 w1716654616
-Z15 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z14 w1716703105
+Z15 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
 R3
-!i122 55
 R4
 Z16 8C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd
 Z17 FC:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd
 l0
-L11 1
-V`T^8j[I>d40:b3g=N`D]d3
+L11
+VSiBen3V`PNPSjFRW?^Y_`0
 !s100 C7eOe:SS=cPMazjE[87H81
 R7
 32
 R8
 !i10b 1
 R9
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd|
+Z18 !s90 -reportprogress|300|-work|work|C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd|
 Z19 !s107 C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd|
 !i113 1
 R12
@@ -81,12 +78,11 @@ R15
 R1
 R2
 R3
-Z20 DEx4 work 13 ttf_driver_tb 0 22 `T^8j[I>d40:b3g=N`D]d3
-!i122 55
+Z20 DEx4 work 13 ttf_driver_tb 0 22 SiBen3V`PNPSjFRW?^Y_`0
 l67
-Z21 L15 133
-Z22 V`n3F7=^zWP=f^X?UIzW<@1
-Z23 !s100 MzUDBf2F[89Vc?h5I^Nz90
+L15
+Z21 VzH]jma52^Tn1e5_QA;Pz]1
+Z22 !s100 ?6PBDdXN:UeUia637T@Tb0
 R7
 32
 R8

@@ -1,0 +1,13 @@
+Sun May 26 09:31:30 +0300 2024
+Trace back: can't read "itk_component(4)": no such element in array
+    while executing
+"$itk_component($name) isMapped """
+    (object "::.main_pane.watch.interior.cs.body.m" method "::vsimwidgets::Monitor::mapped" body line 2)
+    invoked from within
+"::.main_pane.watch.interior.cs.body.m mapped 4"
+    (in namespace inscope "::vsimwidgets::MonitorNode" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::MonitorNode {::.main_pane.watch.interior.cs.body.m mapped 4}"
+    (command bound to event)
+  <2:C:/intelFPGA/18.1/modelsim_ase/win32aloem/tk8.5/bgerror.tcl:92: ::tkerror {can't read "itk_component(4)": no such element in array}
+  <1:proc:-1: ::tk::dialog::error::bgerror {can't read "itk_component(4)": no such element in array}

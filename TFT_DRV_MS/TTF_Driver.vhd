@@ -74,7 +74,7 @@ architecture Behavioral of TTF_Driver is
 	
 	-- Memory frame buffer
 	--type t_Memory is array (0 to 57602) of std_logic_vector(7 downto 0);
-	type t_Memory is array (0 to 127) of std_logic_vector(7 downto 0);
+	type t_Memory is array (0 to 28810) of std_logic_vector(7 downto 0);
 	signal memBuffer : t_Memory := (others => (others => '0'));
 	
 	-- State machine signals
