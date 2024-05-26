@@ -37,7 +37,7 @@ entity TTF_Driver is
 			
 			-- Memory write pins
 			writeMemoryEN 	: in STD_LOGIC;
-			writeClk 	: in STD_LOGIC;
+			writeClk 		: in STD_LOGIC;
 			memoryAddress 	: in STD_LOGIC_VECTOR (14 downto 0);
 			memoryData 		: in STD_LOGIC_VECTOR (7 downto 0);
 			
@@ -90,6 +90,8 @@ architecture Behavioral of TTF_Driver is
 	signal pixelCount 		: std_logic_vector (15 downto 0) 	:= (others => '0');
     signal pixelInFrame 	: std_logic_vector (15 downto 0) 	:= (others => '0');
 	signal stepCount 		: std_logic_vector (7 downto 0) 	:= (others => '0');
+	
+	signal WRX_bit 			: STD_LOGIC := '0';
 begin
 
 MemWrPro : process(writeClk) -- Memory process
@@ -112,7 +114,7 @@ begin
         if nEnable = '1' then
 			-- Clear TFT pins
 			DC_out <= '0';
-			WRX_out <= '0';
+			WRX_bit <= '0';
 			tftData_out <= (others => '0');
 			
 			-- Ready pin Clear
@@ -127,7 +129,7 @@ begin
             if override = '1' then
 				-- Set TFT pins passthru
                 DC_out <= DC_in;
-                WRX_out <= WRX_in;
+                WRX_bit <= WRX_in;
                 tftData_out <= tftData_in;
 				
 				-- Reset ready pin
@@ -180,16 +182,19 @@ begin
                             
 							-- Inital TFT pins to send 0x2C command
                             DC_out <= '0'; 
-                            WRX_out <= '0';
+                            WRX_bit <= '0';
                             tftData_out <= x"2C";
                         elsif to_integer(unsigned(stepCount)) = 3 then -- Read Height
                             -- Get frame Height
 							frame_height <= memBuffer(to_integer(unsigned(idx)));
 							
 							-- Clock WRX_Pin
-                            WRX_out <= '1';
+                            WRX_bit <= '1';
 						elsif to_integer(unsigned(stepCount)) = 7 then -- Clear WRX
-							WRX_out <= '0';
+							WRX_bit <= '0';
+							
+							-- set idx to start of the frame
+                            idx <= std_logic_vector(unsigned(idx) + 1); 
                         end if;
 
                         if to_integer(unsigned(stepCount)) = 11 then
@@ -199,12 +204,13 @@ begin
 							-- Inital TFT pins
 							DC_out <= '1';
 							
-							-- set idx to start of the frame
-                            idx <= std_logic_vector(unsigned(idx) + 1); 
-							
 							-- Inital step counter 
 							stepCount <= (others => '0');
 							
+							--Get pixel from memory
+							pixel1 <=  colors(to_integer(unsigned(memBuffer(to_integer(unsigned(idx)))(7 downto 4)))); -- Get RGB565 color format of pixel 1 
+							pixel2 <=  colors(to_integer(unsigned(memBuffer(to_integer(unsigned(idx)))(3 downto 0)))); -- Get RGB565 color format of pixel 2
+							idx <= std_logic_vector( unsigned(idx) + 1 );
 							-- Set state index to printFrame_st	
                             stateIdx <= printFrame_st;
                         else
@@ -214,41 +220,42 @@ begin
 						-- Set debug pins
                         dbg_out <= "0011";
                     when printFrame_st =>
-                        if to_integer(unsigned(stepCount)) = 0 then -- Setup LSB pixel 0
+                        if to_integer(unsigned(stepCount)) = 0 then 	-- Setup MSB pixel 1
+							tftData_out <= pixel1(15 downto 8);
+                        elsif to_integer(unsigned(stepCount)) = 1 then 	-- Send MSB pixle 1
+							WRX_bit <= '1';
+                        elsif to_integer(unsigned(stepCount)) = 3 then 	-- Reset WRX pin
+							WRX_bit <= '0';
+                        elsif to_integer(unsigned(stepCount)) = 4 then 	-- Setup LSB pixel 1
+							tftData_out <= pixel1(7 downto 0);
+						elsif to_integer(unsigned(stepCount)) = 5 then -- Send LSB pixle 1
+							WRX_bit <= '1';
+						elsif to_integer(unsigned(stepCount)) = 7 then -- Reset WRX pin
+							WRX_bit <= '0';
+							pixelCount <= std_logic_vector( unsigned(pixelCount) + 1 );
+						elsif to_integer(unsigned(stepCount)) = 8 then -- Setup MSB pixle 2
+							tftData_out <= pixel2(15 downto 8);
+						elsif to_integer(unsigned(stepCount)) = 9 then -- Send MSB pixle 2
+							WRX_bit <= '1';
+						elsif to_integer(unsigned(stepCount)) = 11 then -- Reset WRX pin
+							WRX_bit <= '0';
+						elsif to_integer(unsigned(stepCount)) = 12 then -- Setup LSB pixle 2
+							tftData_out <= pixel2(7 downto 0);
+							
+						elsif to_integer(unsigned(stepCount)) = 13 then -- Send LSB pixle 2
+							WRX_bit <= '1';
+						elsif to_integer(unsigned(stepCount)) = 15 then -- Reset WRX pin, advance to next pixels
+                            WRX_bit <= '0';
+                            pixelCount <= std_logic_vector( unsigned(pixelCount) + 1 );
+							
 							--Get pixel from memory
 							pixel1 <=  colors(to_integer(unsigned(memBuffer(to_integer(unsigned(idx)))(7 downto 4)))); -- Get RGB565 color format of pixel 1 
-							pixel2 <=  colors(to_integer(unsigned(memBuffer(to_integer(unsigned(idx)))(3 downto 0)))); -- Get RGB565 color format of pixel 2							
-                        elsif to_integer(unsigned(stepCount)) = 1 then 	-- Setup MSB pixel 1
-							tftData_out <= pixel1(15 downto 8);
-                        elsif to_integer(unsigned(stepCount)) = 3 then 	-- Send MSB pixle 1
-							WRX_out <= '1';
-                        elsif to_integer(unsigned(stepCount)) = 7 then 	-- Reset WRX pin
-							WRX_out <= '0';
-                        elsif to_integer(unsigned(stepCount)) = 8 then 	-- Setup LSB pixel 1
-							tftData_out <= pixel1(7 downto 0);
-						elsif to_integer(unsigned(stepCount)) = 11 then -- Send LSB pixle 1
-							WRX_out <= '1';
-						elsif to_integer(unsigned(stepCount)) = 15 then -- Reset WRX pin
-							WRX_out <= '0';
-							pixelCount <= std_logic_vector( unsigned(pixelCount) + 1 );
-						elsif to_integer(unsigned(stepCount)) = 16 then -- Setup MSB pixle 2
-							tftData_out <= pixel2(15 downto 8);
-						elsif to_integer(unsigned(stepCount)) = 19 then -- Send MSB pixle 2
-							WRX_out <= '1';
-						elsif to_integer(unsigned(stepCount)) = 23 then -- Reset WRX pin
-							WRX_out <= '0';
-						elsif to_integer(unsigned(stepCount)) = 24 then -- Setup LSB pixle 2
-							tftData_out <= pixel2(7 downto 0);
-						elsif to_integer(unsigned(stepCount)) = 27 then -- Send LSB pixle 2
-							WRX_out <= '1';
-						elsif to_integer(unsigned(stepCount)) = 31 then -- Reset WRX pin, advance to next pixels
-                            WRX_out <= '0';
-                            pixelCount <= std_logic_vector( unsigned(pixelCount) + 1 );
-                            idx <= std_logic_vector( unsigned(idx) + 1 );
+							pixel2 <=  colors(to_integer(unsigned(memBuffer(to_integer(unsigned(idx)))(3 downto 0)))); -- Get RGB565 color format of pixel 2
+							idx <= std_logic_vector( unsigned(idx) + 1 );
                         end if;
 
 						-- Step counter handler
-						if to_integer(unsigned(stepCount)) = 31 then
+						if to_integer(unsigned(stepCount)) = 15 then
 							stepCount <= (others => '0'); -- Reset step counter
 						else
 							stepCount <= std_logic_vector( unsigned(stepCount) + 1 ); -- Increment step counter
@@ -263,8 +270,10 @@ begin
                         dbg_out <= "0100";            
                     when others => null;
                 end case;
+				
            end if; -- override = '1'             
         end if; -- nEnable = '1'
+		WRX_out <= WRX_bit;
     end if; -- rising_edge(clk)
 end process;
 

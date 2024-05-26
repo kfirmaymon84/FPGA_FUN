@@ -43,7 +43,7 @@ int main()
 	{
 		for (int w = 0; w < WIDTH; w++) {
             pixCounter++;
-			uint8_t idx = w / 1;//BAR_WIDTH;
+			uint8_t idx = w / BAR_WIDTH;
 			if (isEven)
 			{
 				uint8_t bothPixels = (firstPixel  << 4) | barColor[idx];
