@@ -1,34 +1,14 @@
-/******************************************************************************
-* Copyright (C) 2023 Advanced Micro Devices, Inc. All Rights Reserved.
-* SPDX-License-Identifier: MIT
-******************************************************************************/
-/*
- * helloworld.c: simple test application
- *
- * This application configures UART 16550 to baud rate 9600.
- * PS7 UART (Zynq) is not initialized by this application, since
- * bootrom/bsp configures it to baud rate 115200
- *
- * ------------------------------------------------
- * | UART TYPE   BAUD RATE                        |
- * ------------------------------------------------
- *   uartns550   9600
- *   uartlite    Configurable only in HW design
- *   ps7_uart    115200 (configured by bootrom/bsp)
- */
-
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
 #include "xgpio.h"
 #include "sleep.h"
-
 #include"xuartlite.h"
 
 #include "gpioHandler.h"
 #include "displayHandler.h"
-#define UART_DEVICE_ID    XPAR_XUARTPS_0_DEVICE_ID
+
 XGpio gpio;
 
 int main()
@@ -51,27 +31,44 @@ int main()
         xil_printf("Got-> %c\n",c);
 
         switch (c) {
-			case 'I':
-				//Set TFT_DRVIVER_OVERRIDE pin
-				gpio_pinSet(&gpio, 1, TFT_DRVIVER_OVERRIDE);
-				gpio_pinSet(&gpio, 1, DBG_LED_1);
-
+            case '0':
+                // Init display
+				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 				usleep(1000); //Delay 1 millisec
 				displayInit();
-				usleep(10000); //Delay 10 millisec
+				usleep(1000); //Delay 1 millisec
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+                break;
+            case '1':
+                //Clear screen
+				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+				usleep(1000); //Delay 1 millisec
+				clearScreen();
+				usleep(1000); //Delay 1 millisec
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+            break;
+			case '2': //TEST 1
+                // 8 color bar in override mode
+				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+				usleep(1000); //Delay 1 millisec
 				writeColorBars();
-				usleep(1000000); //Delay 1000 millisec
-				//Clear TFT_DRVIVER_OVERRIDE pin
-				gpio_pinClear(&gpio, 1, TFT_DRVIVER_OVERRIDE);
-				gpio_pinClear(&gpio, 1, DBG_LED_1);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 			break;
+            case '3': //TEST 2
+                writeToMemory();
+                usleep(1000); //Delay 1 millisec
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+                gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+            break;
+            default:
+            break;
         }
-        print("High\n\r");
-        gpio_portSetMask(&gpio, 1, 0xA0000000);
-        usleep(500000);
-        print("Low\n\r");
-        gpio_portClearMask(&gpio, 1, 0x80000000);
-
         usleep(500000);
     }
 

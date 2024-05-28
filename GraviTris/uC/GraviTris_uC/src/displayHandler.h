@@ -3,6 +3,26 @@
 
 #include "gpioHandler.h"
 
+enum colors
+{
+	black = 0,
+	maroon,
+	green,
+	olive,
+	navy_blue,
+	purple,
+	teal,
+	silver,
+	gray,
+	red,
+	lime_green,
+	yellow,
+	blue,
+	fuchsia,
+	aqua_light,
+	white,
+};
+
 // color definitions
 #define	BLACK   0x0000
 #define	BLUE    0x001F
@@ -13,7 +33,7 @@
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
 
-//Function decleretion
+//Function declaration
 void writePort(uint8_t data);
 void writeCommand(uint8_t cmd);
 void writeData(uint8_t data);
@@ -26,6 +46,9 @@ void writeColorBars();
 void writeWindowColorBars(uint8_t width, uint8_t height);
 void clearScreen();
 void writeColor(unsigned long color);
-// End function decleretion
+
+void writeToMemory();
+void writeByteToMemory(uint16_t address, uint8_t data);
+// End function declaration
 
 #endif //__DISPLAY_HANDLER_H_

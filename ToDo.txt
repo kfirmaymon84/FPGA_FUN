@@ -1,0 +1,7 @@
+Task ToDo:
+1. Test Override mode:
+    1. Print full 8 color bar screen.
+2. Test writing to memory:
+    2. write 8 color bar to memory and toggle start pin.
+3. Test ready and start pin:
+    3.1 measure frame rate.

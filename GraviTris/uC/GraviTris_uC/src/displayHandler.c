@@ -3,40 +3,41 @@
 #include "sleep.h"
 extern XGpio gpio;
 
+
+
+
 void writePort(uint8_t data) {
     //Clear TFT_DRIVER_DATA bits
-    gpio_portClearMask(&gpio, 1, (0x000000FF << TFT_DRVIVER_DATA));
+    gpio_portClearMask(&gpio, TFT_DRIVER_OUT_PIN_CH, (0x000000FF << TFT_DRIVER_DATA));
     //Set TFT_DRIVER_DATA bits as data
-    gpio_portSetMask(&gpio, 1, ((uint32_t)data << TFT_DRVIVER_DATA));
+    gpio_portSetMask(&gpio, TFT_DRIVER_OUT_PIN_CH, ((uint32_t)data << TFT_DRIVER_DATA));
 }
 
 void writeCommand(uint8_t cmd){
     //Clear DC and WRX pins
-    gpio_pinClear(&gpio, 1, TFT_DRVIVER_DC);
-    gpio_pinClear(&gpio, 1, TFT_DRVIVER_WRX);
-
+    gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_DC);
+    gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 
     //Setup port data pins
 	writePort(cmd);
     //Set wrx pin
-	gpio_pinSet(&gpio, 1, TFT_DRVIVER_WRX);
+	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 	//Clear wrx pin
-	gpio_pinClear(&gpio, 1, TFT_DRVIVER_WRX);
+	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 }
 
 void writeData(uint8_t data){
-
     //Set DC pin
-    gpio_pinSet(&gpio, 1, TFT_DRVIVER_DC);
+    gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_DC);
     //Clear WRX pin
-	gpio_pinClear(&gpio, 1, TFT_DRVIVER_WRX);
+	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 
     //Setup port data pins
 	writePort(data);
 	//Set wrx pin
-	gpio_pinSet(&gpio, 1, TFT_DRVIVER_WRX);
+	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 	//Clear wrx pin
-	gpio_pinClear(&gpio, 1, TFT_DRVIVER_WRX);
+	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 }
 
 void resetDisplay(){
@@ -359,7 +360,7 @@ void exitSleep (){
 
 void writeColorBars(){
 	uint16_t colors[8]={WHITE, YELLOW, MAGENTA, RED, CYAN, GREEN, BLUE, BLACK};
-
+	
 	for(int h=0;h<240;h++){
 		for(int w=0;w<240;w++){
 			writeColor(colors[w/30]);
@@ -400,3 +401,52 @@ void writeColor(unsigned long color){
   data = color;
   writeData(data);
 }
+
+void writeToMemory(){
+	const uint8_t WIDTH = 240;
+	const uint8_t HEIGHT = 240;
+	const int BARS = 8;
+	const int BAR_WIDTH = WIDTH / BARS;
+	uint8_t barColor[BARS] = {white, yellow, teal, green, fuchsia, red, blue, black};
+	uint8_t isEven = 0;
+	uint16_t pixCounter = 0;
+	uint8_t firstPixel = 0x00;
+	uint16_t address = 0x0000;
+
+	for (int h = 0; h < HEIGHT; h++)
+	{
+		for (int w = 0; w < WIDTH; w++) {
+            pixCounter++;
+			uint8_t idx = w / BAR_WIDTH;
+			if (isEven)
+			{
+				uint8_t bothPixels = (firstPixel  << 4) | barColor[idx];
+				writeByteToMemory(address, bothPixels);
+				isEven = 0;
+			}else if(isEven == 0 && w == (WIDTH-1) && h == (HEIGHT-1)){ // if less pixel is even number
+                uint8_t bothPixels = barColor[idx] << 4;
+				writeByteToMemory(address, bothPixels);
+            }
+			else {
+				firstPixel = barColor[idx];
+				isEven = 1;
+			}
+		}
+	}
+}
+
+void writeByteToMemory(uint16_t address, uint8_t data){
+	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_EN);
+	
+	gpio_portClearMask(&gpio, MEMORY_OUT_PIN_CH, address << MEMORY_ADDRESS);
+	gpio_portSetMask(&gpio, MEMORY_OUT_PIN_CH, address << MEMORY_ADDRESS);
+
+	gpio_portClearMask(&gpio, MEMORY_OUT_PIN_CH, data << MEMORY_DATA);
+	gpio_portSetMask(&gpio, MEMORY_OUT_PIN_CH, data << MEMORY_DATA);
+
+	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
+	usleep(1);
+	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
+	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_EN);
+}
+
