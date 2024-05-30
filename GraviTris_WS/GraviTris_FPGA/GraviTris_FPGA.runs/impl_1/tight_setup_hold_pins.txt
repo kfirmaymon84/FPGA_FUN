@@ -1,0 +1,27 @@
++==============================+==============================+===================================================+
+| Launch Setup Clock           | Launch Hold Clock            | Pin                                               |
++==============================+==============================+===================================================+
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/tftDrv_data_reg[2]/D    |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[1]/D  |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[0]/D  |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryData_reg[0]/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryData_reg[7]/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryData_reg[1]/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryData_reg[3]/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/dbg_LED2_reg/D          |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[2]/D  |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/tftDrv_DC_in_reg/D      |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[10]/D |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/tftDrv_data_reg[7]/D    |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryWriteEN_reg/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/tftDrv_data_reg[3]/D    |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/tftDrv_data_reg[0]/D    |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[4]/D  |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[12]/D |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[3]/D  |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryData_reg[6]/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/tftDrv_data_reg[4]/D    |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryData_reg[2]/D     |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[14]/D |
+| clk_100_design_1_clk_wiz_0_0 | clk_100_design_1_clk_wiz_0_0 | design_1_i/IO_Mapper_0/U0/memoryAddress_reg[9]/D  |
++------------------------------+------------------------------+---------------------------------------------------+
