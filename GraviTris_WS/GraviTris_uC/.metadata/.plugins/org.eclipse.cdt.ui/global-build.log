@@ -1,8 +1,23 @@
 Nothing to build in platform 'design_1_wrapper'
 
-14:11:21 **** Incremental Build of configuration Debug for project GraviTris_uC ****
+15:03:53 **** Incremental Build of configuration Debug for project GraviTris_uC ****
 make all 
-make: Nothing to be done for 'all'.
-14:11:22 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
+'Building file: ../src/displayHandler.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/displayHandler.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/displayHandler.d" -MT"src/displayHandler.o" -o "src/displayHandler.o" "../src/displayHandler.c"
+'Finished building: ../src/displayHandler.c'
+' '
+'Building target: GraviTris_uC.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "GraviTris_uC.elf"  ./src/displayHandler.o ./src/gpioHandler.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: GraviTris_uC.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size GraviTris_uC.elf  |tee "GraviTris_uC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14032	    356	   3284	  17672	   4508	GraviTris_uC.elf
+'Finished building: GraviTris_uC.elf.size'
+' '
+15:03:54 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

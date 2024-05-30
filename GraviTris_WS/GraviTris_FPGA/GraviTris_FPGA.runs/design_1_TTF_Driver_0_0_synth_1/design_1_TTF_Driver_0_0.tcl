@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_TTF_Driver_0_0_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 8
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/mref
@@ -94,7 +91,7 @@ set_property ip_output_repo c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTr
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/FPGA/FPGA_FUN/GraviTris/GraviTris.srcs/sources_1/imports/TFT_DRV_MS/TTF_Driver.vhd
+read_vhdl -library xil_defaultlib C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.srcs/sources_1/imports/TFT_DRV_MS/TTF_Driver.vhd
 read_ip -quiet C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.srcs/sources_1/bd/design_1/ip/design_1_TTF_Driver_0_0/design_1_TTF_Driver_0_0.xci
 
 OPTRACE "Adding files" END { }

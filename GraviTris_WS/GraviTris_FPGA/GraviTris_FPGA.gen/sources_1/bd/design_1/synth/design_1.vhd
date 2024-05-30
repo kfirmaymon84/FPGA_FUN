@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Thu May 30 11:14:57 2024
+--Date        : Thu May 30 14:37:25 2024
 --Host        : CP-230194 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1826,7 +1826,7 @@ entity design_1 is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=5,da_clkrst_cnt=8,da_mb_cnt=4,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=5,da_clkrst_cnt=18,da_mb_cnt=4,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -1836,7 +1836,6 @@ architecture STRUCTURE of design_1 is
   port (
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    clk_16 : out STD_LOGIC;
     clk_100 : out STD_LOGIC;
     locked : out STD_LOGIC
   );
@@ -1948,27 +1947,6 @@ architecture STRUCTURE of design_1 is
     probe3 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_ila_0_0;
-  component design_1_TTF_Driver_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    nEnable : in STD_LOGIC;
-    ready : out STD_LOGIC;
-    start : in STD_LOGIC;
-    override : in STD_LOGIC;
-    DC_in : in STD_LOGIC;
-    WRX_in : in STD_LOGIC;
-    tftData_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    DC_out : out STD_LOGIC;
-    WRX_out : out STD_LOGIC;
-    tftData_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    memoryWriteEN : in STD_LOGIC;
-    memoryWriteClk : in STD_LOGIC;
-    memoryAddress : in STD_LOGIC_VECTOR ( 14 downto 0 );
-    memoryData : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    dbg_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dbug_Out1 : out STD_LOGIC
-  );
-  end component design_1_TTF_Driver_0_0;
   component design_1_Divider_0_0 is
   port (
     clk_100 : in STD_LOGIC;
@@ -2094,6 +2072,27 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_clk_wiz_0_100M_3;
+  component design_1_TTF_Driver_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    nEnable : in STD_LOGIC;
+    ready : out STD_LOGIC;
+    start : in STD_LOGIC;
+    override : in STD_LOGIC;
+    DC_in : in STD_LOGIC;
+    WRX_in : in STD_LOGIC;
+    tftData_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    DC_out : out STD_LOGIC;
+    WRX_out : out STD_LOGIC;
+    tftData_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    memoryWriteEN : in STD_LOGIC;
+    memoryWriteClk : in STD_LOGIC;
+    memoryAddress : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    memoryData : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    dbg_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    dbug_Out1 : out STD_LOGIC
+  );
+  end component design_1_TTF_Driver_0_0;
   signal Divider_0_clk_1K : STD_LOGIC;
   signal IO_Mapper_0_dbg_LED0 : STD_LOGIC;
   signal IO_Mapper_0_dbg_LED1 : STD_LOGIC;
@@ -2119,11 +2118,10 @@ architecture STRUCTURE of design_1 is
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_uartlite_0_UART_RxD : STD_LOGIC;
   signal axi_uartlite_0_UART_TxD : STD_LOGIC;
-  signal clk_wiz_0_clk_16 : STD_LOGIC;
+  signal clk_wiz_0_clk_100 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal dbg_SW_0_1 : STD_LOGIC;
   signal mdm_1_debug_sys_rst : STD_LOGIC;
-  signal microblaze_0_Clk : STD_LOGIC;
   signal microblaze_0_axi_dp_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal microblaze_0_axi_dp_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal microblaze_0_axi_dp_ARREADY : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2279,12 +2277,12 @@ begin
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
 Divider_0: component design_1_Divider_0_0
      port map (
-      clk_100 => microblaze_0_Clk,
+      clk_100 => clk_wiz_0_clk_100,
       clk_1K => Divider_0_clk_1K
     );
 IO_Mapper_0: component design_1_IO_Mapper_0_0
      port map (
-      clk => clk_wiz_0_clk_16,
+      clk => clk_wiz_0_clk_100,
       dbg_LED0 => IO_Mapper_0_dbg_LED0,
       dbg_LED1 => IO_Mapper_0_dbg_LED1,
       dbg_LED2 => IO_Mapper_0_dbg_LED2,
@@ -2310,7 +2308,7 @@ TTF_Driver_0: component design_1_TTF_Driver_0_0
       DC_out => TTF_Driver_0_DC_out,
       WRX_in => IO_Mapper_0_tftDrv_WRX_in,
       WRX_out => TTF_Driver_0_WRX_out,
-      clk => clk_wiz_0_clk_16,
+      clk => clk_wiz_0_clk_100,
       dbg_out(3 downto 0) => TTF_Driver_0_dbg_out(3 downto 0),
       dbug_Out1 => TTF_Driver_0_dbug_Out1,
       memoryAddress(14 downto 0) => IO_Mapper_0_memoryAddress(14 downto 0),
@@ -2328,7 +2326,7 @@ axi_gpio_0: component design_1_axi_gpio_0_0
      port map (
       gpio2_io_o(31 downto 0) => axi_gpio_0_gpio2_io_o(31 downto 0),
       gpio_io_o(31 downto 0) => axi_gpio_0_gpio_io_o(31 downto 0),
-      s_axi_aclk => microblaze_0_Clk,
+      s_axi_aclk => clk_wiz_0_clk_100,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M01_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       s_axi_arready => microblaze_0_axi_periph_M01_AXI_ARREADY,
@@ -2351,7 +2349,7 @@ axi_gpio_0: component design_1_axi_gpio_0_0
 axi_gpio_1: component design_1_axi_gpio_1_0
      port map (
       gpio_io_i(31 downto 0) => IO_Mapper_0_portC(31 downto 0),
-      s_axi_aclk => microblaze_0_Clk,
+      s_axi_aclk => clk_wiz_0_clk_100,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       s_axi_arready => microblaze_0_axi_periph_M02_AXI_ARREADY,
@@ -2375,7 +2373,7 @@ axi_uartlite_0: component design_1_axi_uartlite_0_0
      port map (
       interrupt => NLW_axi_uartlite_0_interrupt_UNCONNECTED,
       rx => axi_uartlite_0_UART_RxD,
-      s_axi_aclk => microblaze_0_Clk,
+      s_axi_aclk => clk_wiz_0_clk_100,
       s_axi_araddr(3 downto 0) => microblaze_0_axi_periph_M03_AXI_ARADDR(3 downto 0),
       s_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       s_axi_arready => microblaze_0_axi_periph_M03_AXI_ARREADY,
@@ -2398,8 +2396,7 @@ axi_uartlite_0: component design_1_axi_uartlite_0_0
     );
 clk_wiz_0: component design_1_clk_wiz_0_0
      port map (
-      clk_100 => microblaze_0_Clk,
-      clk_16 => clk_wiz_0_clk_16,
+      clk_100 => clk_wiz_0_clk_100,
       clk_in1 => sys_clock_1,
       locked => clk_wiz_0_locked,
       reset => reset_1
@@ -2428,7 +2425,7 @@ mdm_1: component design_1_mdm_1_3
 microblaze_0: component design_1_microblaze_0_5
      port map (
       Byte_Enable(0 to 3) => microblaze_0_dlmb_1_BE(0 to 3),
-      Clk => microblaze_0_Clk,
+      Clk => clk_wiz_0_clk_100,
       DCE => microblaze_0_dlmb_1_CE,
       DReady => microblaze_0_dlmb_1_READY,
       DUE => microblaze_0_dlmb_1_UE,
@@ -2518,9 +2515,9 @@ microblaze_0_axi_intc: component design_1_microblaze_0_axi_intc_1
       irq => microblaze_0_interrupt_INTERRUPT,
       processor_ack(1) => microblaze_0_interrupt_ACK(0),
       processor_ack(0) => microblaze_0_interrupt_ACK(1),
-      processor_clk => microblaze_0_Clk,
+      processor_clk => clk_wiz_0_clk_100,
       processor_rst => rst_clk_wiz_0_100M_mb_reset,
-      s_axi_aclk => microblaze_0_Clk,
+      s_axi_aclk => clk_wiz_0_clk_100,
       s_axi_araddr(8 downto 0) => microblaze_0_intc_axi_ARADDR(8 downto 0),
       s_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       s_axi_arready => microblaze_0_intc_axi_ARREADY,
@@ -2542,9 +2539,9 @@ microblaze_0_axi_intc: component design_1_microblaze_0_axi_intc_1
     );
 microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_3
      port map (
-      ACLK => microblaze_0_Clk,
+      ACLK => clk_wiz_0_clk_100,
       ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
-      M00_ACLK => microblaze_0_Clk,
+      M00_ACLK => clk_wiz_0_clk_100,
       M00_ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       M00_AXI_araddr(31 downto 0) => microblaze_0_intc_axi_ARADDR(31 downto 0),
       M00_AXI_arready => microblaze_0_intc_axi_ARREADY,
@@ -2563,7 +2560,7 @@ microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_3
       M00_AXI_wready => microblaze_0_intc_axi_WREADY,
       M00_AXI_wstrb(3 downto 0) => microblaze_0_intc_axi_WSTRB(3 downto 0),
       M00_AXI_wvalid => microblaze_0_intc_axi_WVALID,
-      M01_ACLK => microblaze_0_Clk,
+      M01_ACLK => clk_wiz_0_clk_100,
       M01_ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       M01_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M01_AXI_ARADDR(31 downto 0),
       M01_AXI_arready(0) => microblaze_0_axi_periph_M01_AXI_ARREADY,
@@ -2582,7 +2579,7 @@ microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_3
       M01_AXI_wready(0) => microblaze_0_axi_periph_M01_AXI_WREADY,
       M01_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
       M01_AXI_wvalid(0) => microblaze_0_axi_periph_M01_AXI_WVALID(0),
-      M02_ACLK => microblaze_0_Clk,
+      M02_ACLK => clk_wiz_0_clk_100,
       M02_ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       M02_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(31 downto 0),
       M02_AXI_arready(0) => microblaze_0_axi_periph_M02_AXI_ARREADY,
@@ -2601,7 +2598,7 @@ microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_3
       M02_AXI_wready(0) => microblaze_0_axi_periph_M02_AXI_WREADY,
       M02_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
       M02_AXI_wvalid(0) => microblaze_0_axi_periph_M02_AXI_WVALID(0),
-      M03_ACLK => microblaze_0_Clk,
+      M03_ACLK => clk_wiz_0_clk_100,
       M03_ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       M03_AXI_araddr(31 downto 0) => microblaze_0_axi_periph_M03_AXI_ARADDR(31 downto 0),
       M03_AXI_arready(0) => microblaze_0_axi_periph_M03_AXI_ARREADY,
@@ -2620,7 +2617,7 @@ microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_3
       M03_AXI_wready(0) => microblaze_0_axi_periph_M03_AXI_WREADY,
       M03_AXI_wstrb(3 downto 0) => microblaze_0_axi_periph_M03_AXI_WSTRB(3 downto 0),
       M03_AXI_wvalid(0) => microblaze_0_axi_periph_M03_AXI_WVALID(0),
-      S00_ACLK => microblaze_0_Clk,
+      S00_ACLK => clk_wiz_0_clk_100,
       S00_ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       S00_AXI_araddr(31 downto 0) => microblaze_0_axi_dp_ARADDR(31 downto 0),
       S00_AXI_arprot(2 downto 0) => microblaze_0_axi_dp_ARPROT(2 downto 0),
@@ -2663,7 +2660,7 @@ microblaze_0_local_memory: entity work.microblaze_0_local_memory_imp_1K0VQXK
       ILMB_ready => microblaze_0_ilmb_1_READY,
       ILMB_ue => microblaze_0_ilmb_1_UE,
       ILMB_wait => microblaze_0_ilmb_1_WAIT,
-      LMB_Clk => microblaze_0_Clk,
+      LMB_Clk => clk_wiz_0_clk_100,
       SYS_Rst => rst_clk_wiz_0_100M_bus_struct_reset(0)
     );
 microblaze_0_xlconcat: component design_1_microblaze_0_xlconcat_1
@@ -2682,6 +2679,6 @@ rst_clk_wiz_0_100M: component design_1_rst_clk_wiz_0_100M_3
       mb_reset => rst_clk_wiz_0_100M_mb_reset,
       peripheral_aresetn(0) => rst_clk_wiz_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_clk_wiz_0_100M_peripheral_reset_UNCONNECTED(0),
-      slowest_sync_clk => microblaze_0_Clk
+      slowest_sync_clk => clk_wiz_0_clk_100
     );
 end STRUCTURE;

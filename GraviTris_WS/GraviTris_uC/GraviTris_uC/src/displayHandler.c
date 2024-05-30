@@ -412,57 +412,47 @@ void writeToMemory(){
 	uint8_t bothPixels = 0xFF;
 	uint8_t idx = 0;
 
-	for(int j=0;j<30;j++){
-		address = 0;
-		uint32_t start = millisCounter;
-		gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH, DBG_LED_0);
-		gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH, MEMORY_WRITE_EN);
-		writeByteToMemory(address++, 240);
-		writeByteToMemory(address++, 240);
-		for(int i=0;i<28800;i++){
-			writeByteToMemory(address++, bothPixels);
+	uint32_t start = millisCounter;
+	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH, DBG_LED_0);
+	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH, MEMORY_WRITE_EN);
+	writeByteToMemory(address++, 240);
+	writeByteToMemory(address++, 240);
+	for (int h = 0; h < HEIGHT; h++)
+	{
+		for (int w = 0; w < WIDTH; w++) {
+			idx = w / BAR_WIDTH;
+
+			if (isEven)
+			{
+				bothPixels = (firstPixel  << 4) | barColor[idx];
+				writeByteToMemory(address++, bothPixels);
+				isEven = 0;
+			}else if(isEven == 0 && w == (WIDTH-1) && h == (HEIGHT-1)){ // if less pixel is even number
+				uint8_t bothPixels = barColor[idx] << 4;
+				writeByteToMemory(address++, bothPixels);
+			}
+			else {
+				firstPixel = barColor[idx];
+				isEven = 1;
+			}
 		}
-		bothPixels++;
-		gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_EN);
-
-		uint32_t t = millisCounter - start;
-		xil_printf("time = %d\n",t);
-		gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH, DBG_LED_0);
-
-		gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_START);
-		gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_START);
-
 	}
+	bothPixels++;
+	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_EN);
 
-//	for (int h = 0; h < HEIGHT; h++)
-//	{
-//		for (int w = 0; w < WIDTH; w++) {
-//			idx = w / BAR_WIDTH;
-//
-//			if (isEven)
-//			{
-//				bothPixels = (firstPixel  << 4) | barColor[idx];
-//				//writeByteToMemory(address++, bothPixels);
-//				isEven = 0;
-//			}else if(isEven == 0 && w == (WIDTH-1) && h == (HEIGHT-1)){ // if less pixel is even number
-//                uint8_t bothPixels = barColor[idx] << 4;
-//				//writeByteToMemory(address++, bothPixels);
-//            }
-//			else {
-//				firstPixel = barColor[idx];
-//				isEven = 1;
-//			}
-//		}
-//	}
+	uint32_t t = millisCounter - start;
+	xil_printf("time = %d\n",t);
+	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH, DBG_LED_0);
+
+	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_START);
+	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_START);
+
+
 
 }
 
 void writeByteToMemory(uint16_t address, uint8_t data){
-	gpio_portClearMask(&gpio, MEMORY_OUT_PIN_CH, 0xFFFF << MEMORY_ADDRESS);
-	gpio_portSetMask(&gpio, MEMORY_OUT_PIN_CH, address << MEMORY_ADDRESS);
-
-	gpio_portClearMask(&gpio, MEMORY_OUT_PIN_CH, 0xFF << MEMORY_DATA);
-	gpio_portSetMask(&gpio, MEMORY_OUT_PIN_CH, data << MEMORY_DATA);
+	XGpio_DiscreteWrite(&gpio, MEMORY_OUT_PIN_CH, 0x1<< MEMORY_WRITE_EN | ((uint32_t)data << MEMORY_DATA) | address);
 
 	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
 	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);

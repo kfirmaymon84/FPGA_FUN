@@ -17,7 +17,6 @@
       "axi_gpio_1": "",
       "IO_Mapper_0": "",
       "ila_0": "",
-      "TTF_Driver_0": "",
       "Divider_0": "",
       "microblaze_0": "",
       "microblaze_0_local_memory": {
@@ -38,7 +37,8 @@
       "microblaze_0_axi_intc": "",
       "microblaze_0_xlconcat": "",
       "mdm_1": "",
-      "rst_clk_wiz_0_100M": ""
+      "rst_clk_wiz_0_100M": "",
+      "TTF_Driver_0": ""
     },
     "interface_ports": {
       "usb_uart": {
@@ -135,13 +135,13 @@
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
-            "value": "191.387"
+            "value": "130.958"
           },
           "CLKOUT1_PHASE_ERROR": {
             "value": "98.575"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "16"
+            "value": "100"
           },
           "CLKOUT1_USED": {
             "value": "true"
@@ -156,13 +156,13 @@
             "value": "100"
           },
           "CLKOUT2_USED": {
-            "value": "true"
+            "value": "false"
           },
           "CLK_IN1_BOARD_INTERFACE": {
             "value": "sys_clock"
           },
           "CLK_OUT1_PORT": {
-            "value": "clk_16"
+            "value": "clk_100"
           },
           "CLK_OUT2_PORT": {
             "value": "clk_100"
@@ -171,16 +171,16 @@
             "value": "10.000"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "62.500"
+            "value": "10.000"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "10"
+            "value": "1"
           },
           "MMCM_DIVCLK_DIVIDE": {
             "value": "1"
           },
           "NUM_OUT_CLKS": {
-            "value": "2"
+            "value": "1"
           },
           "RESET_BOARD_INTERFACE": {
             "value": "reset"
@@ -338,81 +338,6 @@
           },
           "C_PROBE1_WIDTH": {
             "value": "8"
-          }
-        }
-      },
-      "TTF_Driver_0": {
-        "vlnv": "xilinx.com:module_ref:TTF_Driver:1.0",
-        "xci_name": "design_1_TTF_Driver_0_0",
-        "xci_path": "ip\\design_1_TTF_Driver_0_0\\design_1_TTF_Driver_0_0.xci",
-        "inst_hier_path": "TTF_Driver_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "TTF_Driver",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "nEnable": {
-            "direction": "I"
-          },
-          "ready": {
-            "direction": "O"
-          },
-          "start": {
-            "direction": "I"
-          },
-          "override": {
-            "direction": "I"
-          },
-          "DC_in": {
-            "direction": "I"
-          },
-          "WRX_in": {
-            "direction": "I"
-          },
-          "tftData_in": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "DC_out": {
-            "direction": "O"
-          },
-          "WRX_out": {
-            "direction": "O"
-          },
-          "tftData_out": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "memoryWriteEN": {
-            "direction": "I"
-          },
-          "memoryWriteClk": {
-            "direction": "I"
-          },
-          "memoryAddress": {
-            "direction": "I",
-            "left": "14",
-            "right": "0"
-          },
-          "memoryData": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "dbg_out": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "dbug_Out1": {
-            "direction": "O"
           }
         }
       },
@@ -1256,6 +1181,81 @@
         "xci_name": "design_1_rst_clk_wiz_0_100M_3",
         "xci_path": "ip\\design_1_rst_clk_wiz_0_100M_3\\design_1_rst_clk_wiz_0_100M_3.xci",
         "inst_hier_path": "rst_clk_wiz_0_100M"
+      },
+      "TTF_Driver_0": {
+        "vlnv": "xilinx.com:module_ref:TTF_Driver:1.0",
+        "xci_name": "design_1_TTF_Driver_0_0",
+        "xci_path": "ip\\design_1_TTF_Driver_0_0\\design_1_TTF_Driver_0_0.xci",
+        "inst_hier_path": "TTF_Driver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "TTF_Driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "nEnable": {
+            "direction": "I"
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "override": {
+            "direction": "I"
+          },
+          "DC_in": {
+            "direction": "I"
+          },
+          "WRX_in": {
+            "direction": "I"
+          },
+          "tftData_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DC_out": {
+            "direction": "O"
+          },
+          "WRX_out": {
+            "direction": "O"
+          },
+          "tftData_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "memoryWriteEN": {
+            "direction": "I"
+          },
+          "memoryWriteClk": {
+            "direction": "I"
+          },
+          "memoryAddress": {
+            "direction": "I",
+            "left": "14",
+            "right": "0"
+          },
+          "memoryData": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "dbg_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "dbug_Out1": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1463,11 +1463,26 @@
           "IO_Mapper_0/portA"
         ]
       },
-      "clk_wiz_0_clk_16": {
+      "clk_wiz_0_clk_100": {
         "ports": [
-          "clk_wiz_0/clk_16",
+          "clk_wiz_0/clk_100",
+          "axi_gpio_0/s_axi_aclk",
+          "microblaze_0_axi_periph/M01_ACLK",
+          "axi_gpio_1/s_axi_aclk",
+          "microblaze_0_axi_periph/M02_ACLK",
+          "axi_uartlite_0/s_axi_aclk",
+          "microblaze_0_axi_periph/M03_ACLK",
           "IO_Mapper_0/clk",
-          "TTF_Driver_0/clk"
+          "microblaze_0/Clk",
+          "microblaze_0_local_memory/LMB_Clk",
+          "microblaze_0_axi_periph/S00_ACLK",
+          "microblaze_0_axi_intc/processor_clk",
+          "microblaze_0_axi_intc/s_axi_aclk",
+          "microblaze_0_axi_periph/M00_ACLK",
+          "microblaze_0_axi_periph/ACLK",
+          "rst_clk_wiz_0_100M/slowest_sync_clk",
+          "TTF_Driver_0/clk",
+          "Divider_0/clk_100"
         ]
       },
       "clk_wiz_0_locked": {
@@ -1486,26 +1501,6 @@
         "ports": [
           "mdm_1/Debug_SYS_Rst",
           "rst_clk_wiz_0_100M/mb_debug_sys_rst"
-        ]
-      },
-      "microblaze_0_Clk": {
-        "ports": [
-          "clk_wiz_0/clk_100",
-          "axi_gpio_0/s_axi_aclk",
-          "axi_gpio_1/s_axi_aclk",
-          "axi_uartlite_0/s_axi_aclk",
-          "Divider_0/clk_100",
-          "microblaze_0/Clk",
-          "microblaze_0_axi_periph/ACLK",
-          "microblaze_0_axi_periph/S00_ACLK",
-          "microblaze_0_axi_periph/M00_ACLK",
-          "microblaze_0_axi_intc/s_axi_aclk",
-          "microblaze_0_axi_intc/processor_clk",
-          "microblaze_0_local_memory/LMB_Clk",
-          "rst_clk_wiz_0_100M/slowest_sync_clk",
-          "microblaze_0_axi_periph/M01_ACLK",
-          "microblaze_0_axi_periph/M02_ACLK",
-          "microblaze_0_axi_periph/M03_ACLK"
         ]
       },
       "microblaze_0_intr": {
