@@ -59,6 +59,7 @@ SDL_Renderer* renderer;
 SDL_Window* window;
 
 const int WINDOW_WIDTH = 240, WINDOW_HEIGHT = 240;
+uint8_t posX = 0, posY = 0;
 //memory (240*240/2) +2 => 1byte width, 1byte height, etch byte from hear is 2 pixels {4bit pixel0, 4bit pixel 1}
 uint8_t memoryBuffer[28802] = { 0 };
 void initBuffer_8Bars() {
@@ -96,7 +97,6 @@ void initBuffer_8Bars() {
     }
 }
 
-
 color get565Color(uint8_t _16bitColor) {
     color ret = { 0 };
     // if color is outside 16 bit return BLACK.
@@ -122,7 +122,7 @@ void draw() {
     uint8_t yIdx = 0;
     bool isEven = true;
 
-    SDL_RenderClear(renderer);
+    //SDL_RenderClear(renderer);
     for (int i = 0; i < pixelCount; i++) {
         uint16_t idx = (i >> 1) + 2;
         if (isEven) {
@@ -142,19 +142,137 @@ void draw() {
         xIdx %= drawWidth;
         
         SDL_SetRenderDrawColor(renderer, pixelColor.r, pixelColor.g, pixelColor.b, 255);
-        SDL_RenderDrawPoint(renderer, xIdx++, yIdx);
-        SDL_RenderPresent(renderer);
+        SDL_RenderDrawPoint(renderer, xIdx + posX, yIdx + posY);
+        xIdx++;
     }
+    SDL_RenderPresent(renderer);
 }
 
+uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t color1, uint8_t color2) {
+    //Set x,y, width, height
+    
+    //if width or height less then 6, box is too small.
+    if (width < 6 || height < 6)
+        return 0;
 
+    posX = x;
+    posY = y;
+    //draw width and height to memory.
+    memoryBuffer[0] = width;
+    memoryBuffer[1] = height;
+    uint16_t pixelCounter = 0;
+    for (uint8_t line = 0;line < height; line++) {
+        // Draw line 1 and last full color 1
+        if (line == 0 || line == (height - 1)) {
+            for (uint8_t i = 0; i < width;i++) {
+                //color1
+                if (pixelCounter & 0x0001) {
+                    memoryBuffer[(pixelCounter >> 1) + 2] |= color1;
+                }
+                else {
+                    memoryBuffer[(pixelCounter >> 1) + 2] = color1 << 4;
+                }
+                pixelCounter++;
+            }
+        }// Draw line 2 and last - 1, first and last pixel are color 1 all the rest are color 2.
+        else if(line == 1 || line == (height - 2)) {
+            for (uint8_t i = 0; i < width;i++) {
+                uint8_t idx = pixelCounter % width;
+                if (idx == 0 || idx == (width - 1)) {
+                    //color1
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter >> 1) + 2] |= color1;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter >> 1) + 2] = color1 << 4;
+                    }
+                }
+                else {
+                    //color2
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter >> 1) + 2] |= color2;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter >> 1) + 2] = color2 << 4;
+                    }
+                }
+                pixelCounter++;
+            }
+        }// Draw line 3 and last - 2, first thierd to last - 2 and last pixel are color 1, secound amd last - 1 are color 2.
+        else if (line == 2 || line == (height - 3)) {
+            for (uint8_t i = 0; i < width;i++) {
+                uint8_t idx = pixelCounter % width;
+                if(idx == 1 || idx == (width - 2)) {
+                    //color2
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter >> 1) + 2] |= color2;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter >> 1) + 2] = color2 << 4;
+                    }
+                }
+                else {
+                    //color1
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter >> 1) + 2] |= color1;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter >> 1) + 2] = color1 << 4;
+                    }
+                }
+                pixelCounter++;
+            }
+        }
+        else {
+            for (uint8_t i = 0; i < width; i++) {
+                uint8_t idx = pixelCounter % width;
+                if (idx == 0 || idx == 2 || idx == (width - 3) || idx == (width - 1)) {
+                    //color1
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter++ >> 1) + 2] |= color1;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter++ >> 1) + 2] = color1 << 4;
+                    }
+                }
+                else if(idx == 1|| idx == (width -2)) {
+                    //color2
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter++ >> 1) + 2] |= color2;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter++ >> 1) + 2] = color2 << 4;
+                    }
+                }
+                else {
+
+                    pixelCounter++;
+                }
+            }
+        }    
+    }//End of for lines
+    return 1;
+}
+
+void clrBuff() {
+    memset(memoryBuffer, 0, sizeof(memoryBuffer));
+}
 int main(int arc, char* argv[])
 {
     SDL_Init(SDL_INIT_VIDEO);
     SDL_CreateWindowAndRenderer(WINDOW_WIDTH, WINDOW_HEIGHT, 0, &window, &renderer);
 
-    initBuffer_8Bars();
+    //initBuffer_8Bars();
+    //drawBorder(1,1,7,9,white, green);
+    //drawBorder(1, 1, 40, 40, teal, yellow);
+    //draw();
+
+    drawBorder(100, 100, 40, 40, teal, yellow);
     draw();
+    clrBuff();
+    drawBorder(10, 10, 10, 10, teal, yellow);
+    draw();
+    clrBuff();
 
     /*SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
