@@ -110,7 +110,10 @@ color get565Color(uint8_t _16bitColor) {
     ret.b = (colorPallet[_16bitColor] & 0x001F) << 3;     // Extract Blue and convert to 8 bit color
     return ret;
 }
-
+void set_pos(uint8_t x, uint8_t y) {
+    posX = x;
+    posY = y;
+}
 // draw canvas from memory
 void draw() {
     uint8_t drawWidth = memoryBuffer[0];
@@ -148,6 +151,57 @@ void draw() {
     SDL_RenderPresent(renderer);
 }
 
+uint8_t drawBlock(uint8_t x, uint8_t y, uint8_t colors) {
+    set_pos(x, y);
+    
+    memoryBuffer[0] = 10;
+    memoryBuffer[1] = 10;
+    uint8_t borderColor = white;
+    uint8_t color1 = colors >> 4;
+    uint8_t color2 = colors & 0x0F;
+    uint16_t pixelCounter = 0;
+    for (uint8_t line = 0; line < 10; line++) {
+        // Draw line 0 and last full color 1
+        if (line == 0 || line == 9) {
+            memoryBuffer[(pixelCounter >> 1) + 2] = (borderColor << 4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 3] = (borderColor << 4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 4] = (borderColor << 4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 5] = (borderColor << 4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 6] = (borderColor << 4) | borderColor;
+            pixelCounter += 10;
+        }
+        else if (line == 1 || line == 2 || line == 7 || line == 8) {
+            // draw line 1,2,7,8
+            memoryBuffer[(pixelCounter >> 1) + 2] = (borderColor << 4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 3] = (color1 << 4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 4] = (color1 << 4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 5] = (color1 << 4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 6] = (color1 << 4) | borderColor;
+            pixelCounter += 10;
+        }
+        else if (line == 3 || line == 6) {
+            // draw lines 3, 6
+            memoryBuffer[(pixelCounter >> 1) + 2] = (borderColor<<4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 3] = (color1<<4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 4] = (borderColor<<4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 5] = (borderColor<<4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 6] = (color1<<4) | borderColor;
+            pixelCounter += 10;
+        }
+        else
+        {
+            // draw lines 4, 5
+            memoryBuffer[(pixelCounter >> 1) + 2] = (borderColor << 4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 3] = (color1 << 4) | borderColor;
+            memoryBuffer[(pixelCounter >> 1) + 4] = (color2<< 4) | color2;
+            memoryBuffer[(pixelCounter >> 1) + 5] = (borderColor << 4) | color1;
+            memoryBuffer[(pixelCounter >> 1) + 6] = (color1 << 4) | borderColor;
+            pixelCounter += 10;
+        }
+    }
+    return 1;
+}
+
 uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t color1, uint8_t color2) {
     //Set x,y, width, height
     
@@ -155,8 +209,7 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
     if (width < 6 || height < 6)
         return 0;
 
-    posX = x;
-    posY = y;
+    set_pos(x, y);
     //draw width and height to memory.
     memoryBuffer[0] = width;
     memoryBuffer[1] = height;
@@ -245,7 +298,6 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
                     }
                 }
                 else {
-
                     pixelCounter++;
                 }
             }
@@ -267,12 +319,23 @@ int main(int arc, char* argv[])
     //drawBorder(1, 1, 40, 40, teal, yellow);
     //draw();
 
-    drawBorder(100, 100, 40, 40, teal, yellow);
+    
+    clrBuff();
+    drawBorder(7, 7, 100, 100, teal, yellow);
     draw();
     clrBuff();
-    drawBorder(10, 10, 10, 10, teal, yellow);
+    drawBlock(10, 10, (green << 4 | red));
     draw();
     clrBuff();
+    drawBlock(20, 10, (green << 4 | red));
+    draw();
+    clrBuff();
+    drawBlock(30, 10, (green << 4 | red));
+    draw();
+    clrBuff();
+    drawBlock(10, 20, (green << 4 | red));
+    draw();
+    
 
     /*SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
