@@ -54,6 +54,13 @@ typedef struct color
     uint8_t b;
 };
 
+typedef struct drawObject {
+    uint8_t width;
+    uint8_t height;
+    uint8_t* buffer;
+};
+
+uint8_t 
 SDL_Event event;
 SDL_Renderer* renderer;
 SDL_Window* window;
@@ -62,6 +69,7 @@ const int WINDOW_WIDTH = 240, WINDOW_HEIGHT = 240;
 uint8_t posX = 0, posY = 0;
 //memory (240*240/2) +2 => 1byte width, 1byte height, etch byte from hear is 2 pixels {4bit pixel0, 4bit pixel 1}
 uint8_t memoryBuffer[28802] = { 0 };
+
 void initBuffer_8Bars() {
     const uint8_t WIDTH = 240;
     const uint8_t HEIGHT = 240;
@@ -110,10 +118,12 @@ color get565Color(uint8_t _16bitColor) {
     ret.b = (colorPallet[_16bitColor] & 0x001F) << 3;     // Extract Blue and convert to 8 bit color
     return ret;
 }
+
 void set_pos(uint8_t x, uint8_t y) {
     posX = x;
     posY = y;
 }
+
 // draw canvas from memory
 void draw() {
     uint8_t drawWidth = memoryBuffer[0];
@@ -309,6 +319,7 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
 void clrBuff() {
     memset(memoryBuffer, 0, sizeof(memoryBuffer));
 }
+
 int main(int arc, char* argv[])
 {
     SDL_Init(SDL_INIT_VIDEO);
