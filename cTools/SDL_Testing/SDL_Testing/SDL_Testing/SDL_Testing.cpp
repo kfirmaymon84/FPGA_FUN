@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <SDL.h>
-
+#include "drawObjects.h"
 
 enum colors
 {
@@ -60,7 +60,6 @@ typedef struct drawObject {
     uint8_t* buffer;
 };
 
-uint8_t 
 SDL_Event event;
 SDL_Renderer* renderer;
 SDL_Window* window;
@@ -159,6 +158,34 @@ void draw() {
         xIdx++;
     }
     SDL_RenderPresent(renderer);
+}
+
+uint8_t drawBitmap(uint8_t* img, uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t color) {
+    set_pos(x, y);
+    memoryBuffer[0] = width;
+    memoryBuffer[1] = height;
+    uint16_t pixelCounter = 0;
+    uint16_t pixel2Draw = width * height;
+    uint16_t byteCounter = 0;
+    for (int h = 0; h < height; h++) {
+        for (uint8_t w = 0; w < width;w++) {
+            uint8_t _byte = img[byteCounter];
+            for (uint8_t bit = 0; bit < 8; bit++) {
+                if (_byte & 0x80) {
+                    if (pixelCounter & 0x0001) {
+                        memoryBuffer[(pixelCounter >> 1) + 2] |= color;
+                    }
+                    else {
+                        memoryBuffer[(pixelCounter >> 1) + 2] = color << 4;
+                    }
+                }
+                _byte = _byte << 1;
+                pixelCounter++;
+            }
+            byteCounter++;
+        }
+    }
+    return 1;
 }
 
 uint8_t drawBlock(uint8_t x, uint8_t y, uint8_t colors) {
@@ -332,20 +359,30 @@ int main(int arc, char* argv[])
 
     
     clrBuff();
-    drawBorder(7, 7, 100, 100, teal, yellow);
+    drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
     draw();
     clrBuff();
-    drawBlock(10, 10, (green << 4 | red));
+    drawBitmap(spinOut24_24spinOut24_24, 0, 24, 24, 24, white);
     draw();
-    clrBuff();
-    drawBlock(20, 10, (green << 4 | red));
-    draw();
-    clrBuff();
-    drawBlock(30, 10, (green << 4 | red));
-    draw();
-    clrBuff();
-    drawBlock(10, 20, (green << 4 | red));
-    draw();
+    //for (int i = 0; i < 10; i++) {
+    //    clrBuff();
+    //    drawBitmap(numbers[i], 16*i, 0, 16, 24, white);
+    //    draw();
+    //}
+    //drawBorder(7, 7, 100, 100, teal, yellow);
+    //draw();
+    //clrBuff();
+    //drawBlock(10, 10, (green << 4 | red));
+    //draw();
+    //clrBuff();
+    //drawBlock(20, 10, (green << 4 | red));
+    //draw();
+    //clrBuff();
+    //drawBlock(30, 10, (green << 4 | red));
+    //draw();
+    //clrBuff();
+    //drawBlock(10, 20, (green << 4 | red));
+    //draw();
     
 
     /*SDL_RenderClear(renderer);
