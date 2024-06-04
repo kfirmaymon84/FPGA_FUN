@@ -49,7 +49,7 @@ void displayInit();
 void setDisplayWindow(int x0, int y0, int x1, int y1);
 void enterSleep();
 void exitSleep ();
-void writeColorBars();
+void draw8ColorBars();
 void writeWindowColorBars(uint8_t width, uint8_t height);
 void clearScreen();
 void writeColor(unsigned long color);

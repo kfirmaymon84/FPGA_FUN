@@ -143,9 +143,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="commonDisplayHandler.cpp" />
+    <ClCompile Include="displayHandler.cpp" />
     <ClCompile Include="SDL_Testing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="commonDisplayHandler.h" />
+    <ClInclude Include="displayHandler.h" />
     <ClInclude Include="drawObjects.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
