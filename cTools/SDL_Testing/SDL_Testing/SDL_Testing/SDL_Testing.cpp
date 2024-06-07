@@ -5,13 +5,19 @@
 
 #include "commonDisplayHandler.h"
 #include "displayHandler.h"
+#include "drawObjects.h"
 
 
 int main(int arc, char* argv[])
 {
 
-    displayMain();
+    displayInit();
 
+    clrBuff();
+    drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
+    drawMemory();
+
+    getchar();
     
     return EXIT_SUCCESS;
 }
