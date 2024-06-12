@@ -54,27 +54,45 @@ void draw8ColorBars() {
 uint8_t drawBitmap(uint8_t* img, uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t color) {
     setDisplayWindow(x, y, width, height);
 
-    uint16_t pixelCounter = 0;
     uint16_t pixel2Draw = width * height;
     uint16_t byteCounter = 0;
-    for (int h = 0; h < height; h++) {
-        for (uint8_t w = 0; w < width; w++) {
-            uint8_t _byte = img[byteCounter];
-            for (uint8_t bit = 0; bit < 8; bit++) {
-                if (_byte & 0x80) {
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter >> 1) + 2, (color<<4));
-                    }
-                }
-                _byte = _byte << 1;
-                pixelCounter++;
-            }
+    uint8_t pixel = 0x00;
+
+    uint8_t idx = 7; // bit mask select
+    uint8_t bitPixels = img[byteCounter];
+    for (uint16_t pixelCounter = 0; pixelCounter < pixel2Draw; pixelCounter++) {    
+        if (idx == 0) {
+            //select next byte from image
             byteCounter++;
+            bitPixels = img[byteCounter];
+            idx = 7;
         }
+        else {
+            idx--;
+        }
+
+        uint8_t bit = img[byteCounter] & (0x01 << idx);
+        
+        if (bit) {
+            if (pixelCounter & 0x0001) {
+                pixel |= color;
+            }
+            else
+            {
+                pixel = color << 4;
+            }
+        }
+
+        //Write to memory
+        if ((pixelCounter & 0x0001)) {
+            writeByteToMemory((pixelCounter >> 1) + 2, pixel);
+            pixel = 0;
+        }
+        
+        
+        
     }
+        
     return 1;
 }
 
@@ -228,6 +246,8 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
     return 1;
 }
 
-
+void drawEmpty(uint8_t x, uint8_t y, uint8_t width, uint8_t height) {
+    clrBuff();
+    setDisplayWindow(x, y, width, height);
+}
 //void draw_img(img,x,y,w,h)
-//void draw_empty(x,y,w,h)

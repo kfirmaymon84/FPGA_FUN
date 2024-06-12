@@ -18,6 +18,9 @@ int main(int arc, char* argv[])
     //drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
     drawBitmap(numbers[0], 0, 0, 16, 24, white);
     drawMemory();
+    drawEmpty(0, 10, 24, 5);
+    drawMemory();
+
 
     getchar();
     
