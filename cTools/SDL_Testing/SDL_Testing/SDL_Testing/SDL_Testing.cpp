@@ -14,10 +14,13 @@ int main(int arc, char* argv[])
     displayInit();
 
     clrBuff();
-    drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
+    //draw8ColorBars();
+    //drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
+    drawBitmap(numbers[0], 0, 0, 16, 24, white);
     drawMemory();
 
     getchar();
+    
     
     return EXIT_SUCCESS;
 }

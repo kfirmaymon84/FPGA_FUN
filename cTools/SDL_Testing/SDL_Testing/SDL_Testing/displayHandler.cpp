@@ -29,11 +29,11 @@ uint8_t memoryBuffer[28802] = { 0 };
 void displayInit() {
     SDL_Init(SDL_INIT_VIDEO);
     SDL_CreateWindowAndRenderer(DISPLAY_WIDTH, DISPLAY_HEIGHT, 0, &window, &renderer);
-    SDL_SetRender //need to select background color????
+    //SDL_Setba //need to select background color????
 
     //clearScreen();
 
-    //clearScreen();
+    ////clearScreen();
     //clrBuff();
     //drawBitmap(spinOut24_24spinOut24_24, 0, 24, 24, 24, white);
     //drawMemory();
@@ -56,9 +56,10 @@ color get565Color(uint8_t _16bitColor) {
         return ret;
     }
 
-    ret.r = ((my_colorPallet[_16bitColor] & 0xF800) >> 11) - 3;  // Extract Red and convert to 8 bit color
-    ret.g = ((my_colorPallet[_16bitColor] & 0x07E0) >> 5) - 2;   // Extract Green and convert to 8 bit color
-    ret.b = ((my_colorPallet[_16bitColor] & 0x001F) << 3);     // Extract Blue and convert to 8 bit color
+    //Conver to RGB888 
+    ret.r = (((my_colorPallet[_16bitColor] & 0xF800) >> 11) * 527 + 23) >> 6;
+    ret.g = (((my_colorPallet[_16bitColor] & 0x07E0) >> 5) * 259 + 33) >> 6;
+    ret.b = (((my_colorPallet[_16bitColor] & 0x001F)) * 527 + 23) >> 6;
     return ret;
 }
 
