@@ -45,17 +45,25 @@ void writePort(uint8_t data);
 void writeCommand(uint8_t cmd);
 void writeData(uint8_t data);
 void resetDisplay();
-void displayInit();
-void setDisplayWindow(int x0, int y0, int x1, int y1);
+
 void enterSleep();
-void exitSleep ();
-void draw8ColorBars();
-void writeWindowColorBars(uint8_t width, uint8_t height);
-void clearScreen();
+void exitSleep();
+
+void override_clearScreen();
 void writeColor(unsigned long color);
 
-void writeToMemory();
+//To implement
+
+void displayInit();
+void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height);
+
+// void clrBuff();
 void writeByteToMemory(uint16_t address, uint8_t data);
+// void drawMemory();
+// void clearScreen();
+
+void writeToMemory();
+
 // End function declaration
 
 #endif //__DISPLAY_HANDLER_H_

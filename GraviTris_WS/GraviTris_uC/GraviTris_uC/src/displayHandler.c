@@ -5,6 +5,16 @@
 extern XGpio gpio;
 extern uint32_t millisCounter;
 
+void takeOverride(){
+	// Take override
+	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+}
+
+void releaseOverride(){
+	// Release override
+	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+}
+
 void writePort(uint8_t data) {
 
     //Clear TFT_DRIVER_DATA bits
@@ -14,6 +24,8 @@ void writePort(uint8_t data) {
 }
 
 void writeCommand(uint8_t cmd){
+	// MUST be in override mode
+
     //Clear DC and WRX pins
     gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_DC);
     gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
@@ -24,9 +36,12 @@ void writeCommand(uint8_t cmd){
 	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
 	//Clear wrx pin
 	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_WRX);
+
 }
 
 void writeData(uint8_t data){
+	// MUST be in override mode
+
     //Set DC pin
     gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_DC);
     //Clear WRX pin
@@ -41,11 +56,16 @@ void writeData(uint8_t data){
 }
 
 void resetDisplay(){
+	// MUST be in override mode
+
 	writeCommand(0x01);
 	usleep(5000); //Delay 5 millisec
 }
 
 void displayInit(){
+	//Take override
+	takeOverride();
+
 	resetDisplay();
     usleep(120000); //Delay 120 millisec
 
@@ -61,7 +81,7 @@ void displayInit(){
 	writeCommand(0xb7); // Gate Control
 	writeData(0x35);	// VGHS[2:0] & VGLS[2:0]
 
-  //Set 65K 16bit per pixle setting.
+  //Set 65K 16bit per pixel setting.
 	writeCommand(0x3A); // Interface Pixel Format
 	writeData(0x55);	// 65K of RGB interface - 16bit/pixel
 
@@ -122,9 +142,15 @@ void displayInit(){
 	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
 
 	exitSleep();
+
+	// Release override
+	releaseOverride();
 }
 
 void setDisplayWindow(int x0, int y0, int x1, int y1){
+	// Take override
+	takeOverride();
+
 	writeCommand(0x2a);	// Column Address Set
 	writeData(x0>>8);	// X address start:
 	writeData(x0);		// 0 <= XS <= X
@@ -136,9 +162,13 @@ void setDisplayWindow(int x0, int y0, int x1, int y1){
 	writeData(y0);		// 0 <= YS <= Y
 	writeData(y1>>8);	// Y address start:
 	writeData(y1);		// S <= YE <= Y
+
+	// Release override
+	releaseOverride();
 }
 
 void enterSleep(){
+	// MUST be in override mode
 	writeCommand(0x28);	// Display Off
 	
     usleep(20000); //delay 20 millisec
@@ -146,6 +176,8 @@ void enterSleep(){
 }
 
 void exitSleep (){
+	// MUST be in override mode
+
 	writeCommand(0x11); // Exit Sleep Mode
     usleep(120000); //Delay 120 millisec
 	writeCommand(0x29); // Display on
@@ -155,28 +187,11 @@ void exitSleep (){
 	// register are reset to the start column/start page positions.
 }
 
-void writeColorBars(){
-	uint16_t colors[8]={WHITE, YELLOW, TEAL, GREEN, FUCHSIA, RED, BLUE, BLACK};
-	
-	for(int h=0;h<240;h++){
-		for(int w=0;w<240;w++){
-			writeColor(colors[w/30]);
-		}
-	}
-}
-
-void writeWindowColorBars(uint8_t width, uint8_t height){
-	uint16_t colors[8]={WHITE, YELLOW, TEAL, GREEN, FUCHSIA, RED, BLUE, BLACK};
-	int barWidth = width / 8;
-	for(int h=0;h<height;h++){
-		for(int w=0;w<width;w++){
-			writeColor(colors[w/barWidth]);
-		}
-	}
-}
-
-void clearScreen(){
+void override_clearScreen(){
 	unsigned int i,j;
+	
+	// Take override
+	takeOverride();
 
 	//Set the display window to the full size of the display 240x240
 	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
@@ -189,64 +204,21 @@ void clearScreen(){
 			writeColor(BLACK);
 		}
 	}
+	
+	// Release override
+	releaseOverride();
 }
 
 void writeColor(unsigned long color){
-  uint8_t data = color >> 8;
-  writeData(data);
-  data = color;
-  writeData(data);
+	// MUST be in override mode
+  	uint8_t data = color >> 8;
+  	writeData(data);
+  	data = color;
+  	writeData(data);
 }
 
-void writeToMemory(){
-	const uint8_t WIDTH = 240;
-	const uint8_t HEIGHT = 240;
-	const int BAR_WIDTH = 30;
-	uint8_t barColor[8] = {white, yellow, teal, green, fuchsia, red, blue, black};
-	uint8_t isEven = 0;
-	uint8_t firstPixel = 0x00;
-	uint16_t address = 0x0000;
-	uint8_t bothPixels = 0xFF;
-	uint8_t idx = 0;
-
-	uint32_t start = millisCounter;
-	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH, DBG_LED_0);
-	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH, MEMORY_WRITE_EN);
-	writeByteToMemory(address++, 240);
-	writeByteToMemory(address++, 240);
-	for (int h = 0; h < HEIGHT; h++)
-	{
-		for (int w = 0; w < WIDTH; w++) {
-			idx = w / BAR_WIDTH;
-
-			if (isEven)
-			{
-				bothPixels = (firstPixel  << 4) | barColor[idx];
-				writeByteToMemory(address++, bothPixels);
-				isEven = 0;
-			}else if(isEven == 0 && w == (WIDTH-1) && h == (HEIGHT-1)){ // if less pixel is even number
-				uint8_t bothPixels = barColor[idx] << 4;
-				writeByteToMemory(address++, bothPixels);
-			}
-			else {
-				firstPixel = barColor[idx];
-				isEven = 1;
-			}
-		}
-	}
-	bothPixels++;
-	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_EN);
-
-	uint32_t t = millisCounter - start;
-	xil_printf("time = %d\n",t);
-	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH, DBG_LED_0);
-
-	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_START);
-	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_START);
 
 
-
-}
 
 void writeByteToMemory(uint16_t address, uint8_t data){
 	XGpio_DiscreteWrite(&gpio, MEMORY_OUT_PIN_CH, 0x1<< MEMORY_WRITE_EN | ((uint32_t)data << MEMORY_DATA) | address);

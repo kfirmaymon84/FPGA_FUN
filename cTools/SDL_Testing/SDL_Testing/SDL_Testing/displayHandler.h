@@ -10,5 +10,5 @@ void clrBuff();
 void writeByteToMemory(uint16_t address, uint8_t data);
 
 void drawMemory();
-void clearScreen();
+void override_clearScreen();
 #endif //__DISPLAY_HANDLER_H_

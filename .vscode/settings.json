@@ -1,5 +1,8 @@
 {
     "files.associations": {
         "displayhandler.h": "c"
-    }
+    },
+    "cSpell.words": [
+        "datasheet"
+    ]
 }
