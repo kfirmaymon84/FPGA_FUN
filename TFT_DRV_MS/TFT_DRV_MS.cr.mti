@@ -7,16 +7,4 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity TTF_Driver
 -- Compiling architecture Behavioral of TTF_Driver
 
-} {} {}} C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package std_logic_textio
--- Compiling entity TTF_Driver_tb
--- Compiling architecture Behavioral of TTF_Driver_tb
-** Warning: C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd(124): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd(126): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-
 } {} {}}

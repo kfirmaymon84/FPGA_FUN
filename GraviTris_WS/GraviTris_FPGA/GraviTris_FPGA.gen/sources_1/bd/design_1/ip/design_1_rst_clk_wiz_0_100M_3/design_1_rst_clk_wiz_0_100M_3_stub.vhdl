@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 -- Date        : Thu May 30 10:49:07 2024
 -- Host        : CP-230194 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_0_100M_3/design_1_rst_clk_wiz_0_100M_3_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_rst_clk_wiz_0_100M_3 -prefix
+--               design_1_rst_clk_wiz_0_100M_3_ design_1_rst_clk_wiz_0_100M_3_stub.vhdl
 -- Design      : design_1_rst_clk_wiz_0_100M_3
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

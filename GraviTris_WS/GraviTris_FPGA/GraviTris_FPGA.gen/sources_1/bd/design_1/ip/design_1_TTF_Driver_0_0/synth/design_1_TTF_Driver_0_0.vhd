@@ -66,10 +66,9 @@ ENTITY design_1_TTF_Driver_0_0 IS
     DC_out : OUT STD_LOGIC;
     WRX_out : OUT STD_LOGIC;
     tftData_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    memoryWriteEN : IN STD_LOGIC;
-    memoryWriteClk : IN STD_LOGIC;
-    memoryAddress : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
-    memoryData : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    bramEN : OUT STD_LOGIC;
+    bramAddress : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    bramData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     dbg_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     dbug_Out1 : OUT STD_LOGIC
   );
@@ -91,10 +90,9 @@ ARCHITECTURE design_1_TTF_Driver_0_0_arch OF design_1_TTF_Driver_0_0 IS
       DC_out : OUT STD_LOGIC;
       WRX_out : OUT STD_LOGIC;
       tftData_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      memoryWriteEN : IN STD_LOGIC;
-      memoryWriteClk : IN STD_LOGIC;
-      memoryAddress : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
-      memoryData : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+      bramEN : OUT STD_LOGIC;
+      bramAddress : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      bramData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       dbg_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       dbug_Out1 : OUT STD_LOGIC
     );
@@ -125,10 +123,9 @@ BEGIN
       DC_out => DC_out,
       WRX_out => WRX_out,
       tftData_out => tftData_out,
-      memoryWriteEN => memoryWriteEN,
-      memoryWriteClk => memoryWriteClk,
-      memoryAddress => memoryAddress,
-      memoryData => memoryData,
+      bramEN => bramEN,
+      bramAddress => bramAddress,
+      bramData => bramData,
       dbg_out => dbg_out,
       dbug_Out1 => dbug_Out1
     );

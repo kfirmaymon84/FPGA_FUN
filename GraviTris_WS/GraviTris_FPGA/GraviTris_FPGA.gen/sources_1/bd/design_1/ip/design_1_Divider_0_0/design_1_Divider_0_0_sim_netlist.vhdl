@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 -- Date        : Thu May 30 10:49:06 2024
 -- Host        : CP-230194 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_Divider_0_0/design_1_Divider_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_Divider_0_0 -prefix
+--               design_1_Divider_0_0_ design_1_Divider_0_0_sim_netlist.vhdl
 -- Design      : design_1_Divider_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity design_1_Divider_0_0_Divider is
     clk_1K : out STD_LOGIC;
     clk_100 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_Divider_0_0_Divider : entity is "Divider";
 end design_1_Divider_0_0_Divider;
 
 architecture STRUCTURE of design_1_Divider_0_0_Divider is

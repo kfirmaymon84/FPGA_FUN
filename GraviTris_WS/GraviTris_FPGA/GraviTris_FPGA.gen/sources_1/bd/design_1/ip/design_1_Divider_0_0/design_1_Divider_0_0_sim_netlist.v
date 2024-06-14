@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Thu May 30 10:49:06 2024
 // Host        : CP-230194 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_Divider_0_0/design_1_Divider_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_Divider_0_0 -prefix
+//               design_1_Divider_0_0_ design_1_Divider_0_0_sim_netlist.v
 // Design      : design_1_Divider_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,24 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_Divider_0_0,Divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "Divider,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module design_1_Divider_0_0
-   (clk_100,
-    clk_1K);
-  input clk_100;
-  output clk_1K;
-
-  wire clk_100;
-  wire clk_1K;
-
-  design_1_Divider_0_0_Divider U0
-       (.clk_100(clk_100),
-        .clk_1K(clk_1K));
-endmodule
-
-(* ORIG_REF_NAME = "Divider" *) 
 module design_1_Divider_0_0_Divider
    (clk_1K,
     clk_100);
@@ -495,6 +477,23 @@ module design_1_Divider_0_0_Divider
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({NLW_plusOp_carry__6_O_UNCONNECTED[3],plusOp[31:29]}),
         .S({1'b0,counter[31:29]}));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_Divider_0_0,Divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "Divider,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module design_1_Divider_0_0
+   (clk_100,
+    clk_1K);
+  input clk_100;
+  output clk_1K;
+
+  wire clk_100;
+  wire clk_1K;
+
+  design_1_Divider_0_0_Divider U0
+       (.clk_100(clk_100),
+        .clk_1K(clk_1K));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/FPGA/FPGA_FUN/TFT_DRV
 Ettf_driver
-Z0 w1716727523
+Z0 w1718296526
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -19,13 +19,13 @@ Z5 8C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd
 Z6 FC:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd
 l0
 L21
-V@d^Q40`H6NdmIj34=nKF]1
-!s100 GMENojzK2Y]AH9PH>78NP2
+VT_4]J?^E:en>MinTD?e_O1
+!s100 DIl<FChjXf3MV]aQX[MHF2
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1716727784
+Z8 !s110 1718296610
 !i10b 1
-Z9 !s108 1716727784.000000
+Z9 !s108 1718296610.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd|
 Z11 !s107 C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver.vhd|
 !i113 1
@@ -35,11 +35,11 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 10 ttf_driver 0 22 @d^Q40`H6NdmIj34=nKF]1
-l95
-L51
-VEBcl6g`2zgozl:JMgONV41
-!s100 FFF?WDOXG7=h?I4^d5Eck3
+DEx4 work 10 ttf_driver 0 22 T_4]J?^E:en>MinTD?e_O1
+l100
+L53
+V1ZPV75UI=mH^4aifH;Z1<3
+!s100 1zK9B<P[m<d5WP2aZQfXG1
 R7
 32
 R8
@@ -51,7 +51,7 @@ R11
 R12
 R13
 Ettf_driver_tb
-Z14 w1716727762
+Z14 w1718295270
 Z15 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R1
 R2
@@ -60,9 +60,9 @@ R4
 Z16 8C:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd
 Z17 FC:/FPGA/FPGA_FUN/TFT_DRV_MS/TTF_Driver_tb.vhd
 l0
-L11
-V`T^8j[I>d40:b3g=N`D]d3
-!s100 C7eOe:SS=cPMazjE[87H81
+L9
+V0ghX>aTnbh;m9QC1cn;Eo2
+!s100 6_KG`JT4oE?UJUfOD^=kh0
 R7
 32
 R8
@@ -78,11 +78,11 @@ R15
 R1
 R2
 R3
-Z20 DEx4 work 13 ttf_driver_tb 0 22 `T^8j[I>d40:b3g=N`D]d3
-l67
-L15
-VZJRk@]Y0Jmo=Dj05ggQl32
-!s100 IRWNME=SdVTLfL4PDKF?S2
+Z20 DEx4 work 13 ttf_driver_tb 0 22 0ghX>aTnbh;m9QC1cn;Eo2
+l68
+L13
+Z21 V__bSEKzbVCRS`G0F5N5;C0
+Z22 !s100 DHL7PKeHB>0nni>UYgNjh0
 R7
 32
 R8

@@ -1,63 +1,14 @@
 	To Do:
 	1. test memory write: !!!PASS!!!
-		1.1. write 240x240 pixles to memory and test if it written ok. 
+		1.1. write 240x240 pixels to memory and test if it is written ok. 
 	2. test override: !!!PASS!!!
-		2.1. Ganrate 240x240x2 random bytes of data file + DC pin. 9 bit => 1 bit(DC pin) 8 bit(Data)
+		2.1. Generate 240x240x2 random bytes of data file + DC pin. 9 bit => 1 bit(DC pin) 8 bit(Data)
 		2.2. write 240x240*2 byte with override mode and test it.
-		2.3. toggle WRX pin between and store data on rise of WRX. 
-	3. test tft driver: !!!PASS!!!
+		2.3. toggle WRX pin between and store data on the rise of WRX. 
+	3. Test TFT driver: !!!PASS!!!
 		3.1 write 240x240 frame and test id.
+
+	4. Add a memory clear pin.
+		4.1. When the memory clear pin is high a rising edge of the clock will set all memory to '0'.
+			4.1.1. Test functionality.
 	
-	black 		= 0,
-	maroon		= 1,
-	green		= 2,
-	olive		= 3,
-	navy_blue	= 4,
-	purple		= 5,
-	teal		= 6,
-	silver		= 7,
-	gray		= 8,
-	red			= 9,
-	lime_green	= A,
-	yellow		= B,
-	blue		= C,
-	fuchsia		= D,
-	aqua_light	= E,
-	white		= F,
-	
-	uint8_t barColor[BARS] = {white, yellow, teal, green, fuchsia, red, blue, black};
-	
-	080000
-	080000
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005
-	FB0002
-	620003
-	D90004
-	C00005

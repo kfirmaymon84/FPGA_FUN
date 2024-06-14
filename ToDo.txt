@@ -5,3 +5,6 @@ Task To-do:
     2. write 8 color bars to memory and toggle the start pin.
 3. Test ready and start pin:
     3.1 measure frame rate.
+4. Add a memory clear pin.
+	4.1. When the memory clear pin is high a rising edge of the clock will set all memory to '0'.
+		4.1.1. Test functionality.

@@ -1,4 +1,5 @@
 #include "displayHandler.h"
+#include "commonDisplayHandler.h"
 #include <xgpio.h>
 #include "sleep.h"
 
@@ -16,7 +17,6 @@ void releaseOverride(){
 }
 
 void writePort(uint8_t data) {
-
     //Clear TFT_DRIVER_DATA bits
     gpio_portClearMask(&gpio, TFT_DRIVER_OUT_PIN_CH, (0x000000FF << TFT_DRIVER_DATA));
     //Set TFT_DRIVER_DATA bits as data
@@ -63,8 +63,6 @@ void resetDisplay(){
 }
 
 void displayInit(){
-	//Take override
-	takeOverride();
 
 	resetDisplay();
     usleep(120000); //Delay 120 millisec
@@ -84,6 +82,7 @@ void displayInit(){
   //Set 65K 16bit per pixel setting.
 	writeCommand(0x3A); // Interface Pixel Format
 	writeData(0x55);	// 65K of RGB interface - 16bit/pixel
+
 
 	writeCommand(0x36);	// Memory Data Access Control
 	writeData(0x00);
@@ -138,18 +137,21 @@ void displayInit(){
 	writeData(0x1b);
 	writeData(0x1e);
 
+	writeCommand(0x21); // Color inversion (FFFF -> white , 0000 -> BLACK)
+
 	//Set the display window to the full size of the display 240x240
 	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
 
 	exitSleep();
 
-	// Release override
-	releaseOverride();
 }
 
-void setDisplayWindow(int x0, int y0, int x1, int y1){
-	// Take override
-	takeOverride();
+//void setDisplayWindow(int x0, int y0, int x1, int y1)
+void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height){
+	int x0 = x;
+	int x1 = x + width;
+	int y0 = y;
+	int y1 = y + height;
 
 	writeCommand(0x2a);	// Column Address Set
 	writeData(x0>>8);	// X address start:
@@ -162,9 +164,6 @@ void setDisplayWindow(int x0, int y0, int x1, int y1){
 	writeData(y0);		// 0 <= YS <= Y
 	writeData(y1>>8);	// Y address start:
 	writeData(y1);		// S <= YE <= Y
-
-	// Release override
-	releaseOverride();
 }
 
 void enterSleep(){
@@ -189,9 +188,6 @@ void exitSleep (){
 
 void override_clearScreen(){
 	unsigned int i,j;
-	
-	// Take override
-	takeOverride();
 
 	//Set the display window to the full size of the display 240x240
 	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
@@ -204,9 +200,22 @@ void override_clearScreen(){
 			writeColor(BLACK);
 		}
 	}
-	
-	// Release override
-	releaseOverride();
+}
+
+void override_8bar(){
+	uint16_t colors[8]={WHITE, YELLOW, TEAL, GREEN, FUCHSIA, RED, BLUE, BLACK};
+
+	//Set the display window to the full size of the display 240x240
+	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
+
+	exitSleep ();
+	int h=0, w=0;
+	for(h=0;h<240;h++){
+		for(w=0;w<240;w++){
+			uint16_t color = colors[w/30];
+			writeColor(color);
+		}
+	}
 }
 
 void writeColor(unsigned long color){
@@ -217,16 +226,12 @@ void writeColor(unsigned long color){
   	writeData(data);
 }
 
-
-
-
 void writeByteToMemory(uint16_t address, uint8_t data){
-	XGpio_DiscreteWrite(&gpio, MEMORY_OUT_PIN_CH, 0x1<< MEMORY_WRITE_EN | ((uint32_t)data << MEMORY_DATA) | address);
-
-	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
-	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
+//	XGpio_DiscreteWrite(&gpio, MEMORY_OUT_PIN_CH, 0x1<< MEMORY_WRITE_EN | ((uint32_t)data << MEMORY_DATA) | address);
+//
+//	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
+//	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
 }
-
 
 //To implement
 //void clrBuff()

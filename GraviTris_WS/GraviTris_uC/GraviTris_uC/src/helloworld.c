@@ -31,7 +31,16 @@ int main()
 
     initGPIO();
 	initInterrupt();
+	uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
+	memPtr[0] = (240 << 8) + 240;
+	for(int i=1;i<7201;i++){
+		memPtr[i] = 0x12345678;
+	}
+
+	for(int i=0;i<7201;i++){
+		xil_printf("%4d. %08X\n",i, memPtr[i]);
+	}
 	xil_printf("Start...\r\n");
 	while(1){
 		char c;
@@ -44,29 +53,40 @@ int main()
 			case '0':
 				// Init display
 				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+				// Take override
+				takeOverride();
 				usleep(1000); //Delay 1 millisec
 				displayInit();
-				// usleep(1000); //Delay 1 millisec
+				usleep(1000); //Delay 1 millisec
+				// Release override
+				releaseOverride();
 				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 				break;
 			case '1':
 				//Clear screen
 				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+				// Take override
+				takeOverride();
 				usleep(1000); //Delay 1 millisec
-				override_clearScreen();
-				usleep(1000); //Delay 1 millisec
+				override_8bar();
+
+				usleep(1000); //Delay 1 millisec	// Release override
+				releaseOverride();
 				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 			break;
 			case '2': //TEST 1
 				// 8 color bar in override mode
 				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
+				// Take override
+				takeOverride();
 				usleep(1000); //Delay 1 millisec
-				writeColorBars();
+				override_clearScreen();
+				usleep(1000); //Delay 1 millisec
+				// Release override
+				releaseOverride();
 				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 			break;
 			case '3': //TEST 2
-				writeToMemory();
-				usleep(1000); //Delay 1 millisec
 				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
 				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
 			break;

@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Thu May 30 14:37:26 2024
+--Date        : Fri Jun 14 19:48:20 2024
 --Host        : CP-230194 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -22,6 +22,8 @@ entity design_1_wrapper is
     dbg_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     dbug_Out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
+    rsta_busy_0 : out STD_LOGIC;
+    rstb_busy_0 : out STD_LOGIC;
     sys_clock : in STD_LOGIC;
     tftData_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
     usb_uart_rxd : in STD_LOGIC;
@@ -44,7 +46,9 @@ architecture STRUCTURE of design_1_wrapper is
     WRX_out : out STD_LOGIC;
     dbg_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     dbug_Out1 : out STD_LOGIC;
-    reset : in STD_LOGIC
+    reset : in STD_LOGIC;
+    rstb_busy_0 : out STD_LOGIC;
+    rsta_busy_0 : out STD_LOGIC
   );
   end component design_1;
 begin
@@ -59,6 +63,8 @@ design_1_i: component design_1
       dbg_out(3 downto 0) => dbg_out(3 downto 0),
       dbug_Out1 => dbug_Out1,
       reset => reset,
+      rsta_busy_0 => rsta_busy_0,
+      rstb_busy_0 => rstb_busy_0,
       sys_clock => sys_clock,
       tftData_out(7 downto 0) => tftData_out(7 downto 0),
       usb_uart_rxd => usb_uart_rxd,
