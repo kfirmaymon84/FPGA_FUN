@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.901818",
+   "Default View_TopLeft":"-349,10",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_DC_out -pg 1 -lvl 3 -x 650 -y 250 -defaultsOSRD
+preplace port port-id_dbug_Out1 -pg 1 -lvl 3 -x 650 -y 370 -defaultsOSRD
+preplace port port-id_start -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace port port-id_ready -pg 1 -lvl 3 -x 650 -y 390 -defaultsOSRD
+preplace port port-id_nEnable -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port port-id_WRX_in -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port port-id_DC_in -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port port-id_override -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_WRX_out -pg 1 -lvl 3 -x 650 -y 270 -defaultsOSRD
+preplace portBus tftData_out -pg 1 -lvl 3 -x 650 -y 410 -defaultsOSRD
+preplace portBus dbg_out -pg 1 -lvl 3 -x 650 -y 230 -defaultsOSRD
+preplace portBus tftData_in -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 520 -y 120 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 190 -y 500 -defaultsOSRD
+preplace inst TTF_Driver_0 -pg 1 -lvl 1 -x 190 -y 300 -defaultsOSRD
+preplace netloc DC_in_0_1 1 0 1 NJ 310
+preplace netloc TTF_Driver_0_DC_out 1 1 2 NJ 250 NJ
+preplace netloc TTF_Driver_0_WRX_out 1 1 2 NJ 270 NJ
+preplace netloc TTF_Driver_0_bramAddress 1 1 1 350 90n
+preplace netloc TTF_Driver_0_bramEN 1 1 1 360 150n
+preplace netloc TTF_Driver_0_dbg_out 1 1 2 390J 230 NJ
+preplace netloc TTF_Driver_0_dbug_Out1 1 1 2 NJ 370 NJ
+preplace netloc TTF_Driver_0_ready 1 1 2 370J 260 630J
+preplace netloc TTF_Driver_0_tftData_out 1 1 2 NJ 290 620J
+preplace netloc WRX_in_0_1 1 0 1 NJ 330
+preplace netloc blk_mem_gen_0_douta 1 0 2 30 130 NJ
+preplace netloc clk_0_1 1 0 2 20 110 NJ
+preplace netloc nEnable_0_1 1 0 1 NJ 250
+preplace netloc override_0_1 1 0 1 NJ 290
+preplace netloc start_0_1 1 0 1 NJ 270
+preplace netloc tftData_in_0_1 1 0 1 NJ 350
+preplace netloc xlconstant_0_dout 1 1 1 380J 170n
+levelinfo -pg 1 0 190 520 650
+pagesize -pg 1 -db -bbox -sgen -140 0 800 560
+"
+}
+0

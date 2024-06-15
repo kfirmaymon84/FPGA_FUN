@@ -1,89 +1,89 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.67006",
-   "Default View_TopLeft":"1824,314",
+   "Default View_ScaleFactor":"0.408136",
+   "Default View_TopLeft":"-113,-123",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port usb_uart -pg 1 -lvl 9 -x 2690 -y 380 -defaultsOSRD
+preplace port usb_uart -pg 1 -lvl 9 -x 2750 -y 380 -defaultsOSRD
 preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
 preplace port port-id_dbg_SW0 -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
-preplace port port-id_DC_out -pg 1 -lvl 9 -x 2690 -y 70 -defaultsOSRD
-preplace port port-id_dbg_LED1 -pg 1 -lvl 9 -x 2690 -y 280 -defaultsOSRD
-preplace port port-id_dbg_LED2 -pg 1 -lvl 9 -x 2690 -y 310 -defaultsOSRD
-preplace port port-id_dbg_LED0 -pg 1 -lvl 9 -x 2690 -y 250 -defaultsOSRD
-preplace port port-id_WRX_out -pg 1 -lvl 9 -x 2690 -y 100 -defaultsOSRD
-preplace port port-id_dbug_Out1 -pg 1 -lvl 9 -x 2690 -y 200 -defaultsOSRD
+preplace port port-id_DC_out -pg 1 -lvl 9 -x 2750 -y 80 -defaultsOSRD
+preplace port port-id_dbg_LED1 -pg 1 -lvl 9 -x 2750 -y 280 -defaultsOSRD
+preplace port port-id_dbg_LED2 -pg 1 -lvl 9 -x 2750 -y 300 -defaultsOSRD
+preplace port port-id_dbg_LED0 -pg 1 -lvl 9 -x 2750 -y 260 -defaultsOSRD
+preplace port port-id_WRX_out -pg 1 -lvl 9 -x 2750 -y 100 -defaultsOSRD
+preplace port port-id_dbug_Out1 -pg 1 -lvl 9 -x 2750 -y 200 -defaultsOSRD
 preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 650 -defaultsOSRD
-preplace port port-id_rstb_busy_0 -pg 1 -lvl 9 -x 2690 -y 720 -defaultsOSRD
-preplace port port-id_rsta_busy_0 -pg 1 -lvl 9 -x 2690 -y 690 -defaultsOSRD
-preplace portBus tftData_out -pg 1 -lvl 9 -x 2690 -y 130 -defaultsOSRD
-preplace portBus dbg_out -pg 1 -lvl 9 -x 2690 -y 170 -defaultsOSRD
+preplace port port-id_rstb_busy_0 -pg 1 -lvl 9 -x 2750 -y 710 -defaultsOSRD
+preplace port port-id_rsta_busy_0 -pg 1 -lvl 9 -x 2750 -y 690 -defaultsOSRD
+preplace portBus tftData_out -pg 1 -lvl 9 -x 2750 -y 120 -defaultsOSRD
+preplace portBus dbg_out -pg 1 -lvl 9 -x 2750 -y 180 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 720 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 8 -x 2470 -y 390 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 2050 -y 460 -defaultsOSRD
-preplace inst Divider_0 -pg 1 -lvl 2 -x 310 -y 810 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 5 -x 1310 -y 680 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 1710 -y 690 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 1710 -y 350 -defaultsOSRD
-preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -x 920 -y 720 -defaultsOSRD
-preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -x 590 -y 810 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 4 -x 920 -y 500 -defaultsOSRD
-preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 3 -x 590 -y 670 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 7 -x 2050 -y 630 -defaultsOSRD
-preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 8 -x 2470 -y 710 -defaultsOSRD
-preplace inst IO_Mapper_0 -pg 1 -lvl 7 -x 2050 -y 190 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 6 -x 1710 -y 910 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 6 -x 1710 -y 810 -defaultsOSRD
-preplace inst TTF_Driver_0 -pg 1 -lvl 8 -x 2470 -y 130 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 8 -x 2530 -y 390 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 2110 -y 460 -defaultsOSRD
+preplace inst Divider_0 -pg 1 -lvl 2 -x 320 -y 810 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 5 -x 1340 -y 680 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 1760 -y 690 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 1760 -y 350 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -x 940 -y 720 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -x 610 -y 810 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 4 -x 940 -y 500 -defaultsOSRD
+preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 3 -x 610 -y 670 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 7 -x 2110 -y 630 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 8 -x 2530 -y 700 -defaultsOSRD
+preplace inst IO_Mapper_0 -pg 1 -lvl 7 -x 2110 -y 190 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 1760 -y 910 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 6 -x 1760 -y 810 -defaultsOSRD
+preplace inst TTF_Driver_0 -pg 1 -lvl 8 -x 2530 -y 130 -defaultsOSRD
 preplace netloc Divider_0_clk_1K 1 2 1 NJ 810
-preplace netloc TTF_Driver_0_DC_out 1 8 1 2670J 70n
+preplace netloc IO_Mapper_0_dbg_LED0 1 7 2 2330J 260 NJ
+preplace netloc IO_Mapper_0_dbg_LED1 1 7 2 2270J 270 2730J
+preplace netloc IO_Mapper_0_dbg_LED2 1 7 2 NJ 280 2720J
+preplace netloc IO_Mapper_0_nEnable 1 7 1 2270 80n
+preplace netloc IO_Mapper_0_portB 1 7 1 2250 100n
+preplace netloc IO_Mapper_0_tftDrv_DC_in 1 7 1 2320 140n
+preplace netloc IO_Mapper_0_tftDrv_WRX_in 1 7 1 2330 160n
+preplace netloc IO_Mapper_0_tftDrv_data 1 7 1 2310 140n
+preplace netloc IO_Mapper_0_tftDrv_override 1 7 1 2290 120n
+preplace netloc IO_Mapper_0_tftDrv_start 1 7 1 2280 100n
+preplace netloc TTF_Driver_0_DC_out 1 8 1 NJ 80
 preplace netloc TTF_Driver_0_WRX_out 1 8 1 NJ 100
-preplace netloc TTF_Driver_0_dbg_out 1 8 1 2670J 170n
+preplace netloc TTF_Driver_0_bramAddress 1 7 2 2360 290 2690
+preplace netloc TTF_Driver_0_bramEN 1 7 2 2350 300 2700
+preplace netloc TTF_Driver_0_dbg_out 1 8 1 NJ 180
 preplace netloc TTF_Driver_0_dbug_Out1 1 8 1 NJ 200
-preplace netloc TTF_Driver_0_tftData_out 1 8 1 2670J 120n
-preplace netloc clk_wiz_0_clk_100 1 1 7 200 630 410 560 770 580 1070 580 1560 140 1880 350 2240
+preplace netloc TTF_Driver_0_ready 1 6 3 1960 340 2330J 310 2710
+preplace netloc TTF_Driver_0_tftData_out 1 8 1 NJ 120
+preplace netloc axi_bram_ctrl_0_bram_doutb 1 7 1 2340 200n
+preplace netloc axi_bram_ctrl_0_bram_rsta_busy 1 8 1 NJ 690
+preplace netloc axi_bram_ctrl_0_bram_rstb_busy 1 8 1 NJ 710
+preplace netloc axi_gpio_0_gpio_io_o 1 6 2 1960 40 2260
+preplace netloc clk_wiz_0_clk_100 1 1 7 200 630 430 560 790 580 1090 580 1600 140 1940 350 2300
 preplace netloc clk_wiz_0_locked 1 1 2 210 710 NJ
-preplace netloc mdm_1_debug_sys_rst 1 2 3 420 570 NJ 570 1040
-preplace netloc microblaze_0_intr 1 3 1 780 730n
+preplace netloc dbg_SW0_1 1 0 7 NJ 430 NJ 430 NJ 430 780J 130 NJ 130 NJ 130 1950J
+preplace netloc mdm_1_debug_sys_rst 1 2 3 440 570 NJ 570 1060
+preplace netloc microblaze_0_intr 1 3 1 800 730n
 preplace netloc reset_1 1 0 3 20 650 NJ 650 NJ
-preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 3 3 760J 590 NJ 590 1540
-preplace netloc rst_clk_wiz_0_100M_mb_reset 1 3 2 790 610 1040
-preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 3 5 780 600 1050J 570 1540 150 1860 360 2210J
+preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 3 3 780J 590 NJ 590 1580
+preplace netloc rst_clk_wiz_0_100M_mb_reset 1 3 2 810 610 1060
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 3 5 800 600 1070J 570 1580 150 1920 360 2270J
 preplace netloc sys_clock_1 1 0 1 NJ 730
-preplace netloc axi_gpio_0_gpio_io_o 1 6 2 1900 40 2200
-preplace netloc IO_Mapper_0_portB 1 7 1 2190 100n
-preplace netloc IO_Mapper_0_nEnable 1 7 1 2210 80n
-preplace netloc IO_Mapper_0_tftDrv_start 1 7 1 2220 100n
-preplace netloc IO_Mapper_0_tftDrv_override 1 7 1 2230 120n
-preplace netloc IO_Mapper_0_tftDrv_DC_in 1 7 1 2260 140n
-preplace netloc IO_Mapper_0_tftDrv_WRX_in 1 7 1 2270 160n
-preplace netloc IO_Mapper_0_tftDrv_data 1 7 1 2250 140n
-preplace netloc axi_bram_ctrl_0_bram_doutb 1 7 1 2280 200n
-preplace netloc TTF_Driver_0_ready 1 6 3 1900 340 2270J 310 2650
-preplace netloc TTF_Driver_0_bramEN 1 7 2 2290 300 2640
-preplace netloc xlconstant_0_dout 1 6 2 1890J 790 NJ
-preplace netloc xlconstant_1_dout 1 6 2 1860J 770 NJ
-preplace netloc TTF_Driver_0_bramAddress 1 7 2 2300 290 2630
-preplace netloc dbg_SW0_1 1 0 7 NJ 430 NJ 430 NJ 430 760J 130 NJ 130 NJ 130 1890J
-preplace netloc IO_Mapper_0_dbg_LED0 1 7 2 2270J 260 2670J
-preplace netloc IO_Mapper_0_dbg_LED1 1 7 2 2210J 270 2670J
-preplace netloc IO_Mapper_0_dbg_LED2 1 7 2 NJ 280 2660J
-preplace netloc axi_bram_ctrl_0_bram_rstb_busy 1 8 1 NJ 720
-preplace netloc axi_bram_ctrl_0_bram_rsta_busy 1 8 1 2650J 690n
+preplace netloc xlconstant_0_dout 1 6 2 1950J 770 NJ
+preplace netloc xlconstant_1_dout 1 6 2 1920J 750 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 7 1 N 630
 preplace netloc axi_uartlite_0_UART 1 8 1 NJ 380
-preplace netloc microblaze_0_axi_dp 1 5 1 1550 210n
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 1870 330n
+preplace netloc microblaze_0_axi_dp 1 5 1 1590 210n
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 1930 330n
 preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 2 N 370 NJ
-preplace netloc microblaze_0_debug 1 4 1 1060 490n
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 6 1 1910 390n
+preplace netloc microblaze_0_debug 1 4 1 1080 490n
 preplace netloc microblaze_0_dlmb_1 1 5 1 N 660
 preplace netloc microblaze_0_ilmb_1 1 5 1 N 680
-preplace netloc microblaze_0_intc_axi 1 3 4 800 120 NJ 120 NJ 120 1850
-preplace netloc microblaze_0_interrupt 1 4 1 1080 650n
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 6 1 1850 390n
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 7 1 N 630
-levelinfo -pg 1 0 110 310 590 920 1310 1710 2050 2470 2690
-pagesize -pg 1 -db -bbox -sgen -110 0 2840 970
+preplace netloc microblaze_0_intc_axi 1 3 4 820 120 NJ 120 NJ 120 1910
+preplace netloc microblaze_0_interrupt 1 4 1 1100 650n
+levelinfo -pg 1 0 110 320 610 940 1340 1760 2110 2530 2750
+pagesize -pg 1 -db -bbox -sgen -120 0 2900 970
 "
 }
 {

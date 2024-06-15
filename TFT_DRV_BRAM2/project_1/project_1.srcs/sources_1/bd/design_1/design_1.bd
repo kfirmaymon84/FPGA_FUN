@@ -1,0 +1,314 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x64EEF59C668DF359",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../project_1.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": "",
+      "xlconstant_0": "",
+      "TTF_Driver_0": ""
+    },
+    "ports": {
+      "DC_out": {
+        "direction": "O"
+      },
+      "dbug_Out1": {
+        "direction": "O"
+      },
+      "start": {
+        "direction": "I"
+      },
+      "ready": {
+        "direction": "O"
+      },
+      "nEnable": {
+        "direction": "I"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "tftData_out": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "WRX_in": {
+        "direction": "I"
+      },
+      "DC_in": {
+        "direction": "I"
+      },
+      "override": {
+        "direction": "I"
+      },
+      "dbg_out": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "WRX_out": {
+        "direction": "O"
+      },
+      "tftData_in": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_blk_mem_gen_0_0",
+        "xci_path": "ip\\design_1_blk_mem_gen_0_0\\design_1_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../../MemoryMap8Pix.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_RAM"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "TTF_Driver_0": {
+        "vlnv": "xilinx.com:module_ref:TTF_Driver:1.0",
+        "xci_name": "design_1_TTF_Driver_0_0",
+        "xci_path": "ip\\design_1_TTF_Driver_0_0\\design_1_TTF_Driver_0_0.xci",
+        "inst_hier_path": "TTF_Driver_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "TTF_Driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "nEnable": {
+            "direction": "I"
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "override": {
+            "direction": "I"
+          },
+          "DC_in": {
+            "direction": "I"
+          },
+          "WRX_in": {
+            "direction": "I"
+          },
+          "tftData_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DC_out": {
+            "direction": "O"
+          },
+          "WRX_out": {
+            "direction": "O"
+          },
+          "tftData_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bramEN": {
+            "direction": "O"
+          },
+          "bramAddress": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bramData": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dbg_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "dbug_Out1": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "DC_in_0_1": {
+        "ports": [
+          "DC_in",
+          "TTF_Driver_0/DC_in"
+        ]
+      },
+      "TTF_Driver_0_DC_out": {
+        "ports": [
+          "TTF_Driver_0/DC_out",
+          "DC_out"
+        ]
+      },
+      "TTF_Driver_0_WRX_out": {
+        "ports": [
+          "TTF_Driver_0/WRX_out",
+          "WRX_out"
+        ]
+      },
+      "TTF_Driver_0_bramAddress": {
+        "ports": [
+          "TTF_Driver_0/bramAddress",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "TTF_Driver_0_bramEN": {
+        "ports": [
+          "TTF_Driver_0/bramEN",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "TTF_Driver_0_dbg_out": {
+        "ports": [
+          "TTF_Driver_0/dbg_out",
+          "dbg_out"
+        ]
+      },
+      "TTF_Driver_0_dbug_Out1": {
+        "ports": [
+          "TTF_Driver_0/dbug_Out1",
+          "dbug_Out1"
+        ]
+      },
+      "TTF_Driver_0_ready": {
+        "ports": [
+          "TTF_Driver_0/ready",
+          "ready"
+        ]
+      },
+      "TTF_Driver_0_tftData_out": {
+        "ports": [
+          "TTF_Driver_0/tftData_out",
+          "tftData_out"
+        ]
+      },
+      "WRX_in_0_1": {
+        "ports": [
+          "WRX_in",
+          "TTF_Driver_0/WRX_in"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "TTF_Driver_0/bramData"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "blk_mem_gen_0/clka",
+          "TTF_Driver_0/clk"
+        ]
+      },
+      "nEnable_0_1": {
+        "ports": [
+          "nEnable",
+          "TTF_Driver_0/nEnable"
+        ]
+      },
+      "override_0_1": {
+        "ports": [
+          "override",
+          "TTF_Driver_0/override"
+        ]
+      },
+      "start_0_1": {
+        "ports": [
+          "start",
+          "TTF_Driver_0/start"
+        ]
+      },
+      "tftData_in_0_1": {
+        "ports": [
+          "tftData_in",
+          "TTF_Driver_0/tftData_in"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "blk_mem_gen_0/wea"
+        ]
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdint.h>
 
-void printTestBantch();
+void memoryMap32();
 enum colors
 {
 	black = 0,
@@ -34,32 +34,39 @@ bool isEven = false;
 uint8_t firstPixel = 0x00;
 int main()
 {
-    FILE* destFile = fopen("MemoryMap.txt", "wb");
-    fprintf(destFile, "%02x%04x\n",WIDTH, address++);
-    fprintf(destFile, "%02x%04x\n",HEIGHT, address++);
+	memoryMap32();
+	return 1;
+}
+
+
+void memoryMap32(){
+    FILE* destFile = fopen("MemoryMap.coe", "wb");
+	fprintf(destFile, "memory_initialization_radix=16;\n");
+	fprintf(destFile, "memory_initialization_vector=\n");
+
+    fprintf(destFile, "%08X\n",(WIDTH<<8 + HEIGHT));
     
 	uint16_t pixCounter = 0;
+	uint32_t pixel = 0;
 	for (int h = 0; h < HEIGHT; h++)
 	{
 		for (int w = 0; w < WIDTH; w++) {
-            pixCounter++;
 			uint8_t idx = w / BAR_WIDTH;
-			if (isEven)
-			{
-				uint8_t bothPixels = (firstPixel  << 4) | barColor[idx];
-                fprintf(destFile, "%02x%04x\n",bothPixels, address++);
-				isEven = false;
-			}else if(isEven == false && w == (WIDTH-1) && h == (HEIGHT-1)){ // if less pixel is even number
-                uint8_t bothPixels = barColor[idx] << 4;
-                fprintf(destFile, "%02x%04x\n",bothPixels, address++);
-            }
-			else {
-				firstPixel = barColor[idx];
-				isEven = true;
+			uint8_t c = barColor[idx];
+			uint8_t pixPos = (pixCounter%8);
+
+			if (pixPos == 0)
+				pixel =0;
+
+			pixel |= (uint32_t)(c << ( (7-pixPos) *4 ));
+
+			if(pixPos == 7){
+				fprintf(destFile, "%08X\n",pixel);
 			}
+			
+            pixCounter++;
 		}
 	}
 
     fclose(destFile);
-	return 1;
 }

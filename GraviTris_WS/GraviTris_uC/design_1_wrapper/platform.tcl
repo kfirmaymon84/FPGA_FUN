@@ -49,3 +49,9 @@ platform generate -domains
 platform active {design_1_wrapper}
 platform config -updatehw {C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/design_1_wrapper.xsa}
 platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/design_1_wrapper.xsa}
+platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/design_1_wrapper.xsa}
+platform generate -domains 

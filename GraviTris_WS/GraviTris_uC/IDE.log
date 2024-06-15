@@ -4918,3 +4918,817 @@ con
 
 19:54:09 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
 19:58:38 INFO  : Disconnected from the channel tcfchan#3.
+19:39:23 DEBUG : Logs will be stored at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/IDE.log'.
+19:39:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\temp_xsdb_launch_script.tcl
+19:39:27 INFO  : XSCT server has started successfully.
+19:39:27 INFO  : Platform repository initialization has completed.
+19:39:27 INFO  : Registering command handlers for Vitis TCF services
+19:39:29 INFO  : Successfully done setting XSCT server connection channel  
+19:39:29 INFO  : plnx-install-location is set to ''
+19:39:29 INFO  : Successfully done query RDI_DATADIR 
+19:39:29 INFO  : Successfully done setting workspace for the tool. 
+19:39:41 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+19:39:51 INFO  : Result from executing command 'getProjects': design_1_wrapper
+19:39:51 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+19:39:53 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:39:56 INFO  : The hardware specification used by project 'GraviTris_uC' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:39:56 INFO  : The file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+19:39:56 INFO  : The file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC\_ide\bitstream\design_1_wrapper.mmi' stored in project is removed.
+19:39:56 INFO  : The updated bitstream files are copied from platform to folder 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC\_ide\bitstream' in project 'GraviTris_uC'.
+19:40:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:01 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:40:01 INFO  : 'jtag frequency' command is executed.
+19:40:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:40:03 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:40:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:03 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:40:03 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:40:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:03 INFO  : System reset is completed.
+19:40:06 INFO  : 'after 3000' command is executed.
+19:40:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:06 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:40:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:40:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:06 INFO  : 'con' command is executed.
+19:40:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:40:06 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:40:48 INFO  : Disconnected from the channel tcfchan#2.
+19:40:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:40:48 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:40:48 INFO  : 'jtag frequency' command is executed.
+19:40:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:40:50 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:40:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:50 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:40:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:40:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:50 INFO  : System reset is completed.
+19:40:53 INFO  : 'after 3000' command is executed.
+19:40:53 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:53 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:40:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:40:53 INFO  : Context for processor 'microblaze_0' is selected.
+19:40:53 INFO  : 'con' command is executed.
+19:40:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:40:53 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:40:58 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:41:00 INFO  : Disconnected from the channel tcfchan#3.
+19:41:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:41:00 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:41:00 INFO  : 'jtag frequency' command is executed.
+19:41:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:41:01 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:41:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:01 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:41:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:41:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:02 INFO  : System reset is completed.
+19:41:05 INFO  : 'after 3000' command is executed.
+19:41:05 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:05 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:41:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:41:05 INFO  : Context for processor 'microblaze_0' is selected.
+19:41:05 INFO  : 'con' command is executed.
+19:41:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:41:05 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:42:49 INFO  : Disconnected from the channel tcfchan#4.
+19:42:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:42:49 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:42:49 INFO  : 'jtag frequency' command is executed.
+19:42:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:42:50 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:42:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:42:50 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:42:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:42:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:42:50 INFO  : System reset is completed.
+19:42:52 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:42:53 INFO  : 'after 3000' command is executed.
+19:42:53 INFO  : Context for processor 'microblaze_0' is selected.
+19:42:53 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:42:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:42:53 INFO  : Context for processor 'microblaze_0' is selected.
+19:42:53 INFO  : 'con' command is executed.
+19:42:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:42:53 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:43:07 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:43:08 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:43:54 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:44:36 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:44:54 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:44:58 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:44:59 INFO  : Disconnected from the channel tcfchan#5.
+19:44:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:44:59 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:44:59 INFO  : 'jtag frequency' command is executed.
+19:44:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:45:00 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:45:00 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:00 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:45:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:45:00 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:00 INFO  : System reset is completed.
+19:45:03 INFO  : 'after 3000' command is executed.
+19:45:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:03 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:45:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:45:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:03 INFO  : 'con' command is executed.
+19:45:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:45:03 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:45:14 INFO  : Disconnected from the channel tcfchan#6.
+19:45:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:15 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:45:15 INFO  : 'jtag frequency' command is executed.
+19:45:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:45:16 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:45:16 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:16 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:45:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:45:16 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:16 INFO  : System reset is completed.
+19:45:19 INFO  : 'after 3000' command is executed.
+19:45:19 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:19 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:45:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:45:20 INFO  : Context for processor 'microblaze_0' is selected.
+19:45:20 INFO  : 'con' command is executed.
+19:45:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:45:20 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:48:02 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:48:04 INFO  : Disconnected from the channel tcfchan#7.
+19:48:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:48:05 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:48:05 INFO  : 'jtag frequency' command is executed.
+19:48:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:48:06 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:48:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:06 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:48:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:48:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:06 INFO  : System reset is completed.
+19:48:09 INFO  : 'after 3000' command is executed.
+19:48:09 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:09 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:48:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:48:09 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:09 INFO  : 'con' command is executed.
+19:48:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:48:09 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:48:56 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:49:02 INFO  : Disconnected from the channel tcfchan#8.
+19:49:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:49:02 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:49:02 INFO  : 'jtag frequency' command is executed.
+19:49:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:49:04 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:49:04 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:04 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:49:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:49:04 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:04 INFO  : System reset is completed.
+19:49:07 INFO  : 'after 3000' command is executed.
+19:49:07 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:07 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:49:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:49:07 INFO  : Context for processor 'microblaze_0' is selected.
+19:49:07 INFO  : 'con' command is executed.
+19:49:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:49:07 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:54:43 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:54:47 INFO  : Disconnected from the channel tcfchan#9.
+19:54:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:54:48 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:54:48 INFO  : 'jtag frequency' command is executed.
+19:54:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:54:49 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:54:49 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:49 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:54:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:54:49 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:49 INFO  : System reset is completed.
+19:54:52 INFO  : 'after 3000' command is executed.
+19:54:52 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:52 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:54:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:54:52 INFO  : Context for processor 'microblaze_0' is selected.
+19:54:52 INFO  : 'con' command is executed.
+19:54:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:54:52 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:58:58 INFO  : Disconnected from the channel tcfchan#10.
+19:59:00 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:59:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:02 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:59:02 INFO  : 'jtag frequency' command is executed.
+19:59:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:59:04 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:04 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:59:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:04 INFO  : System reset is completed.
+19:59:07 INFO  : 'after 3000' command is executed.
+19:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:07 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:59:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:07 INFO  : 'con' command is executed.
+19:59:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:59:07 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+19:59:47 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+19:59:50 INFO  : Disconnected from the channel tcfchan#11.
+19:59:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:50 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+19:59:50 INFO  : 'jtag frequency' command is executed.
+19:59:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+19:59:51 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+19:59:51 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:51 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+19:59:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:59:51 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:51 INFO  : System reset is completed.
+19:59:54 INFO  : 'after 3000' command is executed.
+19:59:54 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:54 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+19:59:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+19:59:54 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:54 INFO  : 'con' command is executed.
+19:59:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:59:54 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:00:44 INFO  : Disconnected from the channel tcfchan#12.
+20:00:45 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:00:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:00:48 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:00:48 INFO  : 'jtag frequency' command is executed.
+20:00:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:00:50 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:00:50 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:50 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:00:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:00:50 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:50 INFO  : System reset is completed.
+20:00:53 INFO  : 'after 3000' command is executed.
+20:00:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:53 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:00:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:00:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:53 INFO  : 'con' command is executed.
+20:00:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:00:53 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:01:28 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:01:30 INFO  : Disconnected from the channel tcfchan#13.
+20:01:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:01:30 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:01:30 INFO  : 'jtag frequency' command is executed.
+20:01:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:01:31 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:01:31 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:31 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:01:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:01:31 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:31 INFO  : System reset is completed.
+20:01:34 INFO  : 'after 3000' command is executed.
+20:01:35 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:35 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:01:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:01:35 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:35 INFO  : 'con' command is executed.
+20:01:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:01:35 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:03:02 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:03:04 INFO  : Disconnected from the channel tcfchan#14.
+20:03:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:03:05 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:03:05 INFO  : 'jtag frequency' command is executed.
+20:03:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:03:06 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:03:06 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:06 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:03:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:03:06 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:06 INFO  : System reset is completed.
+20:03:09 INFO  : 'after 3000' command is executed.
+20:03:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:09 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:03:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:03:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:09 INFO  : 'con' command is executed.
+20:03:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:03:09 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:05:45 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:05:47 INFO  : Disconnected from the channel tcfchan#15.
+20:05:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:05:47 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:05:47 INFO  : 'jtag frequency' command is executed.
+20:05:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:05:49 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:05:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:05:49 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:05:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:05:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:05:49 INFO  : System reset is completed.
+20:05:52 INFO  : 'after 3000' command is executed.
+20:05:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:05:52 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:05:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:05:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:05:52 INFO  : 'con' command is executed.
+20:05:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:05:52 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:06:36 INFO  : Disconnected from the channel tcfchan#16.
+20:06:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:06:36 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:06:36 INFO  : 'jtag frequency' command is executed.
+20:06:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:06:38 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:06:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:38 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:06:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:06:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:38 INFO  : System reset is completed.
+20:06:39 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:06:41 INFO  : 'after 3000' command is executed.
+20:06:41 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:41 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:06:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:06:41 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:41 INFO  : 'con' command is executed.
+20:06:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:06:41 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:06:43 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:06:44 INFO  : Disconnected from the channel tcfchan#17.
+20:06:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:06:45 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:06:45 INFO  : 'jtag frequency' command is executed.
+20:06:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:06:46 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:06:46 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:46 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:06:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:06:46 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:46 INFO  : System reset is completed.
+20:06:49 INFO  : 'after 3000' command is executed.
+20:06:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:49 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:06:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:06:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:06:49 INFO  : 'con' command is executed.
+20:06:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:06:49 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:09:21 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:09:24 INFO  : Disconnected from the channel tcfchan#18.
+20:09:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:09:24 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:09:24 INFO  : 'jtag frequency' command is executed.
+20:09:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:09:26 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:09:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:26 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:09:26 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:09:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:26 INFO  : System reset is completed.
+20:09:29 INFO  : 'after 3000' command is executed.
+20:09:29 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:29 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:09:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:09:29 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:29 INFO  : 'con' command is executed.
+20:09:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:09:29 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:11:25 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:11:33 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:11:34 INFO  : Disconnected from the channel tcfchan#19.
+20:11:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:11:35 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:11:35 INFO  : 'jtag frequency' command is executed.
+20:11:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:11:36 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:11:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:36 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:11:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:11:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:36 INFO  : System reset is completed.
+20:11:39 INFO  : 'after 3000' command is executed.
+20:11:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:39 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:11:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:11:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:39 INFO  : 'con' command is executed.
+20:11:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:11:39 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:16:07 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:16:09 INFO  : Disconnected from the channel tcfchan#20.
+20:16:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:16:10 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:16:10 INFO  : 'jtag frequency' command is executed.
+20:16:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:16:11 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:16:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:11 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:16:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:16:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:11 INFO  : System reset is completed.
+20:16:14 INFO  : 'after 3000' command is executed.
+20:16:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:14 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:16:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:16:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:14 INFO  : 'con' command is executed.
+20:16:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:16:14 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:17:34 INFO  : Disconnected from the channel tcfchan#21.
+20:39:56 DEBUG : Logs will be stored at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/IDE.log'.
+20:39:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\temp_xsdb_launch_script.tcl
+20:39:58 INFO  : XSCT server has started successfully.
+20:39:58 INFO  : Successfully done setting XSCT server connection channel  
+20:39:58 INFO  : plnx-install-location is set to ''
+20:39:58 INFO  : Successfully done setting workspace for the tool. 
+20:39:59 INFO  : Successfully done query RDI_DATADIR 
+20:39:59 INFO  : Platform repository initialization has completed.
+20:39:59 INFO  : Registering command handlers for Vitis TCF services
+20:40:18 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+20:40:36 INFO  : Result from executing command 'getProjects': design_1_wrapper
+20:40:36 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:40:37 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:40:39 INFO  : The hardware specification used by project 'GraviTris_uC' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:40:39 INFO  : The file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+20:40:39 INFO  : The file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC\_ide\bitstream\design_1_wrapper.mmi' stored in project is removed.
+20:40:39 INFO  : The updated bitstream files are copied from platform to folder 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC\_ide\bitstream' in project 'GraviTris_uC'.
+20:40:40 INFO  : Checking for BSP changes to sync application flags for project 'GraviTris_uC'...
+20:40:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:40:45 INFO  : Jtag cable 'Digilent Basys3 210183B31623A' is selected.
+20:40:45 INFO  : 'jtag frequency' command is executed.
+20:40:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}' command is executed.
+20:40:46 INFO  : Device configured successfully with "C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit"
+20:40:46 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:46 INFO  : Hardware design and registers information is loaded from 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+20:40:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:40:46 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:46 INFO  : System reset is completed.
+20:40:49 INFO  : 'after 3000' command is executed.
+20:40:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:49 INFO  : The application 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf' is downloaded to processor 'microblaze_0'.
+20:40:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}
+fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
+----------------End of Script----------------
+
+20:40:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:49 INFO  : 'con' command is executed.
+20:40:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:40:49 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
+20:41:03 INFO  : Disconnected from the channel tcfchan#2.

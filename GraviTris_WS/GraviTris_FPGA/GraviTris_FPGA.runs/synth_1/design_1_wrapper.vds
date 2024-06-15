@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Jun 14 19:49:21 2024
-# Process ID: 47836
+# Start of session at: Sat Jun 15 20:36:20 2024
+# Process ID: 30368
 # Current directory: C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/design_1_wrapper.vds
@@ -26,84 +26,84 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34656
+INFO: [Synth 8-7075] Helper process launched with PID 32496
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1375.277 ; gain = 406.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1374.852 ; gain = 407.844
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:34]
-INFO: [Synth 8-3491] module 'design_1' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2424' bound to instance 'design_1_i' of component 'design_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:55]
-INFO: [Synth 8-638] synthesizing module 'design_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2448]
-INFO: [Synth 8-3491] module 'design_1_Divider_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_Divider_0_0_stub.vhdl:5' bound to instance 'Divider_0' of component 'design_1_Divider_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2964]
-INFO: [Synth 8-638] synthesizing module 'design_1_Divider_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_Divider_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_IO_Mapper_0_1' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_IO_Mapper_0_1_stub.vhdl:5' bound to instance 'IO_Mapper_0' of component 'design_1_IO_Mapper_0_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2969]
-INFO: [Synth 8-638] synthesizing module 'design_1_IO_Mapper_0_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_IO_Mapper_0_1_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'design_1_TTF_Driver_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_TTF_Driver_0_0_stub.vhdl:5' bound to instance 'TTF_Driver_0' of component 'design_1_TTF_Driver_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2986]
-INFO: [Synth 8-638] synthesizing module 'design_1_TTF_Driver_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_TTF_Driver_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_1_axi_bram_ctrl_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3005]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_bram_1' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_bram_ctrl_0_bram_1_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0_bram' of component 'design_1_axi_bram_ctrl_0_bram_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3048]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_bram_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_bram_ctrl_0_bram_1_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3068]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3092]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3117]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_clk_wiz_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_mdm_1_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_mdm_1_3_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3124]
-INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_mdm_1_3_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_5' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_microblaze_0_5_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_5' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3137]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_5' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_microblaze_0_5_stub.vhdl:63]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_intc_1' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_microblaze_0_axi_intc_1_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'design_1_microblaze_0_axi_intc_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3223]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_microblaze_0_axi_intc_1_stub.vhdl:36]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1517]
+INFO: [Synth 8-3491] module 'design_1' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2354' bound to instance 'design_1_i' of component 'design_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'design_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2378]
+INFO: [Synth 8-3491] module 'design_1_Divider_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_Divider_0_0_stub.vhdl:5' bound to instance 'Divider_0' of component 'design_1_Divider_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2896]
+INFO: [Synth 8-638] synthesizing module 'design_1_Divider_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_Divider_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_IO_Mapper_0_1' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_IO_Mapper_0_1_stub.vhdl:5' bound to instance 'IO_Mapper_0' of component 'design_1_IO_Mapper_0_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2901]
+INFO: [Synth 8-638] synthesizing module 'design_1_IO_Mapper_0_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_IO_Mapper_0_1_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_TTF_Driver_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_TTF_Driver_0_0_stub.vhdl:5' bound to instance 'TTF_Driver_0' of component 'design_1_TTF_Driver_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2918]
+INFO: [Synth 8-638] synthesizing module 'design_1_TTF_Driver_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_TTF_Driver_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_1_axi_bram_ctrl_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2937]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_bram_1' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_bram_ctrl_0_bram_1_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0_bram' of component 'design_1_axi_bram_ctrl_0_bram_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2980]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_bram_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_bram_ctrl_0_bram_1_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3000]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3024]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3049]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_mdm_1_3_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3056]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_mdm_1_3_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_5' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_microblaze_0_5_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_5' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3069]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_5' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_microblaze_0_5_stub.vhdl:63]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_intc_1' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_microblaze_0_axi_intc_1_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'design_1_microblaze_0_axi_intc_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3155]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_1' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_microblaze_0_axi_intc_1_stub.vhdl:36]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1529]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:57]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:158]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1W07O72' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:360]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1W07O72' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:360]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_5LX7BU' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:477]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:647]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_auto_pc_0_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_5LX7BU' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:477]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1316]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1316]
-INFO: [Synth 8-3491] module 'design_1_xbar_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_xbar_3_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2273]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_xbar_3_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_3' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1517]
-INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:737]
-INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_dlmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:951]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_dlmb_bram_if_cntlr_3_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_dlmb_v10_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_dlmb_v10_3_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1005]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_dlmb_v10_3_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_ilmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1033]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_ilmb_bram_if_cntlr_3_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_ilmb_v10_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_ilmb_v10_3_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1087]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_ilmb_v10_3_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_lmb_bram_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_lmb_bram_3_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1115]
-INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_lmb_bram_3_stub.vhdl:27]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:737]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_xlconcat_1' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_1/synth/design_1_microblaze_0_xlconcat_1.v:53' bound to instance 'microblaze_0_xlconcat' of component 'design_1_microblaze_0_xlconcat_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3411]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:263]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1W07O72' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:370]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1W07O72' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:370]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_5LX7BU' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:487]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:657]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_auto_pc_0_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_5LX7BU' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:487]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1326]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1326]
+INFO: [Synth 8-3491] module 'design_1_xbar_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_xbar_3_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2199]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_xbar_3_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_3' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1529]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:747]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_dlmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:961]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_dlmb_bram_if_cntlr_3_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_dlmb_v10_3_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1015]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_dlmb_v10_3_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_ilmb_bram_if_cntlr_3_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1043]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_ilmb_bram_if_cntlr_3_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_ilmb_v10_3_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1097]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_ilmb_v10_3_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_lmb_bram_3_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:1125]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_lmb_bram_3_stub.vhdl:27]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:747]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_xlconcat_1' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_1/synth/design_1_microblaze_0_xlconcat_1.v:53' bound to instance 'microblaze_0_xlconcat' of component 'design_1_microblaze_0_xlconcat_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3345]
 INFO: [Synth 8-6157] synthesizing module 'design_1_microblaze_0_xlconcat_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_1/synth/design_1_microblaze_0_xlconcat_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_microblaze_0_xlconcat_1' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_1/synth/design_1_microblaze_0_xlconcat_1.v:53]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_100M_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_rst_clk_wiz_0_100M_3_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_100M' of component 'design_1_rst_clk_wiz_0_100M_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3416]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_100M_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-47836-CP-230194/realtime/design_1_rst_clk_wiz_0_100M_3_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3429]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_100M_3' declared at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_rst_clk_wiz_0_100M_3_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_100M' of component 'design_1_rst_clk_wiz_0_100M_3' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3350]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_100M_3' [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/.Xil/Vivado-30368-CP-230194/realtime/design_1_rst_clk_wiz_0_100M_3_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3363]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:53' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_0_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3433]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:53' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_0_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:3367]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_1' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_1' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:53]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2448]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/synth/design_1.vhd:2378]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:34]
 WARNING: [Synth 8-7129] Port In1[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -207,18 +207,18 @@ WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1479.086 ; gain = 512.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1479.086 ; gain = 512.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1479.086 ; gain = 512.078
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1480.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1479.086 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -371,25 +371,25 @@ Parsing XDC File [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.ru
 Finished Parsing XDC File [C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1480.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1492.504 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1480.059 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1492.504 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -421,10 +421,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constra
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/TTF_Driver_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -447,25 +447,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -483,37 +483,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -571,24 +571,24 @@ Report Cell Usage:
 |21    |OBUF                                  |    21|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1480.059 ; gain = 511.367
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1480.059 ; gain = 511.367
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1494.418 ; gain = 512.078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1494.418 ; gain = 527.410
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1483.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1500.473 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1492.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1504.148 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: b5d5d22e
+Synth Design complete, checksum: f814e948
 INFO: [Common 17-83] Releasing license: Synthesis
 100 Infos, 204 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1492.480 ; gain = 905.957
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1504.148 ; gain = 919.020
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 14 19:49:52 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 15 20:36:50 2024...

@@ -20,4 +20,5 @@ rst -system
 after 3000
 targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
 dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con

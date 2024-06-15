@@ -11,6 +11,7 @@
 
 #include "gpioHandler.h"
 #include "displayHandler.h"
+#include "commonDisplayHandler.h"
 
 #define INTC_HANDLER		  XIntc_InterruptHandler
 
@@ -34,13 +35,61 @@ int main()
 	uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 	memPtr[0] = (240 << 8) + 240;
-	for(int i=1;i<7201;i++){
-		memPtr[i] = 0x12345678;
+
+	uint16_t pixCounter = 0;
+	uint32_t pixel = 0;
+	uint16_t i =1;
+	uint8_t colors[8]={white, yellow, teal, green, fuchsia, red, blue, black};
+	for (int h = 0; h < 240; h++)
+	{
+		for (int w = 0; w < 240; w++) {
+			uint8_t idx = w / 30;
+			uint8_t c = colors[idx];
+			uint8_t pixPos = (pixCounter%8);
+
+			if (pixPos == 0)
+				pixel =0;
+
+			pixel |= (uint32_t)(c << ( (7-pixPos) *4 ));
+
+			if(pixPos == 7){
+				memPtr[i++] = pixel;
+			}
+
+            pixCounter++;
+		}
 	}
 
-	for(int i=0;i<7201;i++){
-		xil_printf("%4d. %08X\n",i, memPtr[i]);
-	}
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+
+
+//	for(int i=1;i<31;i++){
+//		memPtr[i] = 0xFF0000FF;
+//	}
+
+//	for(int i=0;i<7201;i++){
+//		xil_printf("%4d. %08X\n",i, memPtr[i]);
+//	}
 	xil_printf("Start...\r\n");
 	while(1){
 		char c;
