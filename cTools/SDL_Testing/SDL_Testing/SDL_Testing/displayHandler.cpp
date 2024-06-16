@@ -98,13 +98,13 @@ void write32ToMemory(uint16_t address, uint32_t data) {
 
 void writePixel(uint16_t pixelNumber, uint8_t color) {
     //Get buffer u32 index
-    uint8_t idx1 = 1 + (pixelNumber / 8);
+    uint16_t idx1 = 1 + (pixelNumber / 8);
     //Get 8 pixels from buffer
     uint32_t pixels = memoryBuffer[idx1];
     //Get byte index in u32
     uint8_t byteIdx = 3 - ((pixelNumber % 8) / 2);
 
-    uint8_t *pixelsPtr = (uint8_t*)&pixels;
+    uint8_t *pixelsPtr = (uint8_t*)&memoryBuffer[idx1];
 
     uint8_t pixel = pixelsPtr[byteIdx];
     if (pixelNumber % 2 == 0)
@@ -113,25 +113,10 @@ void writePixel(uint16_t pixelNumber, uint8_t color) {
         pixel = (pixel & 0xF0) + color;
 
     pixelsPtr[byteIdx] = pixel;
-    //return pixel;
-
-    //printf("%02X\n", pixel);
-    /*
-    uint16_t pixPos = 4 + ((pixelNumber - 1) / 2);
-    uint8_t pixelsPair = mem8Ptr[pixPos];
-    if (pixelNumber % 2) {
-        pixelsPair &= 0x0f;
-        pixelsPair |= color << 4;
-    }
-    else {
-        pixelsPair &= 0xf0;
-        pixelsPair |= color;
-    }
-    mem8Ptr[pixPos] = pixelsPair;*/
 }
 
 uint8_t getPixel(uint16_t pixelNumber) {
-    uint8_t idx1 = 1 + (pixelNumber / 8);
+    uint16_t idx1 = 1 + (pixelNumber / 8);
     uint32_t pixels = memoryBuffer[idx1];
     uint8_t byteIdx = 3 - ((pixelNumber % 8) / 2);
     uint8_t dualPixel = ((uint8_t*)&pixels)[byteIdx];
@@ -146,8 +131,8 @@ uint8_t getPixel(uint16_t pixelNumber) {
 }
 // draw canvas from memory
 void drawMemory() {
-    uint8_t drawWidth = memoryBuffer[2];
-    uint8_t drawHeight = memoryBuffer[3];
+    uint8_t drawWidth = memoryBuffer[0] >> 8;
+    uint8_t drawHeight = memoryBuffer[0] & 0xFF;
 
     uint16_t pixelCount = drawWidth * drawHeight;
     uint16_t pixIdx = 0;
@@ -155,11 +140,10 @@ void drawMemory() {
     uint8_t xIdx = 0;
     uint8_t yIdx = 0;
 
+    uint8_t idx = 0;
     //SDL_RenderClear(renderer);
     for(int i = 0; i < pixelCount; i++) {
         uint8_t pix = getPixel(pixIdx++);
-        if (pix != 0x0f)
-            printf(".");
         pixelColor = get565Color(pix);
 
         if (xIdx == drawWidth) {
