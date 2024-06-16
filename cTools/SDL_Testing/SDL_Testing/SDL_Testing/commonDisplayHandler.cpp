@@ -15,7 +15,6 @@ void tft_SetDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height) {
 	setDisplayWindow(x, y, x + width, y + height);
 }
 
-// IMPLEMENT
 // draw 8 color bar to memory
 void draw8ColorBars() {
 #define BARS 8
@@ -23,76 +22,45 @@ void draw8ColorBars() {
     const int BAR_WIDTH = DISPLAY_WIDTH / BARS;
     uint8_t barColor[BARS] = { white, yellow, teal, green, fuchsia, red, blue, black };
 
-    bool isEven = false;
-    uint8_t firstPixel = 0x00;
+    setDisplayWindow(0, 0, DISPLAY_WIDTH, DISPLAY_HEIGHT);
 
-    writeByteToMemory(0, DISPLAY_WIDTH);
-    writeByteToMemory(1, DISPLAY_HEIGHT);
-    uint16_t i = 2;
+    uint16_t pixelCounter = 1;
     for (int h = 0; h < DISPLAY_HEIGHT; h++)
     {
         for (int w = 0; w < DISPLAY_WIDTH; w++) {
             uint8_t idx = w / BAR_WIDTH;
-            if (isEven)
-            {
-                uint8_t bothPixels = (firstPixel << 4) | barColor[idx];
-                writeByteToMemory(i++, bothPixels);
-                isEven = false;
-            }
-            else if (isEven == false && w == (DISPLAY_WIDTH - 1) && h == (DISPLAY_HEIGHT - 1)) { // if less pixel is even number
-                uint8_t bothPixels = barColor[idx] << 4;
-                writeByteToMemory(i++, bothPixels);
-            }
-            else {
-                firstPixel = barColor[idx];
-                isEven = true;
-            }
+            writePixel(pixelCounter++, barColor[idx]);
         }
     }
 }
 
+//ToDo: Convert to writePixel()
 uint8_t drawBitmap(uint8_t* img, uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t color) {
     setDisplayWindow(x, y, width, height);
 
     uint16_t pixel2Draw = width * height;
     uint16_t byteCounter = 0;
     uint8_t pixel = 0x00;
-
-    uint8_t idx = 7; // bit mask select
+    uint32_t u32Pixels = 0;
+    //uint8_t idx = 7; // bit mask select
     uint8_t bitPixels = img[byteCounter];
-    for (uint16_t pixelCounter = 0; pixelCounter < pixel2Draw; pixelCounter++) {    
-        if (idx == 0) {
-            //select next byte from image
-            byteCounter++;
-            bitPixels = img[byteCounter];
-            idx = 7;
-        }
-        else {
-            idx--;
-        }
+    uint16_t u32Idx = 1;
 
-        uint8_t bit = img[byteCounter] & (0x01 << idx);
-        
-        if (bit) {
-            if (pixelCounter & 0x0001) {
-                pixel |= color;
-            }
-            else
-            {
-                pixel = color << 4;
+    uint8_t byteIdx = 0;
+    for (int i = 0; i < pixel2Draw; i++) {
+        uint8_t b = img[byteIdx];
+        for (uint8_t bitIdx = 8; bitIdx > 0; bitIdx--) {
+            if (b & (0x01 << (bitIdx - 1))) {
+                u32Pixels |= color << ((bitIdx-1)*4);
             }
         }
 
-        //Write to memory
-        if ((pixelCounter & 0x0001)) {
-            writeByteToMemory((pixelCounter >> 1) + 2, pixel);
-            pixel = 0;
-        }
-        
-        
-        
+        i += 7;
+        byteIdx++;
+        write32ToMemory(u32Idx++, u32Pixels);
+        u32Pixels = 0;
     }
-        
+
     return 1;
 }
 

@@ -1,6 +1,60 @@
-20:40:40 **** Incremental Build of configuration Debug for project GraviTris_uC ****
+14:32:19 **** Incremental Build of configuration Debug for project GraviTris_uC ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
+                 from ../src/helloworld.c:3:
+../src/helloworld.c: In function 'main':
+C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xparameters.h:534:45: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+  534 | #define XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR 0xC0000000U
+      |                                             ^~~~~~~~~~~
+../src/helloworld.c:35:28: note: in expansion of macro 'XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR'
+   35 |         uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:99:21: warning: implicit declaration of function 'XUartLite_RecvByte'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
+   99 |                 c = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+      |                     ^~~~~~~~~~~~~~~~~~
+      |                     XUartLite_Recv
+In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xintc.h:221,
+                 from ../src/helloworld.c:10:
+../src/helloworld.c: In function 'initInterrupt':
+C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xintc_l.h:184:35: warning: passing argument 1 of 'Xil_Out32' makes integer from pointer without a cast [-Wint-conversion]
+  184 |         XIntc_Out32((BaseAddress) + XIN_MER_OFFSET, \
+      |                                   ^
+      |                                   |
+      |                                   XIntc *
+../src/helloworld.c:163:9: note: in expansion of macro 'XIntc_MasterEnable'
+  163 |         XIntc_MasterEnable(&Intc);
+      |         ^~~~~~~~~~~~~~~~~~
+In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xgpio_l.h:61,
+                 from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xgpio.h:117,
+                 from ../src/helloworld.c:5:
+C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xil_io.h:208:38: note: expected 'UINTPTR' {aka 'unsigned int'} but argument is of type 'XIntc *'
+  208 | static INLINE void Xil_Out32(UINTPTR Addr, u32 Value)
+      |                              ~~~~~~~~^~~~
+In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
+                 from ../src/helloworld.c:3:
+../src/helloworld.c: In function 'initGPIO':
+C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xparameters.h:608:34: warning: unsigned conversion from 'int' to 'u16' {aka 'short unsigned int'} changes value from '1073741824' to '0' [-Woverflow]
+  608 | #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
+      |                                  ^~~~~~~~~~
+../src/helloworld.c:169:41: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
+  169 |         gpioConfig = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: GraviTris_uC.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "GraviTris_uC.elf"  ./src/commonDisplayHandler.o ./src/displayHandler.o ./src/gpioHandler.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: GraviTris_uC.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size GraviTris_uC.elf  |tee "GraviTris_uC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13548	    340	   3288	  17176	   4318	GraviTris_uC.elf
+'Finished building: GraviTris_uC.elf.size'
+' '
 
-20:40:40 Build Finished (took 93ms)
+14:32:21 Build Finished (took 1s.966ms)
 

@@ -2,13 +2,9 @@
 #include "commonDisplayHandler.h"
 #include <xgpio.h>
 #include "sleep.h"
-#include "xparameters.h"
 
 extern XGpio gpio;
 extern uint32_t millisCounter;
-
-uint8_t *mem8Ptr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
-uint32_t *mem32Ptr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 void takeOverride(){
 	// Take override
@@ -150,6 +146,7 @@ void displayInit(){
 
 }
 
+//void setDisplayWindow(int x0, int y0, int x1, int y1)
 void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height){
 	int x0 = x;
 	int x1 = x + width;
@@ -188,8 +185,6 @@ void exitSleep (){
 	// When this command is accepted, the column register and the page
 	// register are reset to the start column/start page positions.
 }
-
-
 
 void override_clearScreen(){
 	unsigned int i,j;
@@ -231,17 +226,12 @@ void writeColor(unsigned long color){
   	writeData(data);
 }
 
-
-//To Test
 void writeByteToMemory(uint16_t address, uint8_t data){
-	mem8Ptr[address] = data;
-}
-
-void write32BitToMemory(uint16_t address, uint32_t data){
-	mem32Ptr[address] = data;
+//	XGpio_DiscreteWrite(&gpio, MEMORY_OUT_PIN_CH, 0x1<< MEMORY_WRITE_EN | ((uint32_t)data << MEMORY_DATA) | address);
+//
+//	gpio_pinSet(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
+//	gpio_pinClear(&gpio, MEMORY_OUT_PIN_CH,MEMORY_WRITE_CLK);
 }
 
 //To implement
-void clrBuff(){
-	memset(mem8Ptr,0,sizeof(28810));
-}
+//void clrBuff()

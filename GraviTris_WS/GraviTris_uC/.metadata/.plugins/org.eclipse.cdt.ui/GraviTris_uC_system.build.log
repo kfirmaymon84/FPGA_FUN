@@ -1,6 +1,6 @@
-20:40:41 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
+14:32:21 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-20:40:41 Build Finished (took 107ms)
+14:32:21 Build Finished (took 105ms)
 

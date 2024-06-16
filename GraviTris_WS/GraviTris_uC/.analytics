@@ -513,3 +513,29 @@ timestamp=[2024-06-15 20:40:38], mode=BUILD, duration=0:00:01.564, duration_ms=1
 timestamp=[2024-06-15 20:40:39], mode=BUILD, duration=0:00:00.118, duration_ms=118, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
 timestamp=[2024-06-15 20:40:40], mode=BUILD, duration=0:00:00.099, duration_ms=99, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
 timestamp=[2024-06-15 20:40:41], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:45:41], mode=WORKBENCH_START, duration=0:00:06.777, duration_ms=6777, data={}
+timestamp=[2024-06-16 08:45:42], mode=WORKBENCH_UI_INIT, duration=0:00:00.577, duration_ms=577, data={editors_count=6, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=GraviTris_uC,GraviTris_uC_system,RemoteSystemsTempFiles,design_1_wrapper}
+timestamp=[2024-06-16 08:45:42], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.332, duration_ms=332, data={}
+timestamp=[2024-06-16 08:50:03], mode=BUILD, duration=0:00:02.195, duration_ms=2195, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:50:03], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:50:28], mode=BUILD, duration=0:00:00.554, duration_ms=554, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:50:28], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:51:04], mode=BUILD, duration=0:00:00.761, duration_ms=761, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:51:05], mode=BUILD, duration=0:00:00.127, duration_ms=127, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:51:39], mode=BUILD, duration=0:00:00.541, duration_ms=541, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:51:39], mode=BUILD, duration=0:00:00.100, duration_ms=100, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:52:23], mode=BUILD, duration=0:00:00.596, duration_ms=596, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:52:24], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:52:40], mode=BUILD, duration=0:00:00.546, duration_ms=546, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 08:52:40], mode=BUILD, duration=0:00:00.115, duration_ms=115, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 10:07:26], mode=BUILD, duration=0:00:00.830, duration_ms=830, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 10:07:26], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 10:07:51], mode=BUILD, duration=0:00:01.021, duration_ms=1021, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 10:07:51], mode=BUILD, duration=0:00:00.135, duration_ms=135, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 10:13:10], mode=BUILD, duration=0:00:00.601, duration_ms=601, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 10:13:10], mode=BUILD, duration=0:00:00.105, duration_ms=105, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 14:32:02], mode=WORKBENCH_START, duration=0:00:05.962, duration_ms=5962, data={}
+timestamp=[2024-06-16 14:32:02], mode=WORKBENCH_UI_INIT, duration=0:00:00.565, duration_ms=565, data={editors_count=4, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=GraviTris_uC,GraviTris_uC_system,RemoteSystemsTempFiles,design_1_wrapper}
+timestamp=[2024-06-16 14:32:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.343, duration_ms=343, data={}
+timestamp=[2024-06-16 14:32:21], mode=BUILD, duration=0:00:01.993, duration_ms=1993, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-16 14:32:21], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}

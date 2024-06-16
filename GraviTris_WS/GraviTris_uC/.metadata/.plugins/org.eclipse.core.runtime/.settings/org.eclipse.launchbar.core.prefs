@@ -7,4 +7,4 @@ org.eclipse.launchbar.core.descriptorType.default\:Debugger_GraviTris_uC-Default
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_GraviTris_uC-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_GraviTris_uC-GDB/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_GraviTris_uC-GDB/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
-org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_GraviTris_uC_system/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_GraviTris_uC_system/activeLaunchMode=debug

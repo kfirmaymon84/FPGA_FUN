@@ -1,146 +1,7 @@
-20:40:33 **** Incremental Build of project design_1_wrapper ****
-buildplatform.bat 62845 design_1_wrapper no_domain_build 
-XSDB Server Channel: tcfchan#1
-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
-make --no-print-directory seq_libs
+Nothing to build in platform 'design_1_wrapper'
 
-'Finished building libraries sequentially.'
-
-make -j 30 --no-print-directory par_libs
-
-"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
-
-make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
--Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
-
-make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
--Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
-
-make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
--Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
-
-make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
- -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
-
-make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
-OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
--Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
-
-make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
-PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -W
-all -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
-
-make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
-xtra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
-
-make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
-xtra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/gpio_v4_9/src"
-
-make -C microblaze_0/libsrc/gpio_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
-xtra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
-
-make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
-FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
-extra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
-
-make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
-ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
-ll -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src"
-
-make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
- -Wextra -fno-tree-loop-distribute-patterns"
-
-microblaze_sleep.c:81:9: note: '#pragma message: For the sleep routines, assembly instructions are used'
-   81 | #pragma message ("For the sleep routines, assembly instructions are used")
-      |         ^~~~~~~
-"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
-
-'Finished building libraries parallelly.'
-
-make --no-print-directory archive
-
-mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
-/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
-ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
-/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
-aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
-e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
-aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
-laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
-he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
-lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
-_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
-microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
-/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
-e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xgpio.o microblaze_0/lib/xgpio_extra.o microblaze_0/li
-b/xgpio_g.o microblaze_0/lib/xgpio_intr.o microblaze_0/lib/xgpio_selftest.o microblaze_0/lib/xgpio_sinit.o microblaze_0/lib/xil
-_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_me
-m.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/x
-il_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.
-o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xintc_options.o microbla
-ze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaz
-e_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_intr.o microblaze_0/lib/xuartlite_l.o microblaze_
-0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/xuartlite_stats.o
-
-mb-ar: creating microblaze_0/lib/libxil.a
-'Finished building libraries'
-
-20:40:37 **** Incremental Build of configuration Debug for project GraviTris_uC ****
+14:32:19 **** Incremental Build of configuration Debug for project GraviTris_uC ****
 make all 
-'Building file: ../src/commonDisplayHandler.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/commonDisplayHandler.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/commonDisplayHandler.d" -MT"src/commonDisplayHandler.o" -o "src/commonDisplayHandler.o" "../src/commonDisplayHandler.c"
-../src/commonDisplayHandler.c: In function 'drawBitmap':
-../src/commonDisplayHandler.c:63:13: warning: variable 'bitPixels' set but not used [-Wunused-but-set-variable]
-   63 |     uint8_t bitPixels = img[byteCounter];
-      |             ^~~~~~~~~
-../src/commonDisplayHandler.c: In function 'drawEmpty':
-../src/commonDisplayHandler.c:251:5: warning: implicit declaration of function 'clrBuff' [-Wimplicit-function-declaration]
-  251 |     clrBuff();
-      |     ^~~~~~~
-'Finished building: ../src/commonDisplayHandler.c'
-' '
-'Building file: ../src/displayHandler.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/displayHandler.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/displayHandler.d" -MT"src/displayHandler.o" -o "src/displayHandler.o" "../src/displayHandler.c"
-'Finished building: ../src/displayHandler.c'
-' '
-'Building file: ../src/gpioHandler.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpioHandler.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gpioHandler.d" -MT"src/gpioHandler.o" -o "src/gpioHandler.o" "../src/gpioHandler.c"
-'Finished building: ../src/gpioHandler.c'
-' '
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
@@ -153,8 +14,8 @@ C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrap
 ../src/helloworld.c:35:28: note: in expansion of macro 'XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR'
    35 |         uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
       |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:98:21: warning: implicit declaration of function 'XUartLite_RecvByte'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-   98 |                 c = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
+../src/helloworld.c:99:21: warning: implicit declaration of function 'XUartLite_RecvByte'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
+   99 |                 c = XUartLite_RecvByte(XPAR_AXI_UARTLITE_0_BASEADDR);
       |                     ^~~~~~~~~~~~~~~~~~
       |                     XUartLite_Recv
 In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xintc.h:221,
@@ -165,8 +26,8 @@ C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrap
       |                                   ^
       |                                   |
       |                                   XIntc *
-../src/helloworld.c:162:9: note: in expansion of macro 'XIntc_MasterEnable'
-  162 |         XIntc_MasterEnable(&Intc);
+../src/helloworld.c:163:9: note: in expansion of macro 'XIntc_MasterEnable'
+  163 |         XIntc_MasterEnable(&Intc);
       |         ^~~~~~~~~~~~~~~~~~
 In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xgpio_l.h:61,
                  from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xgpio.h:117,
@@ -180,15 +41,10 @@ In file included from C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrappe
 C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include/xparameters.h:608:34: warning: unsigned conversion from 'int' to 'u16' {aka 'short unsigned int'} changes value from '1073741824' to '0' [-Woverflow]
   608 | #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
       |                                  ^~~~~~~~~~
-../src/helloworld.c:168:41: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
-  168 |         gpioConfig = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
+../src/helloworld.c:169:41: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
+  169 |         gpioConfig = XGpio_LookupConfig(XPAR_AXI_GPIO_0_BASEADDR);
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
 ' '
 'Building target: GraviTris_uC.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -201,14 +57,6 @@ mb-size GraviTris_uC.elf  |tee "GraviTris_uC.elf.size"
   13548	    340	   3288	  17176	   4318	GraviTris_uC.elf
 'Finished building: GraviTris_uC.elf.size'
 ' '
-20:40:39 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
-make all 
-Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
-Nothing to build in platform 'design_1_wrapper'
-
-20:40:40 **** Incremental Build of configuration Debug for project GraviTris_uC ****
-make all 
-make: Nothing to be done for 'all'.
-20:40:41 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
+14:32:21 **** Incremental Build of configuration Debug for project GraviTris_uC_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

@@ -8029,3 +8029,3351 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-7: Launch
 
 !ENTRY com.xilinx.sdk.utils 0 0 2024-06-15 20:41:03.982
 !MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-127
+!SESSION 2024-06-16 08:44:48.040 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2024-06-16 08:45:37.871
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:42.778
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:42.778
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:42.795
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.250
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.251
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.252
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.252
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.268
+!MESSAGE XSCT Command: [setws C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC], Thread: Thread-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.268
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2022.2/data]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:45:47.286
+!MESSAGE XSCT command with result: [setws C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC], Result: [null, ]. Thread: Thread-26
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-06-16 08:47:23.375
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-06-16 08:47:23.376
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-06-16 08:47:23.376
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:00.862
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.038
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.042
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.088
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.089
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.094
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:50:01.095
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.098
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:01.100
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:03.615
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:03.623
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"Divider_0": {"hier_name": "Divider_0",
+"type": "Divider",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"IO_Mapper_0": {"hier_name": "IO_Mapper_0",
+"type": "IO_Mapper",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"TTF_Driver_0": {"hier_name": "TTF_Driver_0",
+"type": "TTF_Driver",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_bram_ctrl_0": {"hier_name": "axi_bram_ctrl_0",
+"type": "axi_bram_ctrl",
+"version": "4.1",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_bram_ctrl_0_bram": {"hier_name": "axi_bram_ctrl_0_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_intc": {"hier_name": "microblaze_0_axi_intc",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"microblaze_0_xlconcat": {"hier_name": "microblaze_0_xlconcat",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_0_100M": {"hier_name": "rst_clk_wiz_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_0": {"hier_name": "xlconstant_0",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_1": {"hier_name": "xlconstant_1",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:50:03.745
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:27.479
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:27.483
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:27.485
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:27.490
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:50:27.490
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:27.491
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:50:27.493
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:50:28.406
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '2'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:03.865
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:03.869
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:03.869
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:03.871
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:51:03.872
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:03.872
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:03.873
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-0: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:51:05.017
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '3'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:38.738
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:38.741
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:38.741
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:38.745
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:51:38.745
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:38.745
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:51:38.747
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-8: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:51:39.607
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:23.278
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:23.281
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:23.281
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:23.283
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:52:23.284
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:23.284
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:23.285
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:52:24.341
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '5'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:40.063
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:40.065
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:40.065
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:40.067
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:52:40.068
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:40.068
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 08:52:40.069
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 08:52:40.961
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '6'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:25.661
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:25.671
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:25.672
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:25.676
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:07:25.676
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:25.677
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:25.677
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:07:26.869
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '7'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:50.048
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:50.050
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:50.050
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:50.052
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:07:50.052
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:50.053
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:50.054
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:07:51.461
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '8'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.153
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.157
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"device": "7a35t",
+"family": "artix7",
+"timestamp": "Sat Jun 15 20:35:43 2024",
+"vivado_version": "2022.2",
+"part": "xc7a35tcpg236-1",
+}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.159
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_ENABLED], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.165
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.166
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_PROFILE_SIZE], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.182
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_PROFILE_SIZE], Result: [null, 0]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.182
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_FREQ], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.185
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_FREQ], Result: [null, 100000000]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.267
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.270
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.271
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.285
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Result: [null, {"axi_bram_ctrl_0": {},
+"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741824,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741828,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741832,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741836,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742108,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742120,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742112,
+},
+},
+"axi_uartlite_0": {"RX_FIFO": {"description": "Receive data FIFO",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_DATA": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033280,
+},
+"TX_FIFO": {"description": "Transmit data FIFO",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"TX_DATA": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033284,
+},
+"CTRL_REG": {"description": "UART Lite control register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RST_TXFIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO
+Writing a 1 to this bit position clears the transmit FIFO
+  0 - Do nothing
+  1 - Clear the transmit FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RST_RXFIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO
+Writing a 1 to this bit position clears the receive FIFO
+  0 - Do nothing
+  1 - Clear the receive FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Enable_Intr": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable interrupt for the AXI UART Lite
+  0 - Disable interrupt signal
+  1 - Enable interrupt signal
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033292,
+},
+"STAT_REG": {"description": "UART Lite status register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_FIFO_Valid_Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has data.
+  0 - Receive FIFO is empty
+  1 - Receive FIFO has data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX_FIFO_Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full.
+  0 - Receive FIFO is not full
+  1 - Receive FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty.
+  0 - Transmit FIFO is not empty
+  1 - Transmit FIFO is empty
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full.
+  0 - Transmit FIFO is not full
+  1 - Transmit FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Intr_Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupts is enabled.
+  0 - Interrupt is disabled
+  1 - Interrupt is enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Overrun_Error": {"access": "read-only",
+"bit_offset": "5",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a overrun error has occurred after the last time the status register was read. Overrun is when a new character has been received but the receive FIFO is full. The received character is ignored and not written into the receive FIFO. This bit is cleared when the status register is read.      0 - No overrun error has occurred      1 - Overrun error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Frame_Error": {"access": "read-only",
+"bit_offset": "6",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a frame error has occurred after the last time the status register was read. Frame error is defined as detection of a stop bit with the value 0. The receive character is ignored and not written to the receive FIFO. This bit is cleared when the status register is read.      0 - No frame error has occurred   1 - Frame error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Parity_Error": {"access": "read-only",
+"bit_offset": "7",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a parity error has occurred after the last time the status register was read. If the UART is configured without any parity handling, this bit is always 0. The received character is written into the receive FIFO. This bit is cleared when the status register is read.      0 - No parity error has occurred      1 - Parity error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033288,
+},
+},
+"microblaze_0_axi_intc": {"ISR": {"description": "Interrupt Status Register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Status Register.
+For each bit up to number of periperhal interrupts:
+  R - Reads active interrupt signal.
+  W - No effect after MER HIE bit has been set, otherwise writes active interrupt signal.
+For remaining bits defined by number of software interrupts:
+  R - Reads software interrupt value.
+  W - Writes software interrupt value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616192,
+},
+"IPR": {"description": "Interrupt Pending Register",
+"address_offset": "0x4",
+"access": "read-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Pending Register.
+For each bit:
+  R - Reads logical AND of bits in ISR and IER.
+  W - No effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616196,
+},
+"IER": {"description": "Interrupt Enable Register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Enable Register.
+For each bit:
+  R - Reads interrupt enable value.
+  W - Writes interrupt enable value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616200,
+},
+"IAR": {"description": "Interrupt Acknowledge Register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Acknowledge Register.
+For each bit:
+  W - Acknowledge interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616204,
+},
+"SIE": {"description": "Set Interrupt Enables",
+"address_offset": "0x10",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Set Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 enables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616208,
+},
+"CIE": {"description": "Clear Interrupt Enables",
+"address_offset": "0x14",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Clear Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 disables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616212,
+},
+"IVR": {"description": "Interrupt Vector Register",
+"address_offset": "0x18",
+"access": "read-only",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"IVN": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "Interrupt Vector Number.
+  R - Reads ordinal of highest priority, enabled, active interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616216,
+},
+"MER": {"description": "Master Enable Register",
+"address_offset": "0x1C",
+"access": "read-write",
+"size": "2",
+"interface": "S_AXI",
+"fields": {"ME": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master IRQ Enable.
+  0 - All interrupts disabled.
+  1 - All interrupts can be enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"HIE": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Hardware Interrupt Enable.
+  0 - HW interrupts disabled.
+  1 - HW interrupts enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616220,
+},
+"IMR": {"description": "Interrupt Mode Register",
+"address_offset": "0x20",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Mode Register.
+For each bit:
+  R - Reads interrupt mode.
+  W - Sets interrupt mode, where 0 is normal mode and 1 is fast mode.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616224,
+},
+"IVAR[0]": {"description": "Interrupt Vector Address Register 0",
+"address_offset": "0x100",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"IVA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "Interrupt vector address of active interrupt 0 with highest priority.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616448,
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.288
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.298
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x40000000",
+"high": "0x4000FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_axi_intc_s_axi": {"name": "microblaze_0_axi_intc",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "s_axi",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x0000FFFF",
+"size": "65536",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+"axi_bram_ctrl_0_S_AXI_Mem0": {"name": "axi_bram_ctrl_0",
+"base": "0xC0000000",
+"high": "0xC0007FFF",
+"size": "32768",
+"slaveintf": "S_AXI",
+"type": "MEMORY",
+"flags": "3",
+"segment": "Mem0",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.299
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.303
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"microblaze_0": {"bscan": "2",
+"index": "0",
+},
+}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.305
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.307
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Result: [null, {}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.307
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.310
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Result: [null, {"microblaze_0": {},
+}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.310
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.323
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Result: [null, microblaze_0]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.323
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.325
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Result: [null, 5]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.325
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.327
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Result: [null, 32]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:07:59.341
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:01.873
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:01.874
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.204
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.205
+!MESSAGE XSCT Command: [version -server], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.207
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.208
+!MESSAGE XSCT Command: [version], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.209
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.217
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.220
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.221
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.230
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.233
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.236
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.237
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.246
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.246
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.249
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.250
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.257
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.259
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.261
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.262
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.274
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.275
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.279
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.280
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.288
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.288
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.298
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.298
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.300
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.302
+!MESSAGE XSCT Command: [::hsi::utils::get_clock_info -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.308
+!MESSAGE XSCT command with result: [::hsi::utils::get_clock_info -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Result: [null, {"Clk": "100000000",
+"Dbg_Clk": "",
+}]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.341
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.344
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.345
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.358
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.367
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.416
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:02.417
+!MESSAGE XSCT Command: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.687
+!MESSAGE XSCT command with result: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.717
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.828
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.828
+!MESSAGE XSCT Command: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.845
+!MESSAGE XSCT command with result: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Result: [null, design_1_wrapper]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.846
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.847
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.847
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.856
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.857
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.859
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:03.860
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:06.868
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:06.869
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:06.963
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:06.963
+!MESSAGE XSCT Command: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:07.033
+!MESSAGE XSCT command with result: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:07.114
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:07.216
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:07.217
+!MESSAGE XSCT Command: [con], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:07.228
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:08:07.230
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:08:07.230
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:34.045
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-306
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:34.079
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-306
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.001
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.005
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.005
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.181
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.182
+!MESSAGE XSCT Command: [version -server], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.185
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.185
+!MESSAGE XSCT Command: [version], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.186
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.186
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.190
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.190
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.199
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.199
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.203
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.203
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.211
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.212
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.215
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.215
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.225
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.226
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.230
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.230
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.239
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.239
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.243
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.243
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.251
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.251
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.260
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.261
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.263
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.286
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.299
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.299
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.308
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.309
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.326
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:36.327
+!MESSAGE XSCT Command: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.587
+!MESSAGE XSCT command with result: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.618
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.629
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.630
+!MESSAGE XSCT Command: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.805
+!MESSAGE XSCT command with result: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Result: [null, design_1_wrapper_0]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.806
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.807
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.808
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.817
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.817
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.831
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:37.832
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:40.838
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:40.839
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:40.855
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:40.855
+!MESSAGE XSCT Command: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:40.927
+!MESSAGE XSCT command with result: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:41.015
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:41.025
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:41.025
+!MESSAGE XSCT Command: [con], Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:08:41.044
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-12: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:08:41.045
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '2'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:08:41.045
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '2'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:09:54.504
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-364
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:09:54.519
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-364
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:41.916
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.087
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#3]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.087
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.349
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.349
+!MESSAGE XSCT Command: [version -server], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.352
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.353
+!MESSAGE XSCT Command: [version], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.354
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.354
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.357
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.357
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.366
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.366
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.370
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.370
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.379
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.380
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.384
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.384
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.393
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.393
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.397
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.397
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.406
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.406
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.409
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.409
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.418
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.419
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.427
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.428
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.429
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.452
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.455
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.455
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.465
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.465
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.482
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:44.483
+!MESSAGE XSCT Command: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:45.747
+!MESSAGE XSCT command with result: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:45.771
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:45.874
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:45.875
+!MESSAGE XSCT Command: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.038
+!MESSAGE XSCT command with result: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.039
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.056
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.057
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.153
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.154
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.157
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:46.157
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.160
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.160
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.275
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.275
+!MESSAGE XSCT Command: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.345
+!MESSAGE XSCT command with result: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.400
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.410
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.411
+!MESSAGE XSCT Command: [con], Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:10:49.427
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:10:49.428
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '3'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:10:49.429
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '3'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:10.699
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-419
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:10.702
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-419
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.522
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.526
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.527
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.711
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.711
+!MESSAGE XSCT Command: [version -server], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.714
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.714
+!MESSAGE XSCT Command: [version], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.715
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.715
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.718
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.718
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.727
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.727
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.730
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.731
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.739
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.740
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.743
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.744
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.752
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.752
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.755
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.755
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.765
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.765
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.769
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.770
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.777
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.778
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.787
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.787
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.789
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.815
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.819
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.819
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.828
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.829
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.845
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:14.848
+!MESSAGE XSCT Command: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.108
+!MESSAGE XSCT command with result: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.135
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.144
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.144
+!MESSAGE XSCT Command: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.308
+!MESSAGE XSCT command with result: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Result: [null, design_1_wrapper_2]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.308
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.311
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.312
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.321
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.322
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.324
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:16.325
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.327
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.328
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.343
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.343
+!MESSAGE XSCT Command: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.420
+!MESSAGE XSCT command with result: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.464
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.479
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.480
+!MESSAGE XSCT Command: [con], Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:12:19.500
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:12:19.502
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:12:19.502
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:07.421
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-480
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:07.437
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-480
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:09.818
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:09.946
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:09.947
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:09.949
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:13:09.949
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:09.950
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:09.951
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-14: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:13:10.915
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '9'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:13.818
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:13.822
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:13.823
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.026
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.026
+!MESSAGE XSCT Command: [version -server], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.030
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.030
+!MESSAGE XSCT Command: [version], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.031
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.031
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.035
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.035
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.043
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.044
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.049
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.049
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.057
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.057
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.060
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.060
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.071
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.071
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.074
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.074
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.084
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.084
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.087
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.088
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.095
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.097
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.106
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.120
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.122
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.150
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.153
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.154
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.163
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.163
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.182
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:14.183
+!MESSAGE XSCT Command: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.443
+!MESSAGE XSCT command with result: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.469
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.478
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.479
+!MESSAGE XSCT Command: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.497
+!MESSAGE XSCT command with result: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Result: [null, design_1_wrapper_3]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.498
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.500
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.500
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.510
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.511
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.514
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:15.514
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.529
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.530
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.542
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.543
+!MESSAGE XSCT Command: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.623
+!MESSAGE XSCT command with result: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.677
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.701
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.701
+!MESSAGE XSCT Command: [con], Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:18.718
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:13:18.719
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '5'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 10:13:18.719
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '5'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:48.945
+!MESSAGE XSCT Command: [disconnect tcfchan#5], Thread: Thread-549
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 10:13:48.961
+!MESSAGE XSCT command with result: [disconnect tcfchan#5], Result: [null, ]. Thread: Thread-549
+!SESSION 2024-06-16 14:31:11.493 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2024-06-16 14:31:59.020
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-06-16 14:32:01.235
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-06-16 14:32:01.235
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-06-16 14:32:01.236
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:03.462
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:03.463
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:03.477
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:03.479
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:03.479
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:03.480
+!MESSAGE XSCT Command: [setws C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC], Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:06.648
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:06.648
+!MESSAGE XSCT command with result: [setws C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC], Result: [null, ]. Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:06.648
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:06.663
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2022.2/data]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.244
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.402
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, ]. Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.416
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.430
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.431
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.434
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 14:32:19.434
+!MESSAGE Generating MD5 hash for file: C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.440
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:19.442
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:21.747
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:21.752
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"Divider_0": {"hier_name": "Divider_0",
+"type": "Divider",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"IO_Mapper_0": {"hier_name": "IO_Mapper_0",
+"type": "IO_Mapper",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"TTF_Driver_0": {"hier_name": "TTF_Driver_0",
+"type": "TTF_Driver",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_bram_ctrl_0": {"hier_name": "axi_bram_ctrl_0",
+"type": "axi_bram_ctrl",
+"version": "4.1",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_bram_ctrl_0_bram": {"hier_name": "axi_bram_ctrl_0_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_intc": {"hier_name": "microblaze_0_axi_intc",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"microblaze_0_xlconcat": {"hier_name": "microblaze_0_xlconcat",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_0_100M": {"hier_name": "rst_clk_wiz_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_0": {"hier_name": "xlconstant_0",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_1": {"hier_name": "xlconstant_1",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-1: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 14:32:21.879
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.049
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.051
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"device": "7a35t",
+"family": "artix7",
+"timestamp": "Sat Jun 15 20:35:43 2024",
+"vivado_version": "2022.2",
+"part": "xc7a35tcpg236-1",
+}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.053
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_ENABLED], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.055
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.055
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_PROFILE_SIZE], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.056
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_PROFILE_SIZE], Result: [null, 0]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.057
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_FREQ], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.058
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_FREQ], Result: [null, 100000000]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.106
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.109
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.110
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.122
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Result: [null, {"axi_bram_ctrl_0": {},
+"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741824,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741828,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741832,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741836,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742108,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742120,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742112,
+},
+},
+"axi_uartlite_0": {"RX_FIFO": {"description": "Receive data FIFO",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_DATA": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033280,
+},
+"TX_FIFO": {"description": "Transmit data FIFO",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"TX_DATA": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033284,
+},
+"CTRL_REG": {"description": "UART Lite control register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RST_TXFIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO
+Writing a 1 to this bit position clears the transmit FIFO
+  0 - Do nothing
+  1 - Clear the transmit FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RST_RXFIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO
+Writing a 1 to this bit position clears the receive FIFO
+  0 - Do nothing
+  1 - Clear the receive FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Enable_Intr": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable interrupt for the AXI UART Lite
+  0 - Disable interrupt signal
+  1 - Enable interrupt signal
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033292,
+},
+"STAT_REG": {"description": "UART Lite status register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_FIFO_Valid_Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has data.
+  0 - Receive FIFO is empty
+  1 - Receive FIFO has data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX_FIFO_Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full.
+  0 - Receive FIFO is not full
+  1 - Receive FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty.
+  0 - Transmit FIFO is not empty
+  1 - Transmit FIFO is empty
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full.
+  0 - Transmit FIFO is not full
+  1 - Transmit FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Intr_Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupts is enabled.
+  0 - Interrupt is disabled
+  1 - Interrupt is enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Overrun_Error": {"access": "read-only",
+"bit_offset": "5",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a overrun error has occurred after the last time the status register was read. Overrun is when a new character has been received but the receive FIFO is full. The received character is ignored and not written into the receive FIFO. This bit is cleared when the status register is read.      0 - No overrun error has occurred      1 - Overrun error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Frame_Error": {"access": "read-only",
+"bit_offset": "6",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a frame error has occurred after the last time the status register was read. Frame error is defined as detection of a stop bit with the value 0. The receive character is ignored and not written to the receive FIFO. This bit is cleared when the status register is read.      0 - No frame error has occurred   1 - Frame error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Parity_Error": {"access": "read-only",
+"bit_offset": "7",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a parity error has occurred after the last time the status register was read. If the UART is configured without any parity handling, this bit is always 0. The received character is written into the receive FIFO. This bit is cleared when the status register is read.      0 - No parity error has occurred      1 - Parity error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033288,
+},
+},
+"microblaze_0_axi_intc": {"ISR": {"description": "Interrupt Status Register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Status Register.
+For each bit up to number of periperhal interrupts:
+  R - Reads active interrupt signal.
+  W - No effect after MER HIE bit has been set, otherwise writes active interrupt signal.
+For remaining bits defined by number of software interrupts:
+  R - Reads software interrupt value.
+  W - Writes software interrupt value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616192,
+},
+"IPR": {"description": "Interrupt Pending Register",
+"address_offset": "0x4",
+"access": "read-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Pending Register.
+For each bit:
+  R - Reads logical AND of bits in ISR and IER.
+  W - No effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616196,
+},
+"IER": {"description": "Interrupt Enable Register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Enable Register.
+For each bit:
+  R - Reads interrupt enable value.
+  W - Writes interrupt enable value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616200,
+},
+"IAR": {"description": "Interrupt Acknowledge Register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Acknowledge Register.
+For each bit:
+  W - Acknowledge interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616204,
+},
+"SIE": {"description": "Set Interrupt Enables",
+"address_offset": "0x10",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Set Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 enables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616208,
+},
+"CIE": {"description": "Clear Interrupt Enables",
+"address_offset": "0x14",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Clear Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 disables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616212,
+},
+"IVR": {"description": "Interrupt Vector Register",
+"address_offset": "0x18",
+"access": "read-only",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"IVN": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "Interrupt Vector Number.
+  R - Reads ordinal of highest priority, enabled, active interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616216,
+},
+"MER": {"description": "Master Enable Register",
+"address_offset": "0x1C",
+"access": "read-write",
+"size": "2",
+"interface": "S_AXI",
+"fields": {"ME": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master IRQ Enable.
+  0 - All interrupts disabled.
+  1 - All interrupts can be enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"HIE": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Hardware Interrupt Enable.
+  0 - HW interrupts disabled.
+  1 - HW interrupts enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616220,
+},
+"IMR": {"description": "Interrupt Mode Register",
+"address_offset": "0x20",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Mode Register.
+For each bit:
+  R - Reads interrupt mode.
+  W - Sets interrupt mode, where 0 is normal mode and 1 is fast mode.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616224,
+},
+"IVAR[0]": {"description": "Interrupt Vector Address Register 0",
+"address_offset": "0x100",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"IVA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "Interrupt vector address of active interrupt 0 with highest priority.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616448,
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.124
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.127
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x40000000",
+"high": "0x4000FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_axi_intc_s_axi": {"name": "microblaze_0_axi_intc",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "s_axi",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x0000FFFF",
+"size": "65536",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+"axi_bram_ctrl_0_S_AXI_Mem0": {"name": "axi_bram_ctrl_0",
+"base": "0xC0000000",
+"high": "0xC0007FFF",
+"size": "32768",
+"slaveintf": "S_AXI",
+"type": "MEMORY",
+"flags": "3",
+"segment": "Mem0",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.127
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.130
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa], Result: [null, {"microblaze_0": {"bscan": "2",
+"index": "0",
+},
+}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.132
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.134
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Result: [null, {}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.136
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.138
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Result: [null, {"microblaze_0": {},
+}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.138
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.139
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa mdm_1], Result: [null, microblaze_0]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.140
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.146
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Result: [null, 5]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.146
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.148
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Result: [null, 32]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:24.150
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.543
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.544
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.819
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.820
+!MESSAGE XSCT Command: [version -server], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.824
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.824
+!MESSAGE XSCT Command: [version], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.826
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.833
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.836
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.836
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.844
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.848
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.853
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.853
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.862
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.863
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.867
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.867
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.877
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.877
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.880
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.881
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.899
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.900
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.904
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Basys3 210183B31623A]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.904
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.914
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.915
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.924
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Basys3 210183B31623A" && level == 0}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.926
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.932
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.932
+!MESSAGE XSCT Command: [::hsi::utils::get_clock_info -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.935
+!MESSAGE XSCT command with result: [::hsi::utils::get_clock_info -json C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa microblaze_0], Result: [null, {"Clk": "100000000",
+"Dbg_Clk": "",
+}]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.951
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.954
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Basys3 210183B31623A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.955
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.963
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==1}], Result: [null,      2  xc7a35t (idcode 0362d093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.968
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.986
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B31623A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B31623A-0362d093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:26.986
+!MESSAGE XSCT Command: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.253
+!MESSAGE XSCT command with result: [fpga -file C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/_ide/bitstream/design_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.283
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.415
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.416
+!MESSAGE XSCT Command: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.433
+!MESSAGE XSCT command with result: [loadhw -hw C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -regs], Result: [null, design_1_wrapper]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.433
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.434
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.436
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.446
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.446
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.449
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:28.450
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.457
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.458
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.560
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.560
+!MESSAGE XSCT Command: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.632
+!MESSAGE XSCT command with result: [dow C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/GraviTris_uC/Debug/GraviTris_uC.elf], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.704
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.725
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.725
+!MESSAGE XSCT Command: [con], Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:32:31.740
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_GraviTris_uC_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 14:32:31.744
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-06-16 14:32:31.744
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '1'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:35:55.379
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-116
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-06-16 14:35:55.398
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-116
