@@ -156,7 +156,6 @@ void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height){
 	int y0 = y;
 	int y1 = y + height;
 
-	mem32Ptr[0] = (width << 8) + height;
 	writeCommand(0x2a);	// Column Address Set
 	writeData(x0>>8);	// X address start:
 	writeData(x0);		// 0 <= XS <= X
@@ -189,6 +188,8 @@ void exitSleep (){
 	// When this command is accepted, the column register and the page
 	// register are reset to the start column/start page positions.
 }
+
+
 
 void override_clearScreen(){
 	unsigned int i,j;
@@ -230,32 +231,14 @@ void writeColor(unsigned long color){
   	writeData(data);
 }
 
+
 //To Test
 void writeByteToMemory(uint16_t address, uint8_t data){
 	mem8Ptr[address] = data;
 }
 
-void write32ToMemory(uint16_t address, uint32_t data){
+void write32BitToMemory(uint16_t address, uint32_t data){
 	mem32Ptr[address] = data;
-}
-
-void writePixel(uint16_t pixelNumber, uint8_t color) {
-    //Get buffer u32 index
-    uint16_t idx1 = 1 + (pixelNumber / 8);
-    //Get 8 pixels from buffer
-    //uint32_t pixels = mem32Ptr[idx1];
-    //Get byte index in u32
-    uint8_t byteIdx = 3 - ((pixelNumber % 8) / 2);
-
-    uint8_t *pixelsPtr = (uint8_t*)&mem32Ptr[idx1];
-
-    uint8_t pixel = pixelsPtr[byteIdx];
-    if (pixelNumber % 2 == 0)
-        pixel = (pixel & 0x0F) + (color<<4);
-    else
-        pixel = (pixel & 0xF0) + color;
-
-    pixelsPtr[byteIdx] = pixel;
 }
 
 //To implement

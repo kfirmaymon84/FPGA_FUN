@@ -1,6 +1,6 @@
 #include "commonDisplayHandler.h"
 #include <stdint.h>
-#include <stdbool.h>
+#include <stdio.h>
 
 //#define FPGA
 #include "displayHandler.h"
@@ -16,7 +16,6 @@ void tft_SetDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height) {
 	setDisplayWindow(x, y, x + width, y + height);
 }
 
-// IMPLEMENT
 // draw 8 color bar to memory
 void draw8ColorBars() {
 #define BARS 8
@@ -24,30 +23,15 @@ void draw8ColorBars() {
     const int BAR_WIDTH = DISPLAY_WIDTH / BARS;
     uint8_t barColor[BARS] = { white, yellow, teal, green, fuchsia, red, blue, black };
 
-    bool isEven = false;
-    uint8_t firstPixel = 0x00;
+    setDisplayWindow(0, 0, DISPLAY_WIDTH, DISPLAY_HEIGHT);
 
-    writeByteToMemory(0, DISPLAY_WIDTH);
-    writeByteToMemory(1, DISPLAY_HEIGHT);
-    uint16_t i = 2;
+    uint16_t pixelCounter = 0;
     for (int h = 0; h < DISPLAY_HEIGHT; h++)
     {
         for (int w = 0; w < DISPLAY_WIDTH; w++) {
             uint8_t idx = w / BAR_WIDTH;
-            if (isEven)
-            {
-                uint8_t bothPixels = (firstPixel << 4) | barColor[idx];
-                writeByteToMemory(i++, bothPixels);
-                isEven = false;
-            }
-            else if (isEven == false && w == (DISPLAY_WIDTH - 1) && h == (DISPLAY_HEIGHT - 1)) { // if less pixel is even number
-                uint8_t bothPixels = barColor[idx] << 4;
-                writeByteToMemory(i++, bothPixels);
-            }
-            else {
-                firstPixel = barColor[idx];
-                isEven = true;
-            }
+
+            writePixel(pixelCounter++, barColor[idx]);
         }
     }
 }
@@ -58,46 +42,30 @@ uint8_t drawBitmap(uint8_t* img, uint8_t x, uint8_t y, uint8_t width, uint8_t he
     uint16_t pixel2Draw = width * height;
     uint16_t byteCounter = 0;
     uint8_t pixel = 0x00;
-
-    uint8_t idx = 7; // bit mask select
+    uint32_t u32Pixels = 0;
+    //uint8_t idx = 7; // bit mask select
     uint8_t bitPixels = img[byteCounter];
-    for (uint16_t pixelCounter = 0; pixelCounter < pixel2Draw; pixelCounter++) {    
-        if (idx == 0) {
-            //select next byte from image
-            byteCounter++;
-            bitPixels = img[byteCounter];
-            idx = 7;
-        }
-        else {
-            idx--;
-        }
+    uint16_t u32Idx = 1;
 
-        uint8_t bit = img[byteCounter] & (0x01 << idx);
-        
-        if (bit) {
-            if (pixelCounter & 0x0001) {
-                pixel |= color;
-            }
-            else
-            {
-                pixel = color << 4;
+    uint8_t byteIdx = 0;
+    for (int i = 0; i < pixel2Draw; i++) {
+        uint8_t b = img[byteIdx];
+        for (uint8_t bitIdx = 8; bitIdx > 0; bitIdx--) {
+            if (b & (0x01 << (bitIdx - 1))) {
+                u32Pixels |= color << ((bitIdx-1)*4);
             }
         }
 
-        //Write to memory
-        if ((pixelCounter & 0x0001)) {
-            writeByteToMemory((pixelCounter >> 1) + 2, pixel);
-            pixel = 0;
-        }
-        
-        
-        
+        i += 7;
+        byteIdx++;
+        write32ToMemory(u32Idx++, u32Pixels);
+        u32Pixels = 0;
     }
-        
+
     return 1;
 }
 
-uint8_t drawBlock(uint8_t x, uint8_t y, uint8_t colors) {
+uint8_t drawGameBlock(uint8_t x, uint8_t y, uint8_t colors) {
     setDisplayWindow(x, y, 10, 10);
 
     uint8_t borderColor = white;
@@ -107,39 +75,43 @@ uint8_t drawBlock(uint8_t x, uint8_t y, uint8_t colors) {
     for (uint8_t line = 0; line < 10; line++) {
         // Draw line 0 and last full color 1
         if (line == 0 || line == 9) {
-            writeByteToMemory((pixelCounter >> 1) + 2, (borderColor << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 3, (borderColor << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 4, (borderColor << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 5, (borderColor << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 6, (borderColor << 4) | borderColor);
+            for(int i=0;i<10;i++){
+                writePixel((line * 10) + i, borderColor);
+            }
+
             pixelCounter += 10;
         }
         else if (line == 1 || line == 2 || line == 7 || line == 8) {
             // draw line 1,2,7,8
-            writeByteToMemory((pixelCounter >> 1) + 2, (borderColor << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 3, (color1 << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 4, (color1 << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 5, (color1 << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 6, (color1 << 4) | borderColor);
+            for (int i = 0; i < 10; i++) {
+                if(i==0 || i == 9)
+                    writePixel((line * 10) + i, borderColor);
+                else
+                    writePixel((line * 10) + i, color1);
+            }
             pixelCounter += 10;
         }
         else if (line == 3 || line == 6) {
             // draw lines 3, 6
-            writeByteToMemory((pixelCounter >> 1) + 2, (borderColor << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 3, (color1 << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 4, (borderColor << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 5, (borderColor << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 6, (color1 << 4) | borderColor);
+            for (int i = 0; i < 10; i++) {
+                if (i == 1 || i == 2 || i == 7 || i == 8)
+                    writePixel((line * 10) + i, color1);
+                else
+                    writePixel((line * 10) + i, borderColor);
+            }
             pixelCounter += 10;
         }
         else
         {
             // draw lines 4, 5
-            writeByteToMemory((pixelCounter >> 1) + 2, (borderColor << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 3, (color1 << 4) | borderColor);
-            writeByteToMemory((pixelCounter >> 1) + 4, (color2 << 4) | color2);
-            writeByteToMemory((pixelCounter >> 1) + 5, (borderColor << 4) | color1);
-            writeByteToMemory((pixelCounter >> 1) + 6, (color1 << 4) | borderColor);
+            for (int i = 0; i < 10; i++) {
+                if (i == 1 || i == 2 || i == 7 || i == 8)
+                    writePixel((line * 10) + i, color1);
+                else if(i == 4 || i == 5)
+                    writePixel((line * 10) + i, color2);
+                else
+                    writePixel((line * 10) + i, borderColor);
+            }
             pixelCounter += 10;
         }
     }
@@ -147,25 +119,20 @@ uint8_t drawBlock(uint8_t x, uint8_t y, uint8_t colors) {
 }
 
 uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t color1, uint8_t color2) {
-    //Set x,y, width, height
-
     //if width or height less then 6, box is too small.
     if (width < 6 || height < 6)
         return 0;
 
+    //Set x,y, width, height
     setDisplayWindow(x, y, width, height);
+
     uint16_t pixelCounter = 0;
     for (uint8_t line = 0; line < height; line++) {
         // Draw line 1 and last full color 1
         if (line == 0 || line == (height - 1)) {
             for (uint8_t i = 0; i < width; i++) {
                 //color1
-                if (pixelCounter & 0x0001) {
-                    writeByteToMemory((pixelCounter >> 1) + 2, color1);
-                }
-                else {
-                    writeByteToMemory((pixelCounter >> 1) + 2, color1 << 4);
-                }
+                writePixel(pixelCounter, color1);
                 pixelCounter++;
             }
         }// Draw line 2 and last - 1, first and last pixel are color 1 all the rest are color 2.
@@ -174,21 +141,11 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
                 uint8_t idx = pixelCounter % width;
                 if (idx == 0 || idx == (width - 1)) {
                     //color1
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color1);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color1 << 4);
-                    }
+                    writePixel(pixelCounter, color1);
                 }
                 else {
                     //color2
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color2);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color2 << 4);
-                    }
+                    writePixel(pixelCounter, color2);
                 }
                 pixelCounter++;
             }
@@ -198,45 +155,24 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
                 uint8_t idx = pixelCounter % width;
                 if (idx == 1 || idx == (width - 2)) {
                     //color2
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color2);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color2 << 4);
-                    }
+                    writePixel(pixelCounter, color2);
                 }
                 else {
                     //color1
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color1);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter >> 1) + 2, color1 << 4);
-                    }
+                    writePixel(pixelCounter, color1);
                 }
                 pixelCounter++;
             }
-        }
-        else {
+        }else {
             for (uint8_t i = 0; i < width; i++) {
                 uint8_t idx = pixelCounter % width;
                 if (idx == 0 || idx == 2 || idx == (width - 3) || idx == (width - 1)) {
                     //color1
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter++ >> 1) + 2, color1);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter++ >> 1) + 2, color1 << 4);
-                    }
+                    writePixel(pixelCounter++, color1);
                 }
                 else if (idx == 1 || idx == (width - 2)) {
                     //color2
-                    if (pixelCounter & 0x0001) {
-                        writeByteToMemory((pixelCounter++ >> 1) + 2, color2);
-                    }
-                    else {
-                        writeByteToMemory((pixelCounter++ >> 1) + 2, color2 << 4);
-                    }
+                    writePixel(pixelCounter++, color2);
                 }
                 else {
                     pixelCounter++;

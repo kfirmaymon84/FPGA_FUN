@@ -539,3 +539,26 @@ timestamp=[2024-06-16 14:32:02], mode=WORKBENCH_UI_INIT, duration=0:00:00.565, d
 timestamp=[2024-06-16 14:32:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.343, duration_ms=343, data={}
 timestamp=[2024-06-16 14:32:21], mode=BUILD, duration=0:00:01.993, duration_ms=1993, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
 timestamp=[2024-06-16 14:32:21], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:09:08], mode=WORKBENCH_START, duration=0:00:09.177, duration_ms=9177, data={}
+timestamp=[2024-06-17 16:09:10], mode=WORKBENCH_UI_INIT, duration=0:00:01.673, duration_ms=1673, data={editors_count=4, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=GraviTris_uC,GraviTris_uC_system,RemoteSystemsTempFiles,design_1_wrapper}
+timestamp=[2024-06-17 16:09:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.376, duration_ms=1376, data={}
+timestamp=[2024-06-17 16:10:56], mode=BUILD, duration=0:00:01.039, duration_ms=1039, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:11:19], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:11:25], mode=BUILD, duration=0:00:02.251, duration_ms=2251, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:11:26], mode=BUILD, duration=0:00:00.100, duration_ms=100, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:11:49], mode=BUILD, duration=0:00:00.538, duration_ms=538, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:11:50], mode=BUILD, duration=0:00:00.099, duration_ms=99, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:12:11], mode=BUILD, duration=0:00:00.607, duration_ms=607, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:12:12], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:12:29], mode=BUILD, duration=0:00:00.866, duration_ms=866, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:12:29], mode=BUILD, duration=0:00:00.102, duration_ms=102, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:14:21], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:15:18], mode=BUILD, duration=0:00:00.412, duration_ms=412, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:15:50], mode=BUILD, duration=0:00:00.866, duration_ms=866, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:15:51], mode=BUILD, duration=0:00:00.102, duration_ms=102, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:20:32], mode=BUILD, duration=0:00:00.607, duration_ms=607, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:20:32], mode=BUILD, duration=0:00:00.099, duration_ms=99, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:22:58], mode=BUILD, duration=0:00:00.601, duration_ms=601, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:22:58], mode=BUILD, duration=0:00:00.097, duration_ms=97, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:23:02], mode=BUILD, duration=0:00:00.092, duration_ms=92, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 16:23:02], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}

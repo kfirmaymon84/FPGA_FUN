@@ -32,7 +32,7 @@ int main()
     init_platform();
 
     initGPIO();
-	//initInterrupt();
+	initInterrupt();
 	uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 //	write32BitToMemory(0, 0x00a50012);

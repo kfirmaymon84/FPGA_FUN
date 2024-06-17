@@ -12,7 +12,6 @@
 #include "gpioHandler.h"
 #include "displayHandler.h"
 #include "commonDisplayHandler.h"
-#include "drawObjects.h"
 
 #define INTC_HANDLER		  XIntc_InterruptHandler
 
@@ -32,36 +31,66 @@ int main()
     init_platform();
 
     initGPIO();
-	//initInterrupt();
+	initInterrupt();
 	uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 //	write32BitToMemory(0, 0x00a50012);
-//	memPtr[0] = (240 << 8) + 240;
+	memPtr[0] = (240 << 8) + 240;
+
+	uint16_t pixCounter = 0;
+	uint32_t pixel = 0;
+	uint16_t i =1;
+	uint8_t colors[8]={white, yellow, teal, green, fuchsia, red, blue, black};
+	for (int h = 0; h < 240; h++)
+	{
+		for (int w = 0; w < 240; w++) {
+			uint8_t idx = w / 30;
+			uint8_t c = colors[idx];
+			uint8_t pixPos = (pixCounter%8);
+
+			if (pixPos == 0)
+				pixel =0;
+
+			pixel |= (uint32_t)(c << ( (7-pixPos) *4 ));
+
+			if(pixPos == 7){
+				memPtr[i++] = pixel;
+			}
+
+            pixCounter++;
+		}
+	}
+
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
 //
-//	uint16_t pixCounter = 0;
-//	uint32_t pixel = 0;
-//	uint16_t i =1;
-//	uint8_t colors[8]={white, yellow, teal, green, fuchsia, red, blue, black};
-//	for (int h = 0; h < 240; h++)
-//	{
-//		for (int w = 0; w < 240; w++) {
-//			uint8_t idx = w / 30;
-//			uint8_t c = colors[idx];
-//			uint8_t pixPos = (pixCounter%8);
-//
-//			if (pixPos == 0)
-//				pixel =0;
-//
-//			pixel |= (uint32_t)(c << ( (7-pixPos) *4 ));
-//
-//			if(pixPos == 7){
-//				memPtr[i++] = pixel;
-//			}
-//
-//            pixCounter++;
-//		}
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+//	memPtr[i++] = 0x22222222;
+//	memPtr[i++] = 0xFFFFFFFF;
+
+
+//	for(int i=1;i<31;i++){
+//		memPtr[i] = 0xFF0000FF;
 //	}
 
+//	for(int i=0;i<7201;i++){
+//		xil_printf("%4d. %08X\n",i, memPtr[i]);
+//	}
 	xil_printf("Start...\r\n");
 	while(1){
 		char c;
@@ -111,19 +140,6 @@ int main()
 				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
 				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
 			break;
-			case '4':
-				draw8ColorBars();
-				break;
-			case '5':
-				drawBitmap(numbers[0], 0, 0, 16, 24, white);
-				break;
-			case '6':
-				drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
-				break;
-			case '7':
-				drawBorder(10, 10, 100, 100, 0xf, 0x2);
-				break;
-
 			default:
 			break;
 		}

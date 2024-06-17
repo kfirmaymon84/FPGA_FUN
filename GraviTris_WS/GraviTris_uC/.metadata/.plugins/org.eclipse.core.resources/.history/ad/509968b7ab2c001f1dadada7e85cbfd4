@@ -156,7 +156,6 @@ void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height){
 	int y0 = y;
 	int y1 = y + height;
 
-	mem32Ptr[0] = (width << 8) + height;
 	writeCommand(0x2a);	// Column Address Set
 	writeData(x0>>8);	// X address start:
 	writeData(x0);		// 0 <= XS <= X
@@ -235,7 +234,7 @@ void writeByteToMemory(uint16_t address, uint8_t data){
 	mem8Ptr[address] = data;
 }
 
-void write32ToMemory(uint16_t address, uint32_t data){
+void write32BitToMemory(uint16_t address, uint32_t data){
 	mem32Ptr[address] = data;
 }
 

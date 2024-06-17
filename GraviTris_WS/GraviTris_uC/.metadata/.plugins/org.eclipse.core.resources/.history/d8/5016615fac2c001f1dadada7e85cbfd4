@@ -32,35 +32,35 @@ int main()
     init_platform();
 
     initGPIO();
-	//initInterrupt();
+	initInterrupt();
 	uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 //	write32BitToMemory(0, 0x00a50012);
-//	memPtr[0] = (240 << 8) + 240;
-//
-//	uint16_t pixCounter = 0;
-//	uint32_t pixel = 0;
-//	uint16_t i =1;
-//	uint8_t colors[8]={white, yellow, teal, green, fuchsia, red, blue, black};
-//	for (int h = 0; h < 240; h++)
-//	{
-//		for (int w = 0; w < 240; w++) {
-//			uint8_t idx = w / 30;
-//			uint8_t c = colors[idx];
-//			uint8_t pixPos = (pixCounter%8);
-//
-//			if (pixPos == 0)
-//				pixel =0;
-//
-//			pixel |= (uint32_t)(c << ( (7-pixPos) *4 ));
-//
-//			if(pixPos == 7){
-//				memPtr[i++] = pixel;
-//			}
-//
-//            pixCounter++;
-//		}
-//	}
+	memPtr[0] = (240 << 8) + 240;
+
+	uint16_t pixCounter = 0;
+	uint32_t pixel = 0;
+	uint16_t i =1;
+	uint8_t colors[8]={white, yellow, teal, green, fuchsia, red, blue, black};
+	for (int h = 0; h < 240; h++)
+	{
+		for (int w = 0; w < 240; w++) {
+			uint8_t idx = w / 30;
+			uint8_t c = colors[idx];
+			uint8_t pixPos = (pixCounter%8);
+
+			if (pixPos == 0)
+				pixel =0;
+
+			pixel |= (uint32_t)(c << ( (7-pixPos) *4 ));
+
+			if(pixPos == 7){
+				memPtr[i++] = pixel;
+			}
+
+            pixCounter++;
+		}
+	}
 
 	xil_printf("Start...\r\n");
 	while(1){
