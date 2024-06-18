@@ -1592,14 +1592,14 @@
       "reset_1": {
         "ports": [
           "reset",
-          "reset_inv_0/Op1"
+          "reset_inv_0/Op1",
+          "rst_clk_wiz_0_100M/ext_reset_in"
         ]
       },
       "reset_inv_0_Res": {
         "ports": [
           "reset_inv_0/Res",
-          "clk_wiz_0/resetn",
-          "rst_clk_wiz_0_100M/ext_reset_in"
+          "clk_wiz_0/resetn"
         ]
       },
       "rst_clk_wiz_0_100M_bus_struct_reset": {

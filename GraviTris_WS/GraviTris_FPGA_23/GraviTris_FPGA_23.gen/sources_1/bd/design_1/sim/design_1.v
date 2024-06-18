@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Tue Jun 18 21:05:55 2024
+//Date        : Tue Jun 18 21:27:54 2024
 //Host        : CP-230194 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -603,7 +603,7 @@ module design_1
        (.aux_reset_in(1'b1),
         .bus_struct_reset(rst_clk_wiz_0_100M_bus_struct_reset),
         .dcm_locked(clk_wiz_0_locked),
-        .ext_reset_in(reset_inv_0_Res),
+        .ext_reset_in(reset_1),
         .mb_debug_sys_rst(mdm_1_debug_sys_rst),
         .mb_reset(rst_clk_wiz_0_100M_mb_reset),
         .peripheral_aresetn(rst_clk_wiz_0_100M_peripheral_aresetn),
