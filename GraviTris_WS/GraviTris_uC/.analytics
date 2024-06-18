@@ -562,3 +562,6 @@ timestamp=[2024-06-17 16:22:58], mode=BUILD, duration=0:00:00.601, duration_ms=6
 timestamp=[2024-06-17 16:22:58], mode=BUILD, duration=0:00:00.097, duration_ms=97, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
 timestamp=[2024-06-17 16:23:02], mode=BUILD, duration=0:00:00.092, duration_ms=92, data={name=GraviTris_uC, configuration=Debug, clean_build=false}
 timestamp=[2024-06-17 16:23:02], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=GraviTris_uC_system, configuration=Debug, clean_build=false}
+timestamp=[2024-06-17 20:30:30], mode=WORKBENCH_START, duration=0:00:12.285, duration_ms=12285, data={}
+timestamp=[2024-06-17 20:30:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.971, duration_ms=971, data={}
+timestamp=[2024-06-17 20:30:32], mode=WORKBENCH_UI_INIT, duration=0:00:01.787, duration_ms=1787, data={editors_count=8, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=GraviTris_uC,GraviTris_uC_system,RemoteSystemsTempFiles,design_1_wrapper}

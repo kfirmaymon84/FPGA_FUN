@@ -124,6 +124,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 8
+  set_param runs.launchOptions { -jobs 16  }
   open_checkpoint design_1_wrapper_routed.dcp
   set_property webtalk.parent_dir C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.cache/wt [current_project]
 set_property TOP design_1_wrapper [current_fileset]

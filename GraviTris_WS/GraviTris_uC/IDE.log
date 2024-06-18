@@ -6285,3 +6285,12 @@ con
 
 16:25:43 INFO  : Launch script is exported to file 'C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\GraviTris_uC_system\_ide\scripts\systemdebugger_gravitris_uc_system_standalone.tcl'
 16:26:13 INFO  : Disconnected from the channel tcfchan#8.
+20:30:24 DEBUG : Logs will be stored at 'C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_uC/IDE.log'.
+20:30:25 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\FPGA\FPGA_FUN\GraviTris_WS\GraviTris_uC\temp_xsdb_launch_script.tcl
+20:30:28 INFO  : XSCT server has started successfully.
+20:30:28 INFO  : plnx-install-location is set to ''
+20:30:28 INFO  : Successfully done setting XSCT server connection channel  
+20:30:28 INFO  : Successfully done setting workspace for the tool. 
+20:30:32 INFO  : Registering command handlers for Vitis TCF services
+20:30:32 INFO  : Platform repository initialization has completed.
+20:30:34 INFO  : Successfully done query RDI_DATADIR 
