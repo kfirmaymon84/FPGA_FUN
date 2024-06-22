@@ -67,39 +67,14 @@ int main()
 		switch (c) {
 			case '0':
 				// Init display
-				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
-				// Take override
-				takeOverride();
-				usleep(1000); //Delay 1 millisec
 				displayInit();
 				usleep(1000); //Delay 1 millisec
-				// Release override
-				releaseOverride();
-				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 				break;
 			case '1':
-				//Clear screen
-				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
-				// Take override
-				takeOverride();
-				usleep(1000); //Delay 1 millisec
 				override_8bar();
-
-				usleep(1000); //Delay 1 millisec	// Release override
-				releaseOverride();
-				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 			break;
 			case '2': //TEST 1
-				// 8 color bar in override mode
-				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
-				// Take override
-				takeOverride();
-				usleep(1000); //Delay 1 millisec
 				override_clearScreen();
-				usleep(1000); //Delay 1 millisec
-				// Release override
-				releaseOverride();
-				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, DBG_LED_1);
 			break;
 			case '3': //TEST 2
 				gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
@@ -109,13 +84,39 @@ int main()
 				draw8ColorBars();
 				break;
 			case '5':
-				drawBitmap(numbers[0], 0, 0, 16, 24, white);
+				drawBitmap(numbers[1], 0, 0, 16, 24, white);
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+
+                usleep(1000);
+				drawBitmap(numbers[2], 0, 0, 16, 24, white);
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+
+                usleep(1000);
+				drawBitmap(numbers[3], 0, 0, 16, 24, white);
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+
+                usleep(1000);
+				drawBitmap(numbers[4], 0, 0, 16, 24, white);
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+
+                usleep(1000);
+				drawBitmap(numbers[5], 0, 0, 16, 24, white);
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
 				break;
 			case '6':
 				drawBitmap(rotate__iconrotate_icon24_24, 0, 0, 24, 24, white);
-				break;
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+                break;
 			case '7':
 				drawBorder(10, 10, 100, 100, 0xf, 0x2);
+                gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
+				gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH,TFT_DRIVER_START);
 				break;
 
 			default:

@@ -1,9 +1,11 @@
 #include "commonDisplayHandler.h"
 #include <stdint.h>
 #include <stdio.h>
+#include "stdbool.h"
 
 //#define FPGA
 #include "displayHandler.h"
+
 
 const uint16_t colorPallet[] = { BLACK, MAROON, GREEN, OLIVE,
                             NAVY, PURPLE, TEAL, SILVER,
@@ -18,10 +20,9 @@ void tft_SetDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height) {
 
 // draw 8 color bar to memory
 void draw8ColorBars() {
-#define BARS 8
 
-    const int BAR_WIDTH = DISPLAY_WIDTH / BARS;
-    uint8_t barColor[BARS] = { white, yellow, teal, green, fuchsia, red, blue, black };
+    const int BAR_WIDTH = DISPLAY_WIDTH / 8;
+    uint8_t barColor[8] = { white, yellow, teal, green, fuchsia, red, blue, black };
 
     setDisplayWindow(0, 0, DISPLAY_WIDTH, DISPLAY_HEIGHT);
 
@@ -124,8 +125,10 @@ uint8_t drawBorder(uint8_t x, uint8_t y, uint8_t width, uint8_t height, uint8_t 
         return 0;
 
     //Set x,y, width, height
+    takeOverride();
     setDisplayWindow(x, y, width, height);
-
+    releaseOverride();
+    
     uint16_t pixelCounter = 0;
     for (uint8_t line = 0; line < height; line++) {
         // Draw line 1 and last full color 1

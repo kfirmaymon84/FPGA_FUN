@@ -3,9 +3,12 @@
 #include <xgpio.h>
 #include "sleep.h"
 #include "xparameters.h"
+#include "stdbool.h"
 
 extern XGpio gpio;
 extern uint32_t millisCounter;
+
+bool isOverride = false;
 
 uint8_t *mem8Ptr = XPAR_AXI_BRAM_0_BASEADDRESS;
 uint32_t *mem32Ptr = XPAR_AXI_BRAM_0_BASEADDRESS;
@@ -13,13 +16,24 @@ uint32_t *mem32Ptr = XPAR_AXI_BRAM_0_BASEADDRESS;
 void takeOverride(){
 	// Take override
 	gpio_pinSet(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+    isOverride = true;
 }
 
 void releaseOverride(){
 	// Release override
 	gpio_pinClear(&gpio, TFT_DRIVER_OUT_PIN_CH, TFT_DRIVER_OVERRIDE);
+    isOverride = false;
 }
 
+void takeOverrideIfNotTaken(void *takenFunctionPtr){
+    static void *takenPtr = NULL;
+
+    if(takenFunctionPtr == NULL){
+        takenPtr = takenFunctionPtr;
+    }
+    
+
+}
 void writePort(uint8_t data) {
     //Clear TFT_DRIVER_DATA bits
     gpio_portClearMask(&gpio, TFT_DRIVER_OUT_PIN_CH, (0x000000FF << TFT_DRIVER_DATA));
@@ -60,13 +74,13 @@ void writeData(uint8_t data){
 }
 
 void resetDisplay(){
-	// MUST be in override mode
-
 	writeCommand(0x01);
 	usleep(5000); //Delay 5 millisec
 }
 
 void displayInit(){
+
+    takeOverride();
 
 	resetDisplay();
     usleep(120000); //Delay 120 millisec
@@ -147,16 +161,19 @@ void displayInit(){
 	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
 
 	exitSleep();
-
+    releaseOverride();
 }
 
 void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height){
-	int x0 = x;
-	int x1 = x + width;
-	int y0 = y;
-	int y1 = y + height;
+	uint8_t x0 = x;
+	uint8_t x1 = x + width - 1;
+	uint8_t y0 = y;
+	uint8_t y1 = y + height -1;
 
 	mem32Ptr[0] = (width << 8) + height;
+
+    takeOverride();
+        
 	writeCommand(0x2a);	// Column Address Set
 	writeData(x0>>8);	// X address start:
 	writeData(x0);		// 0 <= XS <= X
@@ -168,6 +185,9 @@ void setDisplayWindow(uint8_t x, uint8_t y, uint8_t width, uint8_t height){
 	writeData(y0);		// 0 <= YS <= Y
 	writeData(y1>>8);	// Y address start:
 	writeData(y1);		// S <= YE <= Y
+
+    releaseOverride();
+
 }
 
 void enterSleep(){
@@ -194,7 +214,7 @@ void override_clearScreen(){
 	unsigned int i,j;
 
 	//Set the display window to the full size of the display 240x240
-	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
+	setDisplayWindow( 0, 0, 240, 240);
 
 	exitSleep();
 	for(i=0;i<240;i++)
@@ -208,7 +228,7 @@ void override_clearScreen(){
 
 void override_8bar(){
 	uint16_t colors[8]={WHITE, YELLOW, TEAL, GREEN, FUCHSIA, RED, BLUE, BLACK};
-
+    takeOverride();
 	//Set the display window to the full size of the display 240x240
 	setDisplayWindow( 0x0000, 0x0000, 0x00EF, 0x00EF);
 
@@ -220,6 +240,7 @@ void override_8bar(){
 			writeColor(color);
 		}
 	}
+    releaseOverride();
 }
 
 void writeColor(unsigned long color){
@@ -260,5 +281,5 @@ void writePixel(uint16_t pixelNumber, uint8_t color) {
 
 //To implement
 void clrBuff(){
-	memset(mem8Ptr,0,sizeof(28810));
+	//memset(mem8Ptr,0,sizeof(28810));
 }
