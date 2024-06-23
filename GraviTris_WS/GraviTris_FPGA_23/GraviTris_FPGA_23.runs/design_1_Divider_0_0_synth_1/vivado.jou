@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Jun 23 20:54:49 2024
-# Process ID: 30260
+# Start of session at: Sun Jun 23 21:13:32 2024
+# Process ID: 11852
 # Current directory: C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA_23/GraviTris_FPGA_23.runs/design_1_Divider_0_0_synth_1
 # Command line: vivado.exe -log design_1_Divider_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Divider_0_0.tcl
 # Log file: C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA_23/GraviTris_FPGA_23.runs/design_1_Divider_0_0_synth_1/design_1_Divider_0_0.vds
