@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Sun Jun 23 08:31:57 2024
+// Date        : Sun Jun 23 20:39:33 2024
 // Host        : CP-230194 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA_23/GraviTris_FPGA_23.gen/sources_1/bd/design_1/ip/design_1_IO_Mapper_0_0/design_1_IO_Mapper_0_0_sim_netlist.v
@@ -13,8 +13,8 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_IO_Mapper_0_0,IO_Mapper,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "IO_Mapper,Vivado 2023.2" *) 
+(* CHECK_LICENSE_TYPE = "design_1_IO_Mapper_0_0,IO_Mapper,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "IO_Mapper,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
 module design_1_IO_Mapper_0_0
    (clk,
@@ -31,7 +31,7 @@ module design_1_IO_Mapper_0_0
     dbg_LED1,
     dbg_LED2,
     dbg_SW);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
   input [31:0]portA;
   output [31:0]portB;
   output nEnable;
@@ -95,7 +95,7 @@ module design_1_IO_Mapper_0_0
   assign portB[1:0] = \^portB [1:0];
   GND GND
        (.G(\<const0> ));
-  design_1_IO_Mapper_0_0_IO_Mapper inst
+  design_1_IO_Mapper_0_0_IO_Mapper U0
        (.D({dbg_SW,tftDrv_ready}),
         .clk(clk),
         .dbg_LED0(dbg_LED0),

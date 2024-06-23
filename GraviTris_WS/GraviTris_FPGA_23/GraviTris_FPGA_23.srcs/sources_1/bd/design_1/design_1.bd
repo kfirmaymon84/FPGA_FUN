@@ -1360,6 +1360,12 @@
           "blk_mem_gen_0/BRAM_PORTA"
         ]
       },
+      "axi_intc_0_interrupt": {
+        "interface_ports": [
+          "axi_intc_0/interrupt",
+          "microblaze_0/INTERRUPT"
+        ]
+      },
       "axi_uartlite_0_UART": {
         "interface_ports": [
           "usb_uart",

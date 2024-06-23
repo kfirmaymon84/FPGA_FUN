@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Sun Jun 23 09:17:51 2024
+// Date        : Sun Jun 23 20:40:18 2024
 // Host        : CP-230194 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA_23/GraviTris_FPGA_23.gen/sources_1/bd/design_1/ip/design_1_TTF_Driver_0_0/design_1_TTF_Driver_0_0_sim_netlist.v
@@ -13,8 +13,8 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_TTF_Driver_0_0,TTF_Driver,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "TTF_Driver,Vivado 2023.2" *) 
+(* CHECK_LICENSE_TYPE = "design_1_TTF_Driver_0_0,TTF_Driver,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "TTF_Driver,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
 module design_1_TTF_Driver_0_0
    (clk,
@@ -33,7 +33,7 @@ module design_1_TTF_Driver_0_0
     bramData,
     dbg_out,
     dbug_Out1);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
   input nEnable;
   output ready;
   input start;
@@ -75,7 +75,7 @@ module design_1_TTF_Driver_0_0
   assign dbug_Out1 = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  design_1_TTF_Driver_0_0_TTF_Driver inst
+  design_1_TTF_Driver_0_0_TTF_Driver U0
        (.DC_in(DC_in),
         .DC_out(DC_out),
         .WRX_in(WRX_in),

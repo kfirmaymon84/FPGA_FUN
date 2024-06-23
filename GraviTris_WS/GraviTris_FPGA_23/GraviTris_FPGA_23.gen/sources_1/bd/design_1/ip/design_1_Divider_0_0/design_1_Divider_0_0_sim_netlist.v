@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Sun Jun 23 08:32:38 2024
+// Date        : Sun Jun 23 20:40:14 2024
 // Host        : CP-230194 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA_23/GraviTris_FPGA_23.gen/sources_1/bd/design_1/ip/design_1_Divider_0_0/design_1_Divider_0_0_sim_netlist.v
@@ -13,8 +13,8 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_Divider_0_0,Divider,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "Divider,Vivado 2023.2" *) 
+(* CHECK_LICENSE_TYPE = "design_1_Divider_0_0,Divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "Divider,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
 module design_1_Divider_0_0
    (clk_100,
@@ -25,7 +25,7 @@ module design_1_Divider_0_0
   wire clk_100;
   wire clk_1K;
 
-  design_1_Divider_0_0_Divider inst
+  design_1_Divider_0_0_Divider U0
        (.clk_100(clk_100),
         .clk_1K(clk_1K));
 endmodule
