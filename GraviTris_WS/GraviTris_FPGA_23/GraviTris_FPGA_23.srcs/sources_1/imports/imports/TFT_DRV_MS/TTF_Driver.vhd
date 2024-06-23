@@ -181,24 +181,20 @@ begin
                 frame_height <= bramData(7 downto 0);
 
                 -- Get x0
-                x0 <= bramData(31 downto 24);
+                x0(7 downto 0) <= bramData(31 downto 24);
                 -- Get y0
-                x0 <= bramData(23 downto 16);
+                y0(7 downto 0) <= bramData(23 downto 16);
 
                 -- Skip to next address (start of frame)
                 address <= std_logic_vector(unsigned(address) + 4);
 
-                -- Inital TFT pins to send 0x2C command
+                -- Inital TFT pins
                 DC_out      <= '0';
                 WRX_bit     <= '0';
-                tftData_out <= x"2C";
               elsif to_integer(unsigned(stepCount)) = 25 then -- Send TFT "Read from memory" command (4Mhz clk 1)
-                -- Clock WRX_Pin
-                WRX_bit <= '1';
-
                 -- Calc x1, y1
-                x1 <= to_integer(unsigned(x0) + unsigned(frame_width));
-                y1 <= to_integer(unsigned(y0) + unsigned(frame_height));
+                x1 <=  std_logic_vector(unsigned(x0) + unsigned(frame_width) - 1);
+                y1 <= std_logic_vector(unsigned(y0) + unsigned(frame_height) - 1);
               elsif to_integer(unsigned(stepCount)) = 36 then -- Clear WRX  (4Mhz clk 1.5)
                 WRX_bit <= '0';
                 tftData_out <= x"2A"; -- send command to X0
@@ -217,7 +213,7 @@ begin
                 WRX_bit <= '1';
               elsif to_integer(unsigned(stepCount)) = 112 then -- Clear WRX  (4Mhz clk 4.5)
                 WRX_bit <= '0';
-                tftData_out <= x1(15 downto 7); -- Set x1 MSB
+                tftData_out <= x1(15 downto 8); -- Set x1 MSB
               elsif to_integer(unsigned(stepCount)) = 125 then -- Clear WRX  (4Mhz clk 5)
                 WRX_bit <= '1';
               elsif to_integer(unsigned(stepCount)) = 136 then -- Clear WRX  (4Mhz clk 5.5)
@@ -244,7 +240,7 @@ begin
                 WRX_bit <= '1';
               elsif to_integer(unsigned(stepCount)) = 236 then -- Clear WRX  (4Mhz clk 9.5)
                 WRX_bit <= '0';
-                tftData_out <= y1(15 downto 7); -- Set y1 MSB
+                tftData_out <= y1(15 downto 8); -- Set y1 MSB
               elsif to_integer(unsigned(stepCount)) = 250 then -- Clear WRX  (4Mhz clk 10)
                 WRX_bit <= '1';
               elsif to_integer(unsigned(stepCount)) = 262 then -- Clear WRX  (4Mhz clk 10.5)
@@ -254,13 +250,20 @@ begin
                 WRX_bit <= '1';
               elsif to_integer(unsigned(stepCount)) = 287 then -- Clear WRX  (4Mhz clk 11.5)
                 WRX_bit <= '0';
-                end if;
-              if to_integer(unsigned(stepCount)) = 300 then --(4Mhz clk 12)
+                DC_out      <= '0'; -- Set DC to Command
+                tftData_out <= x"2C"; -- write command to TFT write to memory
+              elsif to_integer(unsigned(stepCount)) = 300 then -- Clear WRX  (4Mhz clk 12)
+                WRX_bit <= '1';  
+              elsif to_integer(unsigned(stepCount)) = 312 then -- Clear WRX  (4Mhz clk 12.5)
+                WRX_bit <= '0';
+              end if;
+              
+              if to_integer(unsigned(stepCount)) = 325 then --(4Mhz clk 13)
                 -- Calculate frame pixels count
                 pixelInFrame <= std_logic_vector(unsigned(frame_width) * unsigned(frame_height));
 
                 -- Inital TFT pins
-                DC_out <= '1';
+                DC_out      <= '1'; -- Set DC to Data
 
                 -- Inital step counter 
                 stepCount <= (others => '0');

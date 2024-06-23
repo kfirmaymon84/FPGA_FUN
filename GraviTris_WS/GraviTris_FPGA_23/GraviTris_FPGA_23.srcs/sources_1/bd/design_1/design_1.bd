@@ -1573,7 +1573,6 @@
           "microblaze_0/Clk",
           "microblaze_0_local_memory/LMB_Clk",
           "rst_clk_wiz_0_100M/slowest_sync_clk",
-          "Divider_0/clk_100",
           "microblaze_0_axi_periph/S00_ACLK",
           "axi_uartlite_0/s_axi_aclk",
           "microblaze_0_axi_periph/M00_ACLK",
@@ -1582,11 +1581,12 @@
           "microblaze_0_axi_periph/M01_ACLK",
           "axi_bram_ctrl_0/s_axi_aclk",
           "microblaze_0_axi_periph/M02_ACLK",
-          "IO_Mapper_0/clk",
-          "TTF_Driver_0/clk",
           "blk_mem_gen_0/clkb",
           "axi_intc_0/s_axi_aclk",
-          "microblaze_0_axi_periph/M03_ACLK"
+          "microblaze_0_axi_periph/M03_ACLK",
+          "Divider_0/clk_100",
+          "IO_Mapper_0/clk",
+          "TTF_Driver_0/clk"
         ]
       },
       "reset_1": {

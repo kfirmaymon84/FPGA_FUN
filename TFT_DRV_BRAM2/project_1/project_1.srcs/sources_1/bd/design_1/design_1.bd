@@ -7,7 +7,7 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2",
+      "tool_version": "2023.2",
       "validated": "true"
     },
     "design_tree": {
@@ -88,6 +88,7 @@
     "components": {
       "blk_mem_gen_0": {
         "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "7",
         "xci_name": "design_1_blk_mem_gen_0_0",
         "xci_path": "ip\\design_1_blk_mem_gen_0_0\\design_1_blk_mem_gen_0_0.xci",
         "inst_hier_path": "blk_mem_gen_0",
@@ -104,6 +105,9 @@
           "Memory_Type": {
             "value": "Single_Port_RAM"
           },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
           "Use_RSTA_Pin": {
             "value": "false"
           },
@@ -114,6 +118,7 @@
       },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
         "xci_name": "design_1_xlconstant_0_0",
         "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0",
@@ -128,6 +133,7 @@
       },
       "TTF_Driver_0": {
         "vlnv": "xilinx.com:module_ref:TTF_Driver:1.0",
+        "ip_revision": "1",
         "xci_name": "design_1_TTF_Driver_0_0",
         "xci_path": "ip\\design_1_TTF_Driver_0_0\\design_1_TTF_Driver_0_0.xci",
         "inst_hier_path": "TTF_Driver_0",

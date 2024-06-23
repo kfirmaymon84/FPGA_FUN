@@ -1,9 +1,9 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.901818",
-   "Default View_TopLeft":"-349,10",
+   "Default View_ScaleFactor":"0.911765",
+   "Default View_TopLeft":"-342,11",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port port-id_DC_out -pg 1 -lvl 3 -x 650 -y 250 -defaultsOSRD
 preplace port port-id_dbug_Out1 -pg 1 -lvl 3 -x 650 -y 370 -defaultsOSRD
@@ -39,7 +39,7 @@ preplace netloc start_0_1 1 0 1 NJ 270
 preplace netloc tftData_in_0_1 1 0 1 NJ 350
 preplace netloc xlconstant_0_dout 1 1 1 380J 170n
 levelinfo -pg 1 0 190 520 650
-pagesize -pg 1 -db -bbox -sgen -140 0 800 560
+pagesize -pg 1 -db -bbox -sgen -160 0 820 560
 "
 }
 0
