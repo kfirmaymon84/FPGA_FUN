@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_lmb_bram_1/sim/design_1_lmb_bram_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_lmb_bram_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/sim/design_1_microblaze_0_xlconcat_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_microblaze_0_xlconcat_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xlconstant_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_1/sim/design_1_xlconstant_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xlconstant_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA/WS/GraviTris_FPGA/GraviTris_FPGA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

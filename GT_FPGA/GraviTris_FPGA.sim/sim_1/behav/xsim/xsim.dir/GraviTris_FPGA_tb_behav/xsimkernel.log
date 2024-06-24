@@ -1,0 +1,7 @@
+Running: xsim.dir/GraviTris_FPGA_tb_behav/xsimk.exe -simmode gui -wdb GraviTris_FPGA_tb_behav.wdb -simrunnum 0 -socket 53403
+Design successfully loaded
+Design Loading Memory Usage: 16476 KB (Peak: 16476 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 30384 KB (Peak: 30384 KB)
+Simulation CPU Usage: 93702 ms

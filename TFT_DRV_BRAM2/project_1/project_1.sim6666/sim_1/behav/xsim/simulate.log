@@ -1,6 +1,0 @@
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module design_tb.UUT.design_1_i.blk_mem_gen_0.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_7_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Stopped at time : 5 ns : File "C:/FPGA/FPGA_FUN/TFT_DRV_BRAM2/project_1/project_1.srcs/sources_1/imports/TFT_DRV_MS/TTF_Driver.vhd" Line 107
-Stopped at time : 100265 ns : File "C:/FPGA/FPGA_FUN/TFT_DRV_BRAM2/project_1/project_1.srcs/sources_1/imports/TFT_DRV_MS/TTF_Driver.vhd" Line 200

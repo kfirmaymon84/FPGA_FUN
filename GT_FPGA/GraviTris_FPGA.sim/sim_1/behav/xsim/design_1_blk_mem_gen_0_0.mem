@@ -1,0 +1,13 @@
+// Mem file initialization records.
+//
+// SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+// Vivado v2023.2 (64-bit)
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+// Created on Monday June 24, 2024 - 04:02:14 pm, from:
+//
+//     Map file     - c:\FPGA\WS\GraviTris_FPGA\GraviTris_FPGA.gen\sources_1\bd\design_1\design_1.bmm
+//     Data file(s) - C:/FPGA/WS/GT_Vitis/hello_world/build/hello_world.elf
+//
+// Address space 'UUT_microblaze_0.UUT_blk_mem_gen_0_8K_2_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
