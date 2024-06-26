@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin/mb-gcc.exe")
+set(CMAKE_C_COMPILER "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin/mb-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "12.2.0")
@@ -18,15 +18,15 @@ set(CMAKE_C_SIMULATE_ID "")
 set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_C_SIMULATE_VERSION "")
 
-set(CMAKE_C_COMPILER_SYSROOT "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin//../microblazeeb-xilinx-elf/usr")
-set(CMAKE_COMPILER_SYSROOT "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin//../microblazeeb-xilinx-elf/usr")
+set(CMAKE_C_COMPILER_SYSROOT "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin//../microblazeeb-xilinx-elf/usr")
+set(CMAKE_COMPILER_SYSROOT "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin//../microblazeeb-xilinx-elf/usr")
 
 
 set(CMAKE_AR "mb-ar")
-set(CMAKE_C_COMPILER_AR "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin/mb-gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin/mb-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin/mb-gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/bin/mb-ld.exe")
+set(CMAKE_C_COMPILER_AR "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin/mb-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin/mb-ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin/mb-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/bin/mb-ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -67,7 +67,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/FPGA/WS/GT_Vitis/platform/microblaze_0/standalone_microblaze_0/bsp/include;C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/include;C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/include-fixed;C:/Xilinx/Vitis/2023.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/FPGA/FPGA_FUN/GT_Vitis/platform/microblaze_0/standalone_microblaze_0/bsp/include;C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/include;C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/include-fixed;C:/Xilinx/Vitis/2024.1/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

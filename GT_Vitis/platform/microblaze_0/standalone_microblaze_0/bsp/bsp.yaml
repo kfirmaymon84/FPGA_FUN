@@ -123,3 +123,4 @@ lib_config:
       options:
       - None
       description: This parameter is used to select specific timer for tick functionality
+config: default

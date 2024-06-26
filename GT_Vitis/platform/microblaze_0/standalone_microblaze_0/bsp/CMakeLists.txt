@@ -31,3 +31,8 @@ foreach(entry ${SUBDIR_LIST})
     endif()
 endforeach()
     
+cmake_language(DEFER DIRECTORY ${CMAKE_SOURCE_DIR} CALL _my_hook_end_of_configure())
+function(_my_hook_end_of_configure)
+    set(SUBDIR_LIST "ALL" CACHE STRING "sub dir list" FORCE)
+endfunction(_my_hook_end_of_configure)
+
