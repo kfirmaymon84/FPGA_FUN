@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon Jun 24 15:22:16 2024
+--Date        : Sat Jun 29 18:58:28 2024
 --Host        : CP-230194 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -2089,8 +2089,8 @@ architecture STRUCTURE of design_1 is
   port (
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    locked : out STD_LOGIC;
-    clk_100 : out STD_LOGIC
+    clk_100 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component design_1_clk_wiz_0_0;
   component design_1_microblaze_0_1 is

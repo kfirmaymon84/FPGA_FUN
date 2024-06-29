@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon Jun 24 15:22:16 2024
+--Date        : Sat Jun 29 21:09:46 2024
 --Host        : CP-230194 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -2079,7 +2079,7 @@ entity design_1 is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=29,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_mb_cnt=2,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=30,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=6,da_bram_cntlr_cnt=1,da_mb_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -2089,8 +2089,8 @@ architecture STRUCTURE of design_1 is
   port (
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    locked : out STD_LOGIC;
-    clk_100 : out STD_LOGIC
+    clk_100 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component design_1_clk_wiz_0_0;
   component design_1_microblaze_0_1 is
@@ -2325,7 +2325,29 @@ architecture STRUCTURE of design_1 is
     rstb_busy : out STD_LOGIC
   );
   end component design_1_blk_mem_gen_0_0;
-  component design_1_axi_bram_ctrl_0_0 is
+  component design_1_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_1_xlconstant_0_0;
+  component design_1_xlconstant_0_1 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_xlconstant_0_1;
+  component design_1_blk_mem_gen_1_0 is
+  port (
+    clka : in STD_LOGIC;
+    rsta : in STD_LOGIC;
+    ena : in STD_LOGIC;
+    wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC
+  );
+  end component design_1_blk_mem_gen_1_0;
+  component design_1_axi_bram_ctrl_0_1 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -2368,17 +2390,7 @@ architecture STRUCTURE of design_1 is
     bram_wrdata_a : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_rddata_a : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  end component design_1_axi_bram_ctrl_0_0;
-  component design_1_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component design_1_xlconstant_0_0;
-  component design_1_xlconstant_0_1 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_xlconstant_0_1;
+  end component design_1_axi_bram_ctrl_0_1;
   signal Divider_0_clk_1K : STD_LOGIC;
   signal IO_Mapper_0_dbg_LED0 : STD_LOGIC;
   signal IO_Mapper_0_dbg_LED1 : STD_LOGIC;
@@ -2554,6 +2566,8 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_0_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_0_rstb_busy_UNCONNECTED : STD_LOGIC;
+  signal NLW_blk_mem_gen_1_rsta_busy_UNCONNECTED : STD_LOGIC;
+  signal NLW_blk_mem_gen_1_douta_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_rst_clk_wiz_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute BMM_INFO_ADDRESS_SPACE : string;
@@ -2622,7 +2636,7 @@ TTF_Driver_0: component design_1_TTF_Driver_0_0
       tftData_in(7 downto 0) => IO_Mapper_0_tftDrv_data(7 downto 0),
       tftData_out(7 downto 0) => TTF_Driver_0_tftData_out(7 downto 0)
     );
-axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_0
+axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_1
      port map (
       bram_addr_a(12 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(12 downto 0),
       bram_clk_a => axi_bram_ctrl_0_BRAM_PORTA_CLK,
@@ -2733,6 +2747,17 @@ blk_mem_gen_0: component design_1_blk_mem_gen_0_0
       rstb_busy => NLW_blk_mem_gen_0_rstb_busy_UNCONNECTED,
       wea(3 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_WE(3 downto 0),
       web(3 downto 0) => xlconstant_0_dout(3 downto 0)
+    );
+blk_mem_gen_1: component design_1_blk_mem_gen_1_0
+     port map (
+      addra(31 downto 0) => B"00000000000000000000000000000000",
+      clka => '0',
+      dina(31 downto 0) => B"00000000000000000000000000001000",
+      douta(31 downto 0) => NLW_blk_mem_gen_1_douta_UNCONNECTED(31 downto 0),
+      ena => '0',
+      rsta => '0',
+      rsta_busy => NLW_blk_mem_gen_1_rsta_busy_UNCONNECTED,
+      wea(3 downto 0) => B"0000"
     );
 clk_wiz_0: component design_1_clk_wiz_0_0
      port map (

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.srcs/constrs_1/new/const.xdc rfile:../../../GraviTris_FPGA.srcs/constrs_1/new/const.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.srcs/constrs_1/new/const.xdc rfile:../../../GraviTris_FPGA.srcs/constrs_1/new/const.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS33 [get_ports {dbg_out[3]}]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

@@ -4,11 +4,11 @@ verilog xil_defaultlib  --include "../../../../GraviTris_FPGA.gen/sources_1/bd/d
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_lmb_bram_1/sim/design_1_lmb_bram_1.v" \
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
-"../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/sim/design_1_microblaze_0_xlconcat_0.v" \
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
 "../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_1/sim/design_1_xlconstant_0_1.v" \
+"../../../../GraviTris_FPGA.ip_user_files/bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

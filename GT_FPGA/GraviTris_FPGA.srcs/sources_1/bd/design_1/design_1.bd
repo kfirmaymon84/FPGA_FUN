@@ -40,9 +40,10 @@
       "TTF_Driver_0": "",
       "axi_gpio_0": "",
       "blk_mem_gen_0": "",
-      "axi_bram_ctrl_0": "",
       "xlconstant_0": "",
-      "xlconstant_1": ""
+      "xlconstant_1": "",
+      "blk_mem_gen_1": "",
+      "axi_bram_ctrl_0": ""
     },
     "interface_ports": {
       "usb_uart": {
@@ -1255,32 +1256,16 @@
         "inst_hier_path": "blk_mem_gen_0",
         "parameters": {
           "Assume_Synchronous_Clk": {
+            "value": "false"
+          },
+          "Enable_32bit_Address": {
             "value": "true"
           },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
-          }
-        }
-      },
-      "axi_bram_ctrl_0": {
-        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
-        "ip_revision": "9",
-        "xci_name": "design_1_axi_bram_ctrl_0_0",
-        "xci_path": "ip\\design_1_axi_bram_ctrl_0_0\\design_1_axi_bram_ctrl_0_0.xci",
-        "inst_hier_path": "axi_bram_ctrl_0",
-        "parameters": {
-          "SINGLE_PORT_BRAM": {
-            "value": "1"
-          }
-        },
-        "hdl_attributes": {
-          "BMM_INFO_ADDRESS_SPACE": {
-            "value": "byte  0xC0000000 32 > design_1 blk_mem_gen_0",
-            "value_src": "default"
           },
-          "KEEP_HIERARCHY": {
-            "value": "yes",
-            "value_src": "default"
+          "use_bram_block": {
+            "value": "BRAM_Controller"
           }
         }
       },
@@ -1313,13 +1298,42 @@
             "value": "1"
           }
         }
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "7",
+        "xci_name": "design_1_blk_mem_gen_1_0",
+        "xci_path": "ip\\design_1_blk_mem_gen_1_0\\design_1_blk_mem_gen_1_0.xci",
+        "inst_hier_path": "blk_mem_gen_1"
+      },
+      "axi_bram_ctrl_0": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "ip_revision": "9",
+        "xci_name": "design_1_axi_bram_ctrl_0_1",
+        "xci_path": "ip\\design_1_axi_bram_ctrl_0_1\\design_1_axi_bram_ctrl_0_1.xci",
+        "inst_hier_path": "axi_bram_ctrl_0",
+        "parameters": {
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        },
+        "hdl_attributes": {
+          "BMM_INFO_ADDRESS_SPACE": {
+            "value": "byte  0xC0000000 32 > design_1 blk_mem_gen_0",
+            "value_src": "default"
+          },
+          "KEEP_HIERARCHY": {
+            "value": "yes",
+            "value_src": "default"
+          }
+        }
       }
     },
     "interface_nets": {
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
-          "axi_bram_ctrl_0/BRAM_PORTA",
-          "blk_mem_gen_0/BRAM_PORTA"
+          "blk_mem_gen_0/BRAM_PORTA",
+          "axi_bram_ctrl_0/BRAM_PORTA"
         ]
       },
       "axi_uartlite_0_UART": {
@@ -1527,16 +1541,16 @@
           "microblaze_0_axi_intc/processor_clk",
           "microblaze_0_local_memory/LMB_Clk",
           "rst_clk_wiz_0_100M/slowest_sync_clk",
-          "Divider_0/clk_100",
           "axi_uartlite_0/s_axi_aclk",
           "microblaze_0_axi_periph/M01_ACLK",
           "IO_Mapper_0/clk",
           "axi_gpio_0/s_axi_aclk",
           "microblaze_0_axi_periph/M02_ACLK",
           "blk_mem_gen_0/clkb",
-          "axi_bram_ctrl_0/s_axi_aclk",
           "microblaze_0_axi_periph/M03_ACLK",
-          "TTF_Driver_0/clk"
+          "TTF_Driver_0/clk",
+          "Divider_0/clk_100",
+          "axi_bram_ctrl_0/s_axi_aclk"
         ]
       },
       "microblaze_0_intr": {
@@ -1576,8 +1590,8 @@
           "microblaze_0_axi_periph/M01_ARESETN",
           "axi_gpio_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M02_ARESETN",
-          "axi_bram_ctrl_0/s_axi_aresetn",
-          "microblaze_0_axi_periph/M03_ARESETN"
+          "microblaze_0_axi_periph/M03_ARESETN",
+          "axi_bram_ctrl_0/s_axi_aresetn"
         ]
       },
       "sys_clock_1": {
@@ -1647,9 +1661,9 @@
     },
     "elf_association": {
       "file": {
-        "name": "..\\..\\..\\..\\..\\GT_Vitis\\hello_world\\build\\hello_world.elf",
+        "name": "..\\..\\..\\..\\elf\\hello_world4.elf",
         "type": "ELF",
-        "checksum": "3164952374",
+        "checksum": "4083842293",
         "IsVisible": "1",
         "ScopedToRef": "design_1",
         "ScopedToCell": [

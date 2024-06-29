@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="GraviTris_FPGA_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="GraviTris_FPGA_tb" />
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="lmb_bram_if_funcs" />
+            <top_module name="mdm_funcs" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3,918,312.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,921,747.501 ns"></ZoomEndTime>
+      <Cursor1Time time="3,918,967.500 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="266"></NameColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group12" type="group">
+      <obj_property name="label">UUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/GraviTris_FPGA_tb/sys_clock" type="logic">
+         <obj_property name="ElementShortName">sys_clock</obj_property>
+         <obj_property name="ObjectShortName">sys_clock</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/usb_uart_rxd" type="logic">
+         <obj_property name="ElementShortName">usb_uart_rxd</obj_property>
+         <obj_property name="ObjectShortName">usb_uart_rxd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/usb_uart_txd" type="logic">
+         <obj_property name="ElementShortName">usb_uart_txd</obj_property>
+         <obj_property name="ObjectShortName">usb_uart_txd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/DC_out" type="logic">
+         <obj_property name="ElementShortName">DC_out</obj_property>
+         <obj_property name="ObjectShortName">DC_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/WRX_out" type="logic">
+         <obj_property name="ElementShortName">WRX_out</obj_property>
+         <obj_property name="ObjectShortName">WRX_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/tftData_out" type="array">
+         <obj_property name="ElementShortName">tftData_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tftData_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/dbg_LED0" type="logic">
+         <obj_property name="ElementShortName">dbg_LED0</obj_property>
+         <obj_property name="ObjectShortName">dbg_LED0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/dbg_LED1" type="logic">
+         <obj_property name="ElementShortName">dbg_LED1</obj_property>
+         <obj_property name="ObjectShortName">dbg_LED1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/dbg_LED2" type="logic">
+         <obj_property name="ElementShortName">dbg_LED2</obj_property>
+         <obj_property name="ObjectShortName">dbg_LED2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/dbg_SW" type="logic">
+         <obj_property name="ElementShortName">dbg_SW</obj_property>
+         <obj_property name="ObjectShortName">dbg_SW</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group51" type="group">
+      <obj_property name="label">DRV</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/nEnable" type="logic">
+         <obj_property name="ElementShortName">nEnable</obj_property>
+         <obj_property name="ObjectShortName">nEnable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/ready" type="logic">
+         <obj_property name="ElementShortName">ready</obj_property>
+         <obj_property name="ObjectShortName">ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/override" type="logic">
+         <obj_property name="ElementShortName">override</obj_property>
+         <obj_property name="ObjectShortName">override</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/DC_in" type="logic">
+         <obj_property name="ElementShortName">DC_in</obj_property>
+         <obj_property name="ObjectShortName">DC_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/WRX_in" type="logic">
+         <obj_property name="ElementShortName">WRX_in</obj_property>
+         <obj_property name="ObjectShortName">WRX_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/tftData_in" type="array">
+         <obj_property name="ElementShortName">tftData_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tftData_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/colors" type="array">
+         <obj_property name="ElementShortName">colors[0:15][15:0]</obj_property>
+         <obj_property name="ObjectShortName">colors[0:15][15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group356" type="group">
+         <obj_property name="label">Pixels</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel0" type="array">
+            <obj_property name="ElementShortName">pixel0[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel0[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel1" type="array">
+            <obj_property name="ElementShortName">pixel1[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel1[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel2" type="array">
+            <obj_property name="ElementShortName">pixel2[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel2[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel3" type="array">
+            <obj_property name="ElementShortName">pixel3[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel3[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel4" type="array">
+            <obj_property name="ElementShortName">pixel4[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel4[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel5" type="array">
+            <obj_property name="ElementShortName">pixel5[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel5[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel6" type="array">
+            <obj_property name="ElementShortName">pixel6[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel6[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixel7" type="array">
+            <obj_property name="ElementShortName">pixel7[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pixel7[15:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/WRX_out" type="logic">
+         <obj_property name="ElementShortName">WRX_out</obj_property>
+         <obj_property name="ObjectShortName">WRX_out</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/tftData_out" type="array">
+         <obj_property name="ElementShortName">tftData_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tftData_out[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/DC_out" type="logic">
+         <obj_property name="ElementShortName">DC_out</obj_property>
+         <obj_property name="ObjectShortName">DC_out</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/stateIdx" type="other">
+         <obj_property name="ElementShortName">stateIdx</obj_property>
+         <obj_property name="ObjectShortName">stateIdx</obj_property>
+      </wvobject>
+      <wvobject fp_name="group357" type="group">
+         <obj_property name="label">BRAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/bramEN" type="logic">
+            <obj_property name="ElementShortName">bramEN</obj_property>
+            <obj_property name="ObjectShortName">bramEN</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/bramAddress" type="array">
+            <obj_property name="ElementShortName">bramAddress[31:0]</obj_property>
+            <obj_property name="ObjectShortName">bramAddress[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/bramData" type="array">
+            <obj_property name="ElementShortName">bramData[31:0]</obj_property>
+            <obj_property name="ObjectShortName">bramData[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/address" type="array">
+         <obj_property name="ElementShortName">address[31:0]</obj_property>
+         <obj_property name="ObjectShortName">address[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/frame_width" type="array">
+         <obj_property name="ElementShortName">frame_width[7:0]</obj_property>
+         <obj_property name="ObjectShortName">frame_width[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/frame_height" type="array">
+         <obj_property name="ElementShortName">frame_height[7:0]</obj_property>
+         <obj_property name="ObjectShortName">frame_height[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/lastStart" type="logic">
+         <obj_property name="ElementShortName">lastStart</obj_property>
+         <obj_property name="ObjectShortName">lastStart</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixelCount" type="array">
+         <obj_property name="ElementShortName">pixelCount[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pixelCount[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/pixelInFrame" type="array">
+         <obj_property name="ElementShortName">pixelInFrame[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pixelInFrame[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/stepCount" type="array">
+         <obj_property name="ElementShortName">stepCount[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stepCount[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/WRX_bit" type="logic">
+         <obj_property name="ElementShortName">WRX_bit</obj_property>
+         <obj_property name="ObjectShortName">WRX_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/lastWriteClk" type="logic">
+         <obj_property name="ElementShortName">lastWriteClk</obj_property>
+         <obj_property name="ObjectShortName">lastWriteClk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/debugOutBit" type="logic">
+         <obj_property name="ElementShortName">debugOutBit</obj_property>
+         <obj_property name="ObjectShortName">debugOutBit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/x0" type="array">
+         <obj_property name="ElementShortName">x0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x0[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/x1" type="array">
+         <obj_property name="ElementShortName">x1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">x1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/y0" type="array">
+         <obj_property name="ElementShortName">y0[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y0[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/GraviTris_FPGA_tb/UUT/TTF_Driver_0/U0/y1" type="array">
+         <obj_property name="ElementShortName">y1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">y1[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

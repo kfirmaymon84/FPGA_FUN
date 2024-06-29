@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon Jun 24 15:26:52 2024
+// Date        : Sat Jun 29 21:10:31 2024
 // Host        : CP-230194 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/FPGA/FPGA_FUN/GraviTris_WS/GraviTris_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_stub.v
+//               c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_stub.v
 // Design      : design_1_blk_mem_gen_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1
@@ -17,8 +17,9 @@
 (* x_core_info = "blk_mem_gen_v8_4_7,Vivado 2023.2" *)
 module design_1_blk_mem_gen_0_0(clka, rsta, ena, wea, addra, dina, douta, clkb, rstb, enb, 
   web, addrb, dinb, doutb, rsta_busy, rstb_busy)
-/* synthesis syn_black_box black_box_pad_pin="rsta,ena,wea[3:0],addra[31:0],dina[31:0],douta[31:0],clkb,rstb,enb,web[3:0],addrb[31:0],dinb[31:0],doutb[31:0],rsta_busy,rstb_busy" */
-/* synthesis syn_force_seq_prim="clka" */;
+/* synthesis syn_black_box black_box_pad_pin="rsta,ena,wea[3:0],addra[31:0],dina[31:0],douta[31:0],rstb,enb,web[3:0],addrb[31:0],dinb[31:0],doutb[31:0],rsta_busy,rstb_busy" */
+/* synthesis syn_force_seq_prim="clka" */
+/* synthesis syn_force_seq_prim="clkb" */;
   input clka /* synthesis syn_isclock = 1 */;
   input rsta;
   input ena;
@@ -26,7 +27,7 @@ module design_1_blk_mem_gen_0_0(clka, rsta, ena, wea, addra, dina, douta, clkb, 
   input [31:0]addra;
   input [31:0]dina;
   output [31:0]douta;
-  input clkb;
+  input clkb /* synthesis syn_isclock = 1 */;
   input rstb;
   input enb;
   input [3:0]web;
