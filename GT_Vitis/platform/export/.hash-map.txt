@@ -1,1 +1,0 @@
-{"generate.platform":[{"uri":"C:\\FPGA\\FPGA_FUN\\GT_Vitis\\platform\\vitis-comp.json","md5":"363fe61fae2574902e753f0079c215bb"},{"uri":"C:\\FPGA\\FPGA_FUN\\GT_Vitis\\platform\\microblaze_0\\standalone_microblaze_0\\bsp\\bsp.yaml","md5":"a635499bab71b45169c5ea56a9c7578a"}]}

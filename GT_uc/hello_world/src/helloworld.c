@@ -57,6 +57,8 @@ int main()
 	uint32_t *memPtr = XPAR_AXI_BRAM_CTRL_0_BASEADDR;
 
     xil_printf("Start...\r\n");
+    clearScreen();
+    drawMemory();
 	while(1){
 		char c;
 		print("Enter cmd: ");
