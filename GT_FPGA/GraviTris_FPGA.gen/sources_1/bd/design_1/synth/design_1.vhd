@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Sat Jun 29 21:09:46 2024
+--Date        : Sun Jun 30 15:30:13 2024
 --Host        : CP-230194 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -319,7 +319,7 @@ entity m03_couplers_imp_1W07O72 is
   port (
     M_ACLK : in STD_LOGIC;
     M_ARESETN : in STD_LOGIC;
-    M_AXI_araddr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    M_AXI_araddr : out STD_LOGIC_VECTOR ( 14 downto 0 );
     M_AXI_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_arcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
     M_AXI_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -328,7 +328,7 @@ entity m03_couplers_imp_1W07O72 is
     M_AXI_arready : in STD_LOGIC;
     M_AXI_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M_AXI_arvalid : out STD_LOGIC;
-    M_AXI_awaddr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    M_AXI_awaddr : out STD_LOGIC_VECTOR ( 14 downto 0 );
     M_AXI_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     M_AXI_awcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
     M_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -379,7 +379,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
@@ -390,7 +390,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
@@ -398,7 +398,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    m_axi_awaddr : out STD_LOGIC_VECTOR ( 14 downto 0 );
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -417,7 +417,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bready : out STD_LOGIC;
-    m_axi_araddr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    m_axi_araddr : out STD_LOGIC_VECTOR ( 14 downto 0 );
     m_axi_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -437,7 +437,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
   end component design_1_auto_pc_0;
   signal S_ACLK_1 : STD_LOGIC;
   signal S_ARESETN_1 : STD_LOGIC;
-  signal auto_pc_to_m03_couplers_ARADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal auto_pc_to_m03_couplers_ARADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal auto_pc_to_m03_couplers_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal auto_pc_to_m03_couplers_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal auto_pc_to_m03_couplers_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -446,7 +446,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
   signal auto_pc_to_m03_couplers_ARREADY : STD_LOGIC;
   signal auto_pc_to_m03_couplers_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal auto_pc_to_m03_couplers_ARVALID : STD_LOGIC;
-  signal auto_pc_to_m03_couplers_AWADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal auto_pc_to_m03_couplers_AWADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal auto_pc_to_m03_couplers_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal auto_pc_to_m03_couplers_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal auto_pc_to_m03_couplers_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -492,7 +492,7 @@ architecture STRUCTURE of m03_couplers_imp_1W07O72 is
   signal NLW_auto_pc_m_axi_awqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_auto_pc_m_axi_awregion_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
-  M_AXI_araddr(12 downto 0) <= auto_pc_to_m03_couplers_ARADDR(12 downto 0);
+  M_AXI_araddr(14 downto 0) <= auto_pc_to_m03_couplers_ARADDR(14 downto 0);
   M_AXI_arburst(1 downto 0) <= auto_pc_to_m03_couplers_ARBURST(1 downto 0);
   M_AXI_arcache(3 downto 0) <= auto_pc_to_m03_couplers_ARCACHE(3 downto 0);
   M_AXI_arlen(7 downto 0) <= auto_pc_to_m03_couplers_ARLEN(7 downto 0);
@@ -500,7 +500,7 @@ begin
   M_AXI_arprot(2 downto 0) <= auto_pc_to_m03_couplers_ARPROT(2 downto 0);
   M_AXI_arsize(2 downto 0) <= auto_pc_to_m03_couplers_ARSIZE(2 downto 0);
   M_AXI_arvalid <= auto_pc_to_m03_couplers_ARVALID;
-  M_AXI_awaddr(12 downto 0) <= auto_pc_to_m03_couplers_AWADDR(12 downto 0);
+  M_AXI_awaddr(14 downto 0) <= auto_pc_to_m03_couplers_AWADDR(14 downto 0);
   M_AXI_awburst(1 downto 0) <= auto_pc_to_m03_couplers_AWBURST(1 downto 0);
   M_AXI_awcache(3 downto 0) <= auto_pc_to_m03_couplers_AWCACHE(3 downto 0);
   M_AXI_awlen(7 downto 0) <= auto_pc_to_m03_couplers_AWLEN(7 downto 0);
@@ -548,7 +548,7 @@ auto_pc: component design_1_auto_pc_0
      port map (
       aclk => S_ACLK_1,
       aresetn => S_ARESETN_1,
-      m_axi_araddr(12 downto 0) => auto_pc_to_m03_couplers_ARADDR(12 downto 0),
+      m_axi_araddr(14 downto 0) => auto_pc_to_m03_couplers_ARADDR(14 downto 0),
       m_axi_arburst(1 downto 0) => auto_pc_to_m03_couplers_ARBURST(1 downto 0),
       m_axi_arcache(3 downto 0) => auto_pc_to_m03_couplers_ARCACHE(3 downto 0),
       m_axi_arlen(7 downto 0) => auto_pc_to_m03_couplers_ARLEN(7 downto 0),
@@ -559,7 +559,7 @@ auto_pc: component design_1_auto_pc_0
       m_axi_arregion(3 downto 0) => NLW_auto_pc_m_axi_arregion_UNCONNECTED(3 downto 0),
       m_axi_arsize(2 downto 0) => auto_pc_to_m03_couplers_ARSIZE(2 downto 0),
       m_axi_arvalid => auto_pc_to_m03_couplers_ARVALID,
-      m_axi_awaddr(12 downto 0) => auto_pc_to_m03_couplers_AWADDR(12 downto 0),
+      m_axi_awaddr(14 downto 0) => auto_pc_to_m03_couplers_AWADDR(14 downto 0),
       m_axi_awburst(1 downto 0) => auto_pc_to_m03_couplers_AWBURST(1 downto 0),
       m_axi_awcache(3 downto 0) => auto_pc_to_m03_couplers_AWCACHE(3 downto 0),
       m_axi_awlen(7 downto 0) => auto_pc_to_m03_couplers_AWLEN(7 downto 0),
@@ -583,11 +583,11 @@ auto_pc: component design_1_auto_pc_0
       m_axi_wready => auto_pc_to_m03_couplers_WREADY,
       m_axi_wstrb(3 downto 0) => auto_pc_to_m03_couplers_WSTRB(3 downto 0),
       m_axi_wvalid => auto_pc_to_m03_couplers_WVALID,
-      s_axi_araddr(12 downto 0) => m03_couplers_to_auto_pc_ARADDR(12 downto 0),
+      s_axi_araddr(14 downto 0) => m03_couplers_to_auto_pc_ARADDR(14 downto 0),
       s_axi_arprot(2 downto 0) => m03_couplers_to_auto_pc_ARPROT(2 downto 0),
       s_axi_arready => m03_couplers_to_auto_pc_ARREADY,
       s_axi_arvalid => m03_couplers_to_auto_pc_ARVALID,
-      s_axi_awaddr(12 downto 0) => m03_couplers_to_auto_pc_AWADDR(12 downto 0),
+      s_axi_awaddr(14 downto 0) => m03_couplers_to_auto_pc_AWADDR(14 downto 0),
       s_axi_awprot(2 downto 0) => m03_couplers_to_auto_pc_AWPROT(2 downto 0),
       s_axi_awready => m03_couplers_to_auto_pc_AWREADY,
       s_axi_awvalid => m03_couplers_to_auto_pc_AWVALID,
@@ -1340,7 +1340,7 @@ entity design_1_microblaze_0_axi_periph_0 is
     M02_AXI_wvalid : out STD_LOGIC;
     M03_ACLK : in STD_LOGIC;
     M03_ARESETN : in STD_LOGIC;
-    M03_AXI_araddr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    M03_AXI_araddr : out STD_LOGIC_VECTOR ( 14 downto 0 );
     M03_AXI_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     M03_AXI_arcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
     M03_AXI_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -1349,7 +1349,7 @@ entity design_1_microblaze_0_axi_periph_0 is
     M03_AXI_arready : in STD_LOGIC;
     M03_AXI_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M03_AXI_arvalid : out STD_LOGIC;
-    M03_AXI_awaddr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    M03_AXI_awaddr : out STD_LOGIC_VECTOR ( 14 downto 0 );
     M03_AXI_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     M03_AXI_awcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
     M03_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -1491,7 +1491,7 @@ architecture STRUCTURE of design_1_microblaze_0_axi_periph_0 is
   signal m02_couplers_to_microblaze_0_axi_periph_WREADY : STD_LOGIC;
   signal m02_couplers_to_microblaze_0_axi_periph_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m02_couplers_to_microblaze_0_axi_periph_WVALID : STD_LOGIC;
-  signal m03_couplers_to_microblaze_0_axi_periph_ARADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal m03_couplers_to_microblaze_0_axi_periph_ARADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -1500,7 +1500,7 @@ architecture STRUCTURE of design_1_microblaze_0_axi_periph_0 is
   signal m03_couplers_to_microblaze_0_axi_periph_ARREADY : STD_LOGIC;
   signal m03_couplers_to_microblaze_0_axi_periph_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_ARVALID : STD_LOGIC;
-  signal m03_couplers_to_microblaze_0_axi_periph_AWADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal m03_couplers_to_microblaze_0_axi_periph_AWADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal m03_couplers_to_microblaze_0_axi_periph_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -1662,7 +1662,7 @@ begin
   M02_AXI_wdata(31 downto 0) <= m02_couplers_to_microblaze_0_axi_periph_WDATA(31 downto 0);
   M02_AXI_wstrb(3 downto 0) <= m02_couplers_to_microblaze_0_axi_periph_WSTRB(3 downto 0);
   M02_AXI_wvalid <= m02_couplers_to_microblaze_0_axi_periph_WVALID;
-  M03_AXI_araddr(12 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARADDR(12 downto 0);
+  M03_AXI_araddr(14 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARADDR(14 downto 0);
   M03_AXI_arburst(1 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARBURST(1 downto 0);
   M03_AXI_arcache(3 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARCACHE(3 downto 0);
   M03_AXI_arlen(7 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARLEN(7 downto 0);
@@ -1670,7 +1670,7 @@ begin
   M03_AXI_arprot(2 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARPROT(2 downto 0);
   M03_AXI_arsize(2 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_ARSIZE(2 downto 0);
   M03_AXI_arvalid <= m03_couplers_to_microblaze_0_axi_periph_ARVALID;
-  M03_AXI_awaddr(12 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_AWADDR(12 downto 0);
+  M03_AXI_awaddr(14 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_AWADDR(14 downto 0);
   M03_AXI_awburst(1 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_AWBURST(1 downto 0);
   M03_AXI_awcache(3 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_AWCACHE(3 downto 0);
   M03_AXI_awlen(7 downto 0) <= m03_couplers_to_microblaze_0_axi_periph_AWLEN(7 downto 0);
@@ -1865,7 +1865,7 @@ m03_couplers: entity work.m03_couplers_imp_1W07O72
      port map (
       M_ACLK => microblaze_0_axi_periph_ACLK_net,
       M_ARESETN => microblaze_0_axi_periph_ARESETN_net,
-      M_AXI_araddr(12 downto 0) => m03_couplers_to_microblaze_0_axi_periph_ARADDR(12 downto 0),
+      M_AXI_araddr(14 downto 0) => m03_couplers_to_microblaze_0_axi_periph_ARADDR(14 downto 0),
       M_AXI_arburst(1 downto 0) => m03_couplers_to_microblaze_0_axi_periph_ARBURST(1 downto 0),
       M_AXI_arcache(3 downto 0) => m03_couplers_to_microblaze_0_axi_periph_ARCACHE(3 downto 0),
       M_AXI_arlen(7 downto 0) => m03_couplers_to_microblaze_0_axi_periph_ARLEN(7 downto 0),
@@ -1874,7 +1874,7 @@ m03_couplers: entity work.m03_couplers_imp_1W07O72
       M_AXI_arready => m03_couplers_to_microblaze_0_axi_periph_ARREADY,
       M_AXI_arsize(2 downto 0) => m03_couplers_to_microblaze_0_axi_periph_ARSIZE(2 downto 0),
       M_AXI_arvalid => m03_couplers_to_microblaze_0_axi_periph_ARVALID,
-      M_AXI_awaddr(12 downto 0) => m03_couplers_to_microblaze_0_axi_periph_AWADDR(12 downto 0),
+      M_AXI_awaddr(14 downto 0) => m03_couplers_to_microblaze_0_axi_periph_AWADDR(14 downto 0),
       M_AXI_awburst(1 downto 0) => m03_couplers_to_microblaze_0_axi_periph_AWBURST(1 downto 0),
       M_AXI_awcache(3 downto 0) => m03_couplers_to_microblaze_0_axi_periph_AWCACHE(3 downto 0),
       M_AXI_awlen(7 downto 0) => m03_couplers_to_microblaze_0_axi_periph_AWLEN(7 downto 0),
@@ -2351,7 +2351,7 @@ architecture STRUCTURE of design_1 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2368,7 +2368,7 @@ architecture STRUCTURE of design_1 is
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2386,7 +2386,7 @@ architecture STRUCTURE of design_1 is
     bram_clk_a : out STD_LOGIC;
     bram_en_a : out STD_LOGIC;
     bram_we_a : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    bram_addr_a : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    bram_addr_a : out STD_LOGIC_VECTOR ( 14 downto 0 );
     bram_wrdata_a : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_rddata_a : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
@@ -2408,7 +2408,7 @@ architecture STRUCTURE of design_1 is
   signal TTF_Driver_0_bramEN : STD_LOGIC;
   signal TTF_Driver_0_ready : STD_LOGIC;
   signal TTF_Driver_0_tftData_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_DOUT : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2476,7 +2476,7 @@ architecture STRUCTURE of design_1 is
   signal microblaze_0_axi_periph_M02_AXI_WREADY : STD_LOGIC;
   signal microblaze_0_axi_periph_M02_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal microblaze_0_axi_periph_M02_AXI_WVALID : STD_LOGIC;
-  signal microblaze_0_axi_periph_M03_AXI_ARADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal microblaze_0_axi_periph_M03_AXI_ARADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -2485,7 +2485,7 @@ architecture STRUCTURE of design_1 is
   signal microblaze_0_axi_periph_M03_AXI_ARREADY : STD_LOGIC;
   signal microblaze_0_axi_periph_M03_AXI_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_ARVALID : STD_LOGIC;
-  signal microblaze_0_axi_periph_M03_AXI_AWADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
+  signal microblaze_0_axi_periph_M03_AXI_AWADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal microblaze_0_axi_periph_M03_AXI_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -2638,7 +2638,7 @@ TTF_Driver_0: component design_1_TTF_Driver_0_0
     );
 axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_1
      port map (
-      bram_addr_a(12 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(12 downto 0),
+      bram_addr_a(14 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(14 downto 0),
       bram_clk_a => axi_bram_ctrl_0_BRAM_PORTA_CLK,
       bram_en_a => axi_bram_ctrl_0_BRAM_PORTA_EN,
       bram_rddata_a(31 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_DOUT(31 downto 0),
@@ -2646,7 +2646,7 @@ axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_1
       bram_we_a(3 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_WE(3 downto 0),
       bram_wrdata_a(31 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_DIN(31 downto 0),
       s_axi_aclk => microblaze_0_Clk,
-      s_axi_araddr(12 downto 0) => microblaze_0_axi_periph_M03_AXI_ARADDR(12 downto 0),
+      s_axi_araddr(14 downto 0) => microblaze_0_axi_periph_M03_AXI_ARADDR(14 downto 0),
       s_axi_arburst(1 downto 0) => microblaze_0_axi_periph_M03_AXI_ARBURST(1 downto 0),
       s_axi_arcache(3 downto 0) => microblaze_0_axi_periph_M03_AXI_ARCACHE(3 downto 0),
       s_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
@@ -2656,7 +2656,7 @@ axi_bram_ctrl_0: component design_1_axi_bram_ctrl_0_1
       s_axi_arready => microblaze_0_axi_periph_M03_AXI_ARREADY,
       s_axi_arsize(2 downto 0) => microblaze_0_axi_periph_M03_AXI_ARSIZE(2 downto 0),
       s_axi_arvalid => microblaze_0_axi_periph_M03_AXI_ARVALID,
-      s_axi_awaddr(12 downto 0) => microblaze_0_axi_periph_M03_AXI_AWADDR(12 downto 0),
+      s_axi_awaddr(14 downto 0) => microblaze_0_axi_periph_M03_AXI_AWADDR(14 downto 0),
       s_axi_awburst(1 downto 0) => microblaze_0_axi_periph_M03_AXI_AWBURST(1 downto 0),
       s_axi_awcache(3 downto 0) => microblaze_0_axi_periph_M03_AXI_AWCACHE(3 downto 0),
       s_axi_awlen(7 downto 0) => microblaze_0_axi_periph_M03_AXI_AWLEN(7 downto 0),
@@ -2730,8 +2730,8 @@ axi_uartlite_0: component design_1_axi_uartlite_0_0
     );
 blk_mem_gen_0: component design_1_blk_mem_gen_0_0
      port map (
-      addra(31 downto 13) => B"0000000000000000000",
-      addra(12 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(12 downto 0),
+      addra(31 downto 15) => B"00000000000000000",
+      addra(14 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(14 downto 0),
       addrb(31 downto 0) => TTF_Driver_0_bramAddress(31 downto 0),
       clka => axi_bram_ctrl_0_BRAM_PORTA_CLK,
       clkb => microblaze_0_Clk,
@@ -2957,7 +2957,7 @@ microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_0
       M02_AXI_wvalid => microblaze_0_axi_periph_M02_AXI_WVALID,
       M03_ACLK => microblaze_0_Clk,
       M03_ARESETN => rst_clk_wiz_0_100M_peripheral_aresetn(0),
-      M03_AXI_araddr(12 downto 0) => microblaze_0_axi_periph_M03_AXI_ARADDR(12 downto 0),
+      M03_AXI_araddr(14 downto 0) => microblaze_0_axi_periph_M03_AXI_ARADDR(14 downto 0),
       M03_AXI_arburst(1 downto 0) => microblaze_0_axi_periph_M03_AXI_ARBURST(1 downto 0),
       M03_AXI_arcache(3 downto 0) => microblaze_0_axi_periph_M03_AXI_ARCACHE(3 downto 0),
       M03_AXI_arlen(7 downto 0) => microblaze_0_axi_periph_M03_AXI_ARLEN(7 downto 0),
@@ -2966,7 +2966,7 @@ microblaze_0_axi_periph: entity work.design_1_microblaze_0_axi_periph_0
       M03_AXI_arready => microblaze_0_axi_periph_M03_AXI_ARREADY,
       M03_AXI_arsize(2 downto 0) => microblaze_0_axi_periph_M03_AXI_ARSIZE(2 downto 0),
       M03_AXI_arvalid => microblaze_0_axi_periph_M03_AXI_ARVALID,
-      M03_AXI_awaddr(12 downto 0) => microblaze_0_axi_periph_M03_AXI_AWADDR(12 downto 0),
+      M03_AXI_awaddr(14 downto 0) => microblaze_0_axi_periph_M03_AXI_AWADDR(14 downto 0),
       M03_AXI_awburst(1 downto 0) => microblaze_0_axi_periph_M03_AXI_AWBURST(1 downto 0),
       M03_AXI_awcache(3 downto 0) => microblaze_0_axi_periph_M03_AXI_AWCACHE(3 downto 0),
       M03_AXI_awlen(7 downto 0) => microblaze_0_axi_periph_M03_AXI_AWLEN(7 downto 0),

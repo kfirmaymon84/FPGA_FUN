@@ -117,9 +117,9 @@ set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FP
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_1_0/design_1_blk_mem_gen_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/design_1_axi_bram_ctrl_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/FPGA_FUN/GT_FPGA/GraviTris_FPGA.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_1/data/mb_bootloop_le.elf]
 
