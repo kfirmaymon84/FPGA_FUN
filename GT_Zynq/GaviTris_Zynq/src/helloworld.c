@@ -17,6 +17,7 @@
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
 
+#include <stdint.h>
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
@@ -46,14 +47,15 @@ int main()
 		return XST_FAILURE;
 	}
 
-    for (int i = 0; i < 16*4; i=i+4){
+    
+    for (uint32_t i = 0; i < 7201*4; i=i+4){
     	XBram_WriteReg(XPAR_AXI_BRAM_0_BASEADDRESS,i,i);
 
     }
 
     int out_data;
 
-    for (int i = 0; i < 16*4; i=i+4){
+    for (uint32_t i = 0; i < 7201*4; i=i+4){
     	out_data = XBram_ReadReg(XPAR_AXI_BRAM_0_BASEADDRESS,i);
 		xil_printf("%d: %d\n\r",i, out_data);
 
